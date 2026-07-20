@@ -1,0 +1,75 @@
+{
+  "word": "leave ... alone",
+  "ipa": "/liːv əˈloʊn/",
+  "arpabet": "L IY1 V AH0 L OW1 N",
+  "syllables": [
+    "leave",
+    "...",
+    "a",
+    "lone"
+  ],
+  "stress": [
+    1,
+    0,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "ea",
+      "silent": false
+    },
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": ".",
+      "silent": false
+    },
+    {
+      "text": ".",
+      "silent": false
+    },
+    {
+      "text": ".",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

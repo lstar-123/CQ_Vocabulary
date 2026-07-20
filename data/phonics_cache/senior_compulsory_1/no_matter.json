@@ -1,0 +1,45 @@
+{
+  "word": "no matter",
+  "ipa": "/noʊ ˈmætər/",
+  "arpabet": "N OW1 M AE1 T ER0",
+  "syllables": [
+    "no",
+    "mat",
+    "ter"
+  ],
+  "stress": [
+    1,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "tt",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    }
+  ]
+}

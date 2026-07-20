@@ -1,0 +1,39 @@
+{
+  "word": "mountain",
+  "ipa": "/ˈmaʊntən/",
+  "arpabet": "M AW1 N T AH0 N",
+  "syllables": [
+    "moun",
+    "tain"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "ou",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "ai",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    }
+  ]
+}

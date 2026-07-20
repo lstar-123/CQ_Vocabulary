@@ -1,0 +1,23 @@
+{
+  "word": "CE",
+  "ipa": "/siː iː/",
+  "arpabet": "S IY1 IY1",
+  "syllables": [
+    "C",
+    "E"
+  ],
+  "stress": [
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "C",
+      "silent": false
+    },
+    {
+      "text": "E",
+      "silent": false
+    }
+  ]
+}

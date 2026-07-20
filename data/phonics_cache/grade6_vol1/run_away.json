@@ -1,0 +1,45 @@
+{
+  "word": "run away",
+  "ipa": "/rʌn əˈweɪ/",
+  "arpabet": "R AH1 N AH0 W EY1",
+  "syllables": [
+    "run",
+    "a",
+    "way"
+  ],
+  "stress": [
+    1,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "w",
+      "silent": false
+    },
+    {
+      "text": "ay",
+      "silent": false
+    }
+  ]
+}

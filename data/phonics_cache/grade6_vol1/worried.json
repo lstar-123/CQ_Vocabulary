@@ -1,0 +1,35 @@
+{
+  "word": "worried",
+  "ipa": "/ˈwɜːrid/",
+  "arpabet": "W ER1 IY0 D",
+  "syllables": [
+    "wor",
+    "ried"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "w",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "rr",
+      "silent": false
+    },
+    {
+      "text": "ie",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

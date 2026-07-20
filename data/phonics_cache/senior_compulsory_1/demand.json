@@ -1,0 +1,39 @@
+{
+  "word": "demand",
+  "ipa": "/dɪˈmɑːnd/",
+  "arpabet": "D IH0 M AA1 N D",
+  "syllables": [
+    "de",
+    "mand"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "word": "calm",
+  "ipa": "/kɑːm/",
+  "arpabet": "K AA1 M",
+  "syllables": [
+    "calm"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": true
+    },
+    {
+      "text": "m",
+      "silent": false
+    }
+  ]
+}

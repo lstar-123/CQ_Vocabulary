@@ -1,0 +1,25 @@
+{
+  "word": "beg",
+  "ipa": "/bɛɡ/",
+  "arpabet": "B EH1 G",
+  "syllables": [
+    "beg"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    }
+  ]
+}

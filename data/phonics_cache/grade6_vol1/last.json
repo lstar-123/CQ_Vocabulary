@@ -1,0 +1,29 @@
+{
+  "word": "last",
+  "ipa": "/læst/",
+  "arpabet": "L AE1 S T",
+  "syllables": [
+    "last"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

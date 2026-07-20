@@ -1,0 +1,41 @@
+{
+  "word": "injury",
+  "ipa": "/ˈɪndʒəri/",
+  "arpabet": "IH1 N JH ER0 IY0",
+  "syllables": [
+    "in",
+    "ju",
+    "ry"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "j",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "word": "affair",
+  "ipa": "/əˈfɛər/",
+  "arpabet": "AH0 F EH1 R",
+  "syllables": [
+    "af",
+    "fair"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "ai",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    }
+  ]
+}

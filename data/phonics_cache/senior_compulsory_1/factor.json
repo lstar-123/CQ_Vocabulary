@@ -1,0 +1,39 @@
+{
+  "word": "factor",
+  "ipa": "/ˈfæktər/",
+  "arpabet": "F AE1 K T ER0",
+  "syllables": [
+    "fac",
+    "tor"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    }
+  ]
+}

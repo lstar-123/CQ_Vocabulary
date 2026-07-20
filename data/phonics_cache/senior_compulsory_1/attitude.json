@@ -1,0 +1,45 @@
+{
+  "word": "attitude",
+  "ipa": "/ˈætɪtjuːd/",
+  "arpabet": "AE1 T IH0 T Y UW0 D",
+  "syllables": [
+    "at",
+    "ti",
+    "tude"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "tt",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

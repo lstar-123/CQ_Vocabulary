@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CamelliaQuill · 教师后台</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============ GROVE "CALM TECH" DESIGN SYSTEM ============ */
+:root {
+  --cream: #F8F5EE;
+  --mint: #E6F2E9;
+  --peach: #F9EAE3;
+  --sage: #58997A;
+  --sage-hover: #4A8568;
+  --sage-light: #EEF5F1;
+  --terracotta: #C86F50;
+  --text-headline: #222222;
+  --text-body: #555555;
+  --text-muted: #8C8C8C;
+  --white: #FFFFFF;
+  --pill-bg: #ECE8E1;
+  --pill-hover: #E0DBD2;
+  --input-border: #E8E5DE;
+  --divider: #EDE9E2;
+  --success: #58997A;
+  --danger: #C86F50;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 2px 8px rgba(0,0,0,0.05);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.05);
+  --radius-card: 12px;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: var(--cream);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% 0%, #E6F2E9 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 80%, #F9EAE3 0%, transparent 55%);
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  color: var(--text-headline);
+  -webkit-font-smoothing: antialiased;
+}
+
+.app { width: 100%; max-width: 780px; }
+
+/* ============ HEADER ============ */
+.header { text-align: center; margin-bottom: 28px; }
+.header .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px; font-weight: 700; color: var(--text-headline);
+  letter-spacing: -0.5px; margin-bottom: 6px;
+}
+.header .logo .logo-dot {
+  display: inline-block; width: 10px; height: 10px;
+  background: var(--terracotta); border-radius: 50%;
+  margin-right: 4px; vertical-align: middle; margin-bottom: 6px;
+}
+.header .subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px; color: var(--text-body); font-weight: 400;
+}
+
+/* ============ USER BAR ============ */
+.user-bar {
+  display: flex; align-items: center; justify-content: center;
+  gap: 12px; margin-bottom: 16px;
+  font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text-body);
+}
+.user-bar .user-name { font-weight: 600; color: var(--sage); }
+.role-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  background: var(--peach); color: var(--terracotta);
+  font-size: 11px; font-weight: 600; font-family: 'Inter', sans-serif;
+}
+.user-bar .btn-logout {
+  background: none; border: 1px solid var(--input-border);
+  padding: 4px 14px; border-radius: 999px; cursor: pointer;
+  font-size: 12px; color: var(--text-muted); font-family: 'Inter', sans-serif;
+  transition: all 0.2s;
+}
+.user-bar .btn-logout:hover { border-color: var(--terracotta); color: var(--terracotta); }
+
+/* ============ TAB BAR ============ */
+.tab-bar {
+  display: flex; gap: 0; margin-bottom: 24px;
+  background: var(--white); border-radius: 999px;
+  padding: 5px; box-shadow: var(--shadow-sm);
+  border: 1px solid var(--input-border);
+}
+.tab-btn {
+  flex: 1; padding: 12px 20px; font-size: 14px; font-weight: 500;
+  border: none; border-radius: 999px; cursor: pointer;
+  background: transparent; color: var(--text-body);
+  transition: all 0.25s; font-family: 'Inter', sans-serif;
+}
+.tab-btn.active {
+  background: var(--sage); color: #fff;
+  box-shadow: 0 2px 6px rgba(88,153,122,0.25);
+}
+.tab-btn:hover:not(.active) { color: var(--text-headline); background: var(--pill-bg); }
+
+/* ============ AUTH OVERLAY ============ */
+.auth-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.3);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 100; backdrop-filter: blur(4px);
+}
+.auth-card {
+  background: var(--white); border-radius: 16px;
+  padding: 40px 36px; width: 100%; max-width: 400px;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.auth-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px; color: var(--text-headline); margin-bottom: 4px;
+}
+.auth-card .auth-sub {
+  font-size: 13px; color: var(--text-body); margin-bottom: 24px;
+}
+.auth-card .form-group { margin-bottom: 14px; text-align: left; }
+.auth-card .form-group label {
+  display: block; font-size: 13px; font-weight: 500;
+  color: var(--text-body); margin-bottom: 4px;
+}
+.auth-card .form-group input {
+  width: 100%; padding: 12px 16px; font-size: 14px; font-family: 'Inter', sans-serif;
+  border: 1.5px solid var(--input-border); border-radius: 10px;
+  outline: none; transition: border-color 0.2s;
+}
+.auth-card .form-group input:focus { border-color: var(--sage); }
+.auth-card .auth-error {
+  color: var(--terracotta); font-size: 13px; margin-bottom: 12px; min-height: 20px;
+}
+.auth-card .btn-auth {
+  width: 100%; padding: 13px; font-size: 15px; font-weight: 600;
+  border: none; border-radius: 999px; cursor: pointer;
+  background: var(--sage); color: #fff; font-family: 'Inter', sans-serif;
+  transition: all 0.2s;
+}
+.auth-card .btn-auth:hover { background: var(--sage-hover); }
+.auth-card .auth-hint {
+  font-size: 11px; color: var(--text-muted); margin-top: 12px;
+}
+
+/* ============ STUDENT CARDS ============ */
+.student-card {
+  background: var(--white); border-radius: var(--radius-card);
+  padding: 20px 24px; margin-bottom: 12px;
+  border: 1px solid var(--input-border); cursor: pointer;
+  transition: all 0.15s; box-shadow: var(--shadow-sm);
+}
+.student-card:hover { border-color: var(--sage); background: var(--sage-light); }
+.student-card .sc-header { display: flex; align-items: center; gap: 14px; }
+.student-card .sc-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--sage-light); color: var(--sage);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 18px; flex-shrink: 0;
+}
+.student-card .sc-info { flex: 1; }
+.student-card .sc-name { font-weight: 600; font-size: 15px; color: var(--text-headline); }
+.student-card .sc-meta { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+.student-card .sc-stats { display: flex; gap: 20px; text-align: center; }
+.student-card .sc-stat .sc-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 700; color: var(--sage);
+}
+.student-card .sc-stat .sc-label { font-size: 11px; color: var(--text-muted); }
+
+/* ============ STUDENT DETAIL ============ */
+.student-detail {
+  background: var(--cream); border-radius: 0 0 12px 12px;
+  margin-top: -14px; margin-bottom: 12px; padding: 20px;
+  border: 1px solid var(--input-border); border-top: none;
+}
+.student-detail .no-sessions { text-align: center; color: var(--text-muted); font-size: 13px; padding: 12px; }
+
+/* ============ SESSION ITEM ============ */
+.session-item {
+  background: var(--white); border-radius: 10px;
+  padding: 14px 18px; margin-bottom: 8px;
+  border: 1px solid var(--input-border); cursor: pointer;
+  transition: all 0.12s; display: flex; align-items: center; gap: 12px;
+}
+.session-item:hover { border-color: var(--sage); }
+.session-item .si-score {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 700; min-width: 55px; text-align: center;
+}
+.session-item .si-info { flex: 1; }
+.session-item .si-info .si-meta { font-size: 12px; color: var(--text-muted); }
+.session-item .si-arrow { color: var(--text-muted); font-size: 12px; }
+
+/* ============ SESSION DETAIL ============ */
+.session-detail {
+  background: var(--white); border-radius: 0 0 10px 10px;
+  margin-top: -10px; margin-bottom: 8px; padding: 16px 18px;
+  border: 1px solid var(--input-border); border-top: none;
+}
+.detail-table { width: 100%; border-collapse: collapse; font-family: 'Inter', sans-serif; font-size: 13px; }
+.detail-table th {
+  text-align: left; padding: 8px 10px; background: var(--cream);
+  color: var(--text-body); font-weight: 600; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 0.5px; border-radius: 6px;
+}
+.detail-table td { padding: 8px 10px; border-bottom: 1px solid var(--divider); vertical-align: top; }
+.detail-table .zh { font-weight: 600; color: var(--text-headline); }
+.detail-table .correct-ans { color: var(--sage); font-weight: 500; }
+.detail-table .user-ans { color: var(--terracotta); }
+.detail-table .icon { font-size: 14px; }
+.detail-table tr:last-child td { border-bottom: none; }
+
+/* ============ FILTER CHIPS ============ */
+.cat-filter-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+.cat-chip {
+  padding: 9px 18px; font-family: 'Inter', sans-serif;
+  font-size: 13px; font-weight: 500;
+  border: 1.5px solid var(--input-border); border-radius: 999px;
+  cursor: pointer; background: var(--white); color: var(--text-body);
+  transition: all 0.2s;
+}
+.cat-chip:hover { background: var(--pill-bg); }
+.cat-chip.active-chip {
+  background: var(--sage); color: #fff; border-color: var(--sage);
+  box-shadow: 0 2px 8px rgba(88,153,122,0.2);
+}
+
+/* ============ ADD WORD FORM ============ */
+.add-word-form {
+  background: var(--white); border-radius: 12px;
+  padding: 16px 20px; margin-bottom: 16px; display: flex;
+  gap: 10px; align-items: center; flex-wrap: wrap;
+  border: 1px solid var(--input-border); box-shadow: var(--shadow-sm);
+}
+.add-word-form select, .add-word-form input {
+  padding: 10px 14px; font-size: 14px; font-family: 'Inter', sans-serif;
+  border: 1.5px solid var(--input-border); border-radius: 10px;
+  outline: none; transition: border-color 0.2s; background: var(--white);
+}
+.add-word-form select:focus, .add-word-form input:focus { border-color: var(--sage); }
+.add-word-form select { min-width: 140px; }
+.add-word-form input { min-width: 120px; flex: 1; }
+
+.btn {
+  padding: 12px 22px; font-size: 14px; font-weight: 600;
+  border: none; border-radius: 999px; cursor: pointer;
+  transition: all 0.2s; font-family: 'Inter', sans-serif; white-space: nowrap;
+}
+.btn-primary { background: var(--sage); color: #fff; }
+.btn-primary:hover { background: var(--sage-hover); }
+.btn-sm {
+  padding: 8px 14px; font-size: 12px; font-weight: 500;
+  border: none; border-radius: 999px; cursor: pointer;
+  font-family: 'Inter', sans-serif; transition: all 0.15s;
+}
+.btn-edit { background: var(--sage-light); color: var(--sage); }
+.btn-edit:hover { background: #D5E9DC; }
+.btn-danger { background: var(--terracotta); color: #fff; }
+.btn-danger:hover { background: #B55E44; }
+.btn-cancel { background: var(--pill-bg); color: var(--text-body); }
+.btn-cancel:hover { background: var(--pill-hover); }
+
+/* ============ WORD TABLE ============ */
+.word-table-wrap {
+  background: var(--white); border-radius: var(--radius-card);
+  box-shadow: var(--shadow-md); overflow: hidden;
+  border: 1px solid var(--input-border);
+}
+.word-table { width: 100%; border-collapse: collapse; font-family: 'Inter', sans-serif; font-size: 13px; }
+.word-table th {
+  text-align: left; padding: 14px 16px; background: var(--cream);
+  color: var(--text-body); font-weight: 600; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.word-table td { padding: 12px 16px; border-bottom: 1px solid var(--divider); vertical-align: middle; }
+.word-table .en { font-weight: 600; color: var(--text-headline); }
+.word-table .zh { color: var(--sage); font-weight: 500; }
+.word-table .unit-tag {
+  display: inline-block; font-size: 11px; padding: 3px 10px;
+  background: var(--pill-bg); border-radius: 999px; color: var(--text-body);
+}
+.word-table tr:last-child td { border-bottom: none; }
+.word-table .actions { display: flex; gap: 6px; justify-content: flex-end; }
+
+/* ============ PAGINATION ============ */
+.pagination {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; margin-top: 16px;
+}
+.pagination .page-info {
+  font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text-body);
+}
+
+/* ============ MODAL ============ */
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.35);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 200; backdrop-filter: blur(4px);
+}
+.modal-card {
+  background: var(--white); border-radius: 16px;
+  padding: 32px; width: 100%; max-width: 440px;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.12);
+}
+.modal-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px; color: var(--text-headline); margin-bottom: 20px;
+}
+.modal-card .form-group { margin-bottom: 14px; }
+.modal-card .form-group label {
+  display: block; font-size: 13px; font-weight: 500;
+  color: var(--text-body); margin-bottom: 4px;
+}
+.modal-card .form-group input, .modal-card .form-group select {
+  width: 100%; padding: 12px 16px; font-size: 14px; font-family: 'Inter', sans-serif;
+  border: 1.5px solid var(--input-border); border-radius: 10px; outline: none;
+  background: var(--white);
+}
+.modal-card .form-group input:focus, .modal-card .form-group select:focus { border-color: var(--sage); }
+.modal-card .btn-row { display: flex; gap: 10px; justify-content: flex-end; margin-top: 24px; }
+
+/* ============ NO DATA ============ */
+.no-data {
+  text-align: center; padding: 48px 20px;
+  color: var(--text-muted); font-size: 14px;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 500px) {
+  .student-card .sc-stats { gap: 10px; }
+  .student-card .sc-stat .sc-num { font-size: 18px; }
+  .add-word-form { flex-direction: column; }
+  .add-word-form select, .add-word-form input { width: 100%; }
+  .word-table th, .word-table td { padding: 8px 10px; }
+  .modal-card { padding: 24px; margin: 16px; }
+  .auth-card { padding: 28px 20px; margin: 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="app" id="app">
+  <!-- Auth Overlay -->
+  <div id="authOverlay" class="auth-overlay" style="display:none;"></div>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo"><span class="logo-dot"></span>CamelliaQuill</div>
+    <div class="subtitle" id="subtitle">教师管理后台</div>
+  </div>
+
+  <!-- User Bar -->
+  <div class="user-bar" id="userBar" style="display:none;">
+    <span>👤</span>
+    <span class="user-name" id="userNameDisplay"></span>
+    <span class="role-badge">教师</span>
+    <button class="btn-logout" onclick="handleLogout()">退出登录</button>
+  </div>
+
+  <!-- Tab Bar -->
+  <div class="tab-bar" id="tabBar" style="display:none;">
+    <button class="tab-btn active" id="tabStudents" onclick="switchTab('students')">📋 学生管理</button>
+    <button class="tab-btn" id="tabWords" onclick="switchTab('words')">📝 词汇管理</button>
+  </div>
+
+  <!-- ==================== STUDENTS TAB ==================== -->
+  <div id="studentsScreen" style="display:none;">
+    <div id="studentList"></div>
+  </div>
+
+  <!-- ==================== WORDS TAB ==================== -->
+  <div id="wordsScreen" style="display:none;">
+    <div class="cat-filter-chips" id="wordBookFilter">
+      <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.8px;padding:8px 4px;">词书：</span>
+    </div>
+    <div class="cat-filter-chips" id="wordUnitFilter"></div>
+    <div class="add-word-form" id="addWordForm">
+      <select id="addWordUnit"><option value="">选择单元...</option></select>
+      <input type="text" id="addWordEn" placeholder="英文" autocomplete="off">
+      <input type="text" id="addWordZh" placeholder="中文" autocomplete="off">
+      <button class="btn btn-primary" onclick="addWord()">+ 添加词汇</button>
+    </div>
+    <div class="word-table-wrap">
+      <table class="word-table">
+        <thead>
+          <tr>
+            <th style="width:5%">#</th>
+            <th style="width:12%">单元</th>
+            <th style="width:33%">英文</th>
+            <th style="width:30%">中文</th>
+            <th style="width:20%">操作</th>
+          </tr>
+        </thead>
+        <tbody id="wordTableBody"></tbody>
+      </table>
+    </div>
+    <div class="pagination" id="wordPagination"></div>
+  </div>
+
+  <!-- ==================== EDIT MODAL ==================== -->
+  <div id="editModal" class="modal-overlay" style="display:none;">
+    <div class="modal-card">
+      <h3>✏️ 编辑词汇</h3>
+      <div class="form-group">
+        <label>所属单元</label>
+        <select id="editWordUnit"></select>
+      </div>
+      <div class="form-group">
+        <label>英文</label>
+        <input type="text" id="editWordEn" placeholder="英文" autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label>中文</label>
+        <input type="text" id="editWordZh" placeholder="中文" autocomplete="off">
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-cancel" onclick="closeModal()">取消</button>
+        <button class="btn btn-primary" id="btnSaveEdit" onclick="saveEdit()">保存</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer style="text-align:center; padding: 32px 16px 24px; font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 12px; color: #999;">
+    <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" style="color:#999; text-decoration:none; transition: color 0.2s;">豫ICP备2025153149号-3</a>
+    &nbsp;&nbsp;
+    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41030502001247" target="_blank" rel="noopener noreferrer" style="color:#999; text-decoration:none; display:inline-block; transition: color 0.2s;">
+      <img src="https://www.beian.gov.cn/img/ghs.png" alt="" style="vertical-align:middle;margin-right:2px;width:14px;height:14px;">豫公网安备41030502001247号
+    </a>
+  </footer>
+</div>
+
+<script>
+// ==================== API HELPER ====================
+async function apiFetch(path, options = {}) {
+  const res = await fetch(path, {
+    credentials: 'same-origin',
+    headers: { 'Content-Type': 'application/json', ...options.headers },
+    ...options
+  });
+  const data = await res.json();
+  if (!res.ok) {
+    if (res.status === 401) {
+      showLogin();
+      throw new Error(data.error || '请先登录');
+    }
+    if (res.status === 403) {
+      alert('权限不足：仅教师可访问此功能');
+      throw new Error(data.error || '权限不足');
+    }
+    throw new Error(data.error || '请求失败');
+  }
+  return data;
+}
+
+// ==================== AUTH ====================
+let currentUser = null;
+
+async function checkAuth() {
+  try {
+    const res = await fetch('/api/auth/me', { credentials: 'same-origin' });
+    const data = await res.json();
+    if (data.id) {
+      if (data.role !== 'teacher') {
+        document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:Inter,sans-serif;color:#555;">' +
+          '<div style="text-align:center"><h2 style="color:#C86F50;margin-bottom:8px;">权限不足</h2><p>此页面仅限教师访问。</p>' +
+          '<a href="/" style="color:#58997A;margin-top:12px;display:inline-block;">前往学生端</a></div></div>';
+        return;
+      }
+      currentUser = data;
+      showMainApp();
+    } else {
+      showLogin();
+    }
+  } catch (e) {
+    showLogin();
+  }
+}
+
+function showLogin() {
+  currentUser = null;
+  document.getElementById('authOverlay').style.display = 'flex';
+  document.getElementById('tabBar').style.display = 'none';
+  document.getElementById('userBar').style.display = 'none';
+  document.getElementById('studentsScreen').style.display = 'none';
+  document.getElementById('wordsScreen').style.display = 'none';
+  renderLoginForm();
+}
+
+function showMainApp() {
+  document.getElementById('authOverlay').style.display = 'none';
+  document.getElementById('tabBar').style.display = 'flex';
+  document.getElementById('userBar').style.display = 'flex';
+  document.getElementById('userNameDisplay').textContent = currentUser.username;
+  switchTab('students');
+}
+
+function renderLoginForm() {
+  const overlay = document.getElementById('authOverlay');
+  overlay.innerHTML = `
+    <div class="auth-card">
+      <h2>教师登录</h2>
+      <p class="auth-sub">请使用教师账号登录管理后台</p>
+      <div class="auth-error" id="authError"></div>
+      <div class="form-group">
+        <label>用户名</label>
+        <input type="text" id="authUsername" placeholder="请输入教师用户名" autocomplete="username">
+      </div>
+      <div class="form-group">
+        <label>密码</label>
+        <input type="password" id="authPassword" placeholder="请输入密码" autocomplete="current-password">
+      </div>
+      <button class="btn-auth" onclick="handleLogin()">登 录</button>
+      <p class="auth-hint">学生请前往 <a href="/" style="color:var(--sage);">学生端</a></p>
+    </div>
+  `;
+  setTimeout(() => {
+    const inp = document.getElementById('authUsername');
+    if (inp) inp.focus();
+  }, 100);
+}
+
+async function handleLogin() {
+  const username = document.getElementById('authUsername').value.trim();
+  const password = document.getElementById('authPassword').value.trim();
+  const errEl = document.getElementById('authError');
+
+  if (!username || !password) { errEl.textContent = '请填写用户名和密码'; return; }
+
+  try {
+    const res = await fetch('/api/auth/teacher/login', {
+      method: 'POST', credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password })
+    });
+    const data = await res.json();
+    if (!res.ok) { errEl.textContent = data.error || '登录失败'; return; }
+    currentUser = data;
+    showMainApp();
+  } catch (e) {
+    errEl.textContent = '网络错误，请重试';
+  }
+}
+
+async function handleLogout() {
+  await apiFetch('/api/auth/logout', { method: 'POST' });
+  currentUser = null;
+  showLogin();
+}
+
+// ==================== TAB SWITCHING ====================
+function switchTab(tab) {
+  document.getElementById('tabStudents').classList.toggle('active', tab === 'students');
+  document.getElementById('tabWords').classList.toggle('active', tab === 'words');
+  document.getElementById('studentsScreen').style.display = tab === 'students' ? 'block' : 'none';
+  document.getElementById('wordsScreen').style.display = tab === 'words' ? 'block' : 'none';
+
+  if (tab === 'students') fetchStudents();
+  else if (tab === 'words') buildWordsTab();
+}
+
+// ==================== STUDENT MANAGEMENT ====================
+async function fetchStudents() {
+  const container = document.getElementById('studentList');
+  try {
+    const students = await apiFetch('/api/teacher/students');
+    if (students.length === 0) {
+      container.innerHTML = '<div class="no-data">还没有学生用户。学生注册后会自动出现在这里。</div>';
+      return;
+    }
+    container.innerHTML = students.map(s => `
+      <div class="student-card" id="sc${s.id}" onclick="toggleStudent(${s.id})">
+        <div class="sc-header">
+          <div class="sc-avatar">${(s.username[0] || '?').toUpperCase()}</div>
+          <div class="sc-info">
+            <div class="sc-name">${escapeHtml(s.username)}</div>
+            <div class="sc-meta">注册于 ${s.created_at ? new Date(s.created_at).toLocaleDateString('zh-CN') : '-'} · 共 ${s.total_quizzes} 次测验</div>
+          </div>
+          <div class="sc-stats">
+            <div class="sc-stat"><div class="sc-num">${s.avg_score}%</div><div class="sc-label">平均分</div></div>
+            <div class="sc-stat"><div class="sc-num">${s.best_score}%</div><div class="sc-label">最高分</div></div>
+            <div class="sc-stat"><div class="sc-num">${s.total_words_tested}</div><div class="sc-label">总题数</div></div>
+          </div>
+          <span style="color:var(--text-muted);font-size:14px;margin-left:4px;">&#9660;</span>
+        </div>
+      </div>
+      <div class="student-detail" id="sd${s.id}" style="display:none;"></div>
+    `).join('');
+  } catch (e) {
+    container.innerHTML = '<div class="no-data">加载失败，请刷新重试</div>';
+  }
+}
+
+async function toggleStudent(studentId) {
+  const detailDiv = document.getElementById('sd' + studentId);
+  if (detailDiv.style.display !== 'none') {
+    detailDiv.style.display = 'none';
+    return;
+  }
+  // Hide all others
+  document.querySelectorAll('.student-detail').forEach(d => d.style.display = 'none');
+
+  if (detailDiv.innerHTML) {
+    detailDiv.style.display = 'block';
+    return;
+  }
+
+  try {
+    const sessions = await apiFetch(`/api/teacher/students/${studentId}/sessions`);
+    if (sessions.length === 0) {
+      detailDiv.innerHTML = '<div class="no-sessions">该学生还没有答题记录</div>';
+    } else {
+      detailDiv.innerHTML = sessions.map(s => {
+        const sc = s.score_pct >= 80 ? '#58997A' : s.score_pct >= 60 ? '#C8A87A' : '#C86F50';
+        const dt = s.completed_at ? new Date(s.completed_at).toLocaleDateString('zh-CN', {
+          year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit'
+        }) : '';
+        return `
+          <div class="session-item" onclick="event.stopPropagation();toggleSession(${studentId}, ${s.id})" id="si${s.id}">
+            <div class="si-score" style="color:${sc}">${s.score_pct}%</div>
+            <div class="si-info">
+              <div style="font-weight:600;font-size:13px;color:var(--text-headline);">${s.correct_count}/${s.total_count} 正确</div>
+              <div class="si-meta">${dt} · ${escapeHtml((s.unit_names || []).join(', '))}</div>
+            </div>
+            <span class="si-arrow">&#9660;</span>
+          </div>
+          <div class="session-detail" id="sessd${s.id}" style="display:none;"></div>
+        `;
+      }).join('');
+    }
+    detailDiv.style.display = 'block';
+  } catch (e) {
+    detailDiv.innerHTML = '<div class="no-sessions" style="color:var(--terracotta);">加载失败</div>';
+    detailDiv.style.display = 'block';
+  }
+}
+
+async function toggleSession(studentId, sessionId) {
+  const detailDiv = document.getElementById('sessd' + sessionId);
+  if (detailDiv.style.display !== 'none') { detailDiv.style.display = 'none'; return; }
+  document.querySelectorAll('.session-detail').forEach(d => d.style.display = 'none');
+
+  if (detailDiv.innerHTML) { detailDiv.style.display = 'block'; return; }
+
+  try {
+    const detail = await apiFetch(`/api/teacher/students/${studentId}/sessions/${sessionId}`);
+    detailDiv.innerHTML = `
+      <table class="detail-table">
+        <thead><tr><th>#</th><th>中文</th><th>学生答案</th><th>正确答案</th><th></th></tr></thead>
+        <tbody>
+          ${detail.answers.map((a, i) => `
+            <tr>
+              <td>${i + 1}</td>
+              <td class="zh">${escapeHtml(a.chinese)}</td>
+              <td class="${a.is_correct ? 'correct-ans' : 'user-ans'}">${escapeHtml(a.user_answer)}</td>
+              <td class="correct-ans">${escapeHtml(a.english)}</td>
+              <td class="icon">${a.is_correct ? '✓' : '✗'}</td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+    `;
+    detailDiv.style.display = 'block';
+  } catch (e) {
+    detailDiv.innerHTML = '<div style="padding:12px;color:var(--terracotta);">加载详情失败</div>';
+    detailDiv.style.display = 'block';
+  }
+}
+
+// ==================== WORD MANAGEMENT ====================
+let allUnits = [];
+let wordPage = 1;
+let wordUnitFilter = 'all';
+let currentWordBook = 'grade6_vol1';
+let bookList = [];
+let editingWordId = null;
+
+async function buildWordsTab() {
+  if (bookList.length === 0) {
+    try { bookList = await apiFetch('/api/teacher/books'); } catch (e) { bookList = []; }
+  }
+  renderBookFilter();
+  // Fetch units for the current book
+  try { allUnits = await apiFetch(`/api/units?book_schema=${currentWordBook}`); } catch (e) { allUnits = []; }
+  renderUnitFilter();
+  renderAddWordSelect();
+  await fetchWords();
+}
+
+function renderBookFilter() {
+  const container = document.getElementById('wordBookFilter');
+  let html = `<span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.8px;padding:8px 4px;">词书：</span>`;
+  bookList.forEach(b => {
+    const active = currentWordBook === b.schema ? ' active-chip' : '';
+    html += `<button class="cat-chip${active}" onclick="switchWordBook('${b.schema}')">📚 ${escapeHtml(b.name)}</button>`;
+  });
+  container.innerHTML = html;
+}
+
+function switchWordBook(book) {
+  currentWordBook = book;
+  wordUnitFilter = 'all';
+  wordPage = 1;
+  document.querySelectorAll('#wordBookFilter .cat-chip').forEach(el => {
+    el.classList.toggle('active-chip', el.textContent.includes(book));
+  });
+  buildWordsTab();
+}
+
+function renderUnitFilter() {
+  const container = document.getElementById('wordUnitFilter');
+  let html = `<button class="cat-chip${wordUnitFilter === 'all' ? ' active-chip' : ''}" id="chipAll" onclick="switchWordFilter('all')">📊 全部</button>`;
+  allUnits.forEach(u => {
+    const active = wordUnitFilter === String(u.id) ? ' active-chip' : '';
+    html += `<button class="cat-chip${active}" id="chip${u.id}" onclick="switchWordFilter('${u.id}')">📖 ${escapeHtml(u.name)}</button>`;
+  });
+  container.innerHTML = html;
+}
+
+function renderAddWordSelect() {
+  const sel = document.getElementById('addWordUnit');
+  sel.innerHTML = '<option value="">选择单元...</option>' +
+    allUnits.map(u => `<option value="${u.id}">${escapeHtml(u.name)}</option>`).join('');
+}
+
+function switchWordFilter(unitId) {
+  wordUnitFilter = unitId;
+  wordPage = 1;
+  document.querySelectorAll('.cat-chip').forEach(el => el.classList.remove('active-chip'));
+  const target = document.getElementById('chip' + (unitId === 'all' ? 'All' : unitId));
+  if (target) target.classList.add('active-chip');
+  fetchWords();
+}
+
+async function fetchWords() {
+  let url = `/api/teacher/words?page=${wordPage}&per_page=20&book_schema=${currentWordBook}`;
+  if (wordUnitFilter !== 'all') url += `&unit_id=${wordUnitFilter}`;
+
+  try {
+    const data = await apiFetch(url);
+    renderWordTable(data.words);
+    renderPagination(data.total, data.page, data.per_page);
+  } catch (e) {
+    document.getElementById('wordTableBody').innerHTML =
+      '<tr><td colspan="5" class="no-data" style="padding:20px;">加载失败</td></tr>';
+  }
+}
+
+function renderWordTable(words) {
+  if (words.length === 0) {
+    document.getElementById('wordTableBody').innerHTML =
+      '<tr><td colspan="5" class="no-data" style="padding:24px;">暂无词汇，请添加</td></tr>';
+    return;
+  }
+  document.getElementById('wordTableBody').innerHTML = words.map((w, i) => `
+    <tr>
+      <td>${(wordPage - 1) * 20 + i + 1}</td>
+      <td><span class="unit-tag">${escapeHtml(w.unit_name)}</span></td>
+      <td class="en">${escapeHtml(w.english)}</td>
+      <td class="zh">${escapeHtml(w.chinese)}</td>
+      <td class="actions">
+        <button class="btn-sm btn-edit" onclick="openEditModal(${w.id})">编辑</button>
+        <button class="btn-sm btn-danger" onclick="deleteWord(${w.id})">删除</button>
+      </td>
+    </tr>
+  `).join('');
+}
+
+function renderPagination(total, page, perPage) {
+  const totalPages = Math.ceil(total / perPage);
+  const container = document.getElementById('wordPagination');
+  if (totalPages <= 1) { container.innerHTML = ''; return; }
+  container.innerHTML = `
+    <button class="btn-sm btn-cancel" onclick="goPage(${page - 1})" ${page <= 1 ? 'disabled' : ''}>上一页</button>
+    <span class="page-info">第 ${page} / ${totalPages} 页（共 ${total} 个词汇）</span>
+    <button class="btn-sm btn-cancel" onclick="goPage(${page + 1})" ${page >= totalPages ? 'disabled' : ''}>下一页</button>
+  `;
+}
+
+function goPage(p) { wordPage = p; fetchWords(); }
+
+async function addWord() {
+  const unitId = document.getElementById('addWordUnit').value;
+  const english = document.getElementById('addWordEn').value.trim();
+  const chinese = document.getElementById('addWordZh').value.trim();
+
+  if (!unitId) { alert('请选择单元'); return; }
+  if (!english) { alert('请输入英文'); return; }
+  if (!chinese) { alert('请输入中文'); return; }
+
+  try {
+    await apiFetch('/api/teacher/words', {
+      method: 'POST',
+      body: JSON.stringify({ unit_id: parseInt(unitId), english, chinese, book_schema: currentWordBook })
+    });
+    document.getElementById('addWordEn').value = '';
+    document.getElementById('addWordZh').value = '';
+    fetchWords();
+  } catch (e) {
+    alert('添加失败：' + e.message);
+  }
+}
+
+function openEditModal(wordId) {
+  // Find word data from current rows
+  editingWordId = wordId;
+  // Fetch from API to get current data
+  apiFetch(`/api/teacher/words?per_page=1000&book_schema=${currentWordBook}`).then(data => {
+    const word = data.words.find(w => w.id === wordId);
+    if (!word) { alert('词汇不存在'); return; }
+    // Populate unit select
+    const sel = document.getElementById('editWordUnit');
+    sel.innerHTML = allUnits.map(u =>
+      `<option value="${u.id}" ${u.id === word.unit_id ? 'selected' : ''}>${escapeHtml(u.name)}</option>`
+    ).join('');
+    document.getElementById('editWordEn').value = word.english;
+    document.getElementById('editWordZh').value = word.chinese;
+    document.getElementById('editModal').style.display = 'flex';
+  }).catch(e => alert('加载词汇失败'));
+}
+
+function closeModal() {
+  document.getElementById('editModal').style.display = 'none';
+  editingWordId = null;
+}
+
+async function saveEdit() {
+  const unitId = document.getElementById('editWordUnit').value;
+  const english = document.getElementById('editWordEn').value.trim();
+  const chinese = document.getElementById('editWordZh').value.trim();
+
+  if (!unitId) { alert('请选择单元'); return; }
+  if (!english) { alert('请输入英文'); return; }
+  if (!chinese) { alert('请输入中文'); return; }
+
+  try {
+    await apiFetch(`/api/teacher/words/${editingWordId}`, {
+      method: 'PUT',
+      body: JSON.stringify({ unit_id: parseInt(unitId), english, chinese, book_schema: currentWordBook })
+    });
+    closeModal();
+    fetchWords();
+  } catch (e) {
+    alert('保存失败：' + e.message);
+  }
+}
+
+async function deleteWord(wordId) {
+  if (!confirm('确定要删除这个词汇吗？此操作不可撤销。')) return;
+  try {
+    await apiFetch(`/api/teacher/words/${wordId}?book_schema=${currentWordBook}`, { method: 'DELETE' });
+    fetchWords();
+  } catch (e) {
+    alert('删除失败：' + e.message);
+  }
+}
+
+// ==================== UTILS ====================
+function escapeHtml(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+// ==================== KEYBOARD ====================
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+  if (e.key === 'Enter') {
+    // Check if login form is open
+    const authOverlay = document.getElementById('authOverlay');
+    if (authOverlay.style.display !== 'none' && document.getElementById('authUsername')) {
+      e.preventDefault(); handleLogin();
+    }
+  }
+});
+
+// Close modal on overlay click
+document.getElementById('editModal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+// ==================== INIT ====================
+checkAuth();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "word": "all over",
+  "ipa": "/ɔːl ˈoʊvər/",
+  "arpabet": "AO1 L OW1 V ER0",
+  "syllables": [
+    "all",
+    "o",
+    "ver"
+  ],
+  "stress": [
+    1,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "ll",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    }
+  ]
+}

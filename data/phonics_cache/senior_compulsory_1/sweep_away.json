@@ -1,0 +1,49 @@
+{
+  "word": "sweep away",
+  "ipa": "/swiːp əˈweɪ/",
+  "arpabet": "S W IY1 P AH0 W EY1",
+  "syllables": [
+    "sweep",
+    "a",
+    "way"
+  ],
+  "stress": [
+    1,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "w",
+      "silent": false
+    },
+    {
+      "text": "ee",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "w",
+      "silent": false
+    },
+    {
+      "text": "ay",
+      "silent": false
+    }
+  ]
+}

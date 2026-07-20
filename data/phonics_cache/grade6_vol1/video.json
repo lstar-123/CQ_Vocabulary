@@ -1,0 +1,37 @@
+{
+  "word": "video",
+  "ipa": "/ˈvɪdioʊ/",
+  "arpabet": "V IH1 D IY0 OW0",
+  "syllables": [
+    "vid",
+    "e",
+    "o"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    }
+  ]
+}

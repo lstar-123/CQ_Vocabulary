@@ -1,0 +1,39 @@
+{
+  "word": "request",
+  "ipa": "/rɪˈkwest/",
+  "arpabet": "R IH0 K W EH1 S T",
+  "syllables": [
+    "re",
+    "quest"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "qu",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

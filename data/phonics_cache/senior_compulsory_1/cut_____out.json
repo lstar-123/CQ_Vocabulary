@@ -1,0 +1,57 @@
+{
+  "word": "cut ... out",
+  "ipa": "/kʌt aʊt/",
+  "arpabet": "K AH1 T AW1 T",
+  "syllables": [
+    "cut",
+    "...",
+    "out"
+  ],
+  "stress": [
+    1,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": ".",
+      "silent": false
+    },
+    {
+      "text": ".",
+      "silent": false
+    },
+    {
+      "text": ".",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "ou",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

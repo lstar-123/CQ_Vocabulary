@@ -1,0 +1,25 @@
+{
+  "word": "death",
+  "ipa": "/dɛθ/",
+  "arpabet": "D EH1 TH",
+  "syllables": [
+    "death"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "ea",
+      "silent": false
+    },
+    {
+      "text": "th",
+      "silent": false
+    }
+  ]
+}

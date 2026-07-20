@@ -1,0 +1,29 @@
+{
+  "word": "smart",
+  "ipa": "/smɑːrt/",
+  "arpabet": "S M AA1 R T",
+  "syllables": [
+    "smart"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "ar",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

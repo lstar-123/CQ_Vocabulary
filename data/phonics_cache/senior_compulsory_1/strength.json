@@ -1,0 +1,37 @@
+{
+  "word": "strength",
+  "ipa": "/strɛŋθ/",
+  "arpabet": "S T R EH1 NG TH",
+  "syllables": [
+    "strength"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "ng",
+      "silent": false
+    },
+    {
+      "text": "th",
+      "silent": false
+    }
+  ]
+}

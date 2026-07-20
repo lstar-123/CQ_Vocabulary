@@ -1,0 +1,47 @@
+{
+  "word": "economy",
+  "ipa": "/ɪˈkɒnəmi/",
+  "arpabet": "IH0 K AA1 N AH0 M IY0",
+  "syllables": [
+    "e",
+    "con",
+    "o",
+    "my"
+  ],
+  "stress": [
+    0,
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}

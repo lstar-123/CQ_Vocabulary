@@ -1,0 +1,53 @@
+{
+  "word": "hurricane",
+  "ipa": "/ˈhʌrɪkən/",
+  "arpabet": "HH AH1 R IH0 K AH0 N",
+  "syllables": [
+    "hur",
+    "ri",
+    "cane"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "h",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

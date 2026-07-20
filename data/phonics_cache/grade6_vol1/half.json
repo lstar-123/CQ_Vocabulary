@@ -1,0 +1,29 @@
+{
+  "word": "half",
+  "ipa": "/hæf/",
+  "arpabet": "HH AE1 F",
+  "syllables": [
+    "half"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "h",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": true
+    },
+    {
+      "text": "f",
+      "silent": false
+    }
+  ]
+}

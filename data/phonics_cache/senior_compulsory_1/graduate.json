@@ -1,0 +1,49 @@
+{
+  "word": "graduate",
+  "ipa": "/ˈɡrædʒuət/",
+  "arpabet": "G R AE1 JH UW0 AH0 T",
+  "syllables": [
+    "grad",
+    "u",
+    "ate"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

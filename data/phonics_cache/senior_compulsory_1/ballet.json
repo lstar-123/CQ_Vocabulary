@@ -1,0 +1,39 @@
+{
+  "word": "ballet",
+  "ipa": "/bæˈleɪ/",
+  "arpabet": "B AE0 L EY1",
+  "syllables": [
+    "bal",
+    "let"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": true
+    }
+  ]
+}

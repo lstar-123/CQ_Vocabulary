@@ -1,0 +1,25 @@
+{
+  "word": "part",
+  "ipa": "/pɑːrt/",
+  "arpabet": "P AA1 R T",
+  "syllables": [
+    "part"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "ar",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

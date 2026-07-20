@@ -1,0 +1,61 @@
+{
+  "word": "concentrate",
+  "ipa": "/ˈkɒnsəntreɪt/",
+  "arpabet": "K AA1 N S AH0 N T R EY0 T",
+  "syllables": [
+    "con",
+    "cen",
+    "trate"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

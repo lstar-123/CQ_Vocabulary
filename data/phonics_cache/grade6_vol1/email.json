@@ -1,0 +1,31 @@
+{
+  "word": "email",
+  "ipa": "/ˈiːmeɪl/",
+  "arpabet": "IY1 M EY0 L",
+  "syllables": [
+    "e",
+    "mail"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "ai",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    }
+  ]
+}

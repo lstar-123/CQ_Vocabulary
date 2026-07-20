@@ -1,0 +1,45 @@
+{
+  "word": "apply for",
+  "ipa": "/əˈplaɪ fɔːr/",
+  "arpabet": "AH0 P L AY1 F AO1 R",
+  "syllables": [
+    "ap",
+    "ply",
+    "for"
+  ],
+  "stress": [
+    0,
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "pp",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "or",
+      "silent": false
+    }
+  ]
+}

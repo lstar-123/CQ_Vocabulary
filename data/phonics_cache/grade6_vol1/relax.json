@@ -1,0 +1,35 @@
+{
+  "word": "relax",
+  "ipa": "/rɪˈlæks/",
+  "arpabet": "R IH0 L AE1 K S",
+  "syllables": [
+    "re",
+    "lax"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "x",
+      "silent": false
+    }
+  ]
+}

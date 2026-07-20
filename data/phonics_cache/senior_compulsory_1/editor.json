@@ -1,0 +1,41 @@
+{
+  "word": "editor",
+  "ipa": "/ˈɛdɪtər/",
+  "arpabet": "EH1 D AH0 T ER0",
+  "syllables": [
+    "ed",
+    "i",
+    "tor"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "word": "crack",
+  "ipa": "/kræk/",
+  "arpabet": "K R AE1 K",
+  "syllables": [
+    "crack"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "ck",
+      "silent": false
+    }
+  ]
+}

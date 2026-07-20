@@ -1,0 +1,39 @@
+{
+  "word": "effort",
+  "ipa": "/ˈɛfət/",
+  "arpabet": "EH1 F AH0 T",
+  "syllables": [
+    "ef",
+    "fort"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

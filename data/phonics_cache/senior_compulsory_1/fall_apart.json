@@ -1,0 +1,53 @@
+{
+  "word": "fall apart",
+  "ipa": "/ˈfɔːl əˈpɑːrt/",
+  "arpabet": "F AO1 L AH0 P AA1 R T",
+  "syllables": [
+    "fall",
+    "a",
+    "part"
+  ],
+  "stress": [
+    1,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "ar",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

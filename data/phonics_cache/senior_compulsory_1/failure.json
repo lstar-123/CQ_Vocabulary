@@ -1,0 +1,31 @@
+{
+  "word": "failure",
+  "ipa": "/ˈfeɪljə/",
+  "arpabet": "F EY1 L Y AH0",
+  "syllables": [
+    "fail",
+    "ure"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "ai",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "ure",
+      "silent": false
+    }
+  ]
+}

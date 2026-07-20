@@ -1,0 +1,39 @@
+{
+  "word": "whistle",
+  "ipa": "/ˈwɪsəl/",
+  "arpabet": "W IH1 S AH0 L",
+  "syllables": [
+    "whis",
+    "tle"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "w",
+      "silent": false
+    },
+    {
+      "text": "h",
+      "silent": true
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": true
+    },
+    {
+      "text": "le",
+      "silent": false
+    }
+  ]
+}

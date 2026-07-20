@@ -1,0 +1,51 @@
+{
+  "word": "economic",
+  "ipa": "/ˌiːkəˈnɑːmɪk/",
+  "arpabet": "IY2 K AH0 N AA1 M AH0 K",
+  "syllables": [
+    "e",
+    "co",
+    "no",
+    "mic"
+  ],
+  "stress": [
+    2,
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    }
+  ]
+}

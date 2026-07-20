@@ -1,0 +1,29 @@
+{
+  "word": "lose",
+  "ipa": "/luːz/",
+  "arpabet": "L UW1 Z",
+  "syllables": [
+    "lose"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

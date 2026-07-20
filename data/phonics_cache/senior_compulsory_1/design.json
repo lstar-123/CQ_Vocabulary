@@ -1,0 +1,39 @@
+{
+  "word": "design",
+  "ipa": "/dɪˈzaɪn/",
+  "arpabet": "D IH0 Z AY1 N",
+  "syllables": [
+    "de",
+    "sign"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": true
+    },
+    {
+      "text": "n",
+      "silent": false
+    }
+  ]
+}

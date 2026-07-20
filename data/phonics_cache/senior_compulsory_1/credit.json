@@ -1,0 +1,39 @@
+{
+  "word": "credit",
+  "ipa": "/ˈkrɛdɪt/",
+  "arpabet": "K R EH1 D AH0 T",
+  "syllables": [
+    "cred",
+    "it"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

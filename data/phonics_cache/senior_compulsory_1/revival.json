@@ -1,0 +1,45 @@
+{
+  "word": "revival",
+  "ipa": "/rɪˈvaɪvəl/",
+  "arpabet": "R IH0 V AY1 V AH0 L",
+  "syllables": [
+    "re",
+    "vi",
+    "val"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    }
+  ]
+}

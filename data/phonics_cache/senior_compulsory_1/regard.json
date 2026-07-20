@@ -1,0 +1,35 @@
+{
+  "word": "regard",
+  "ipa": "/rɪˈɡɑːrd/",
+  "arpabet": "R IH0 G AA1 R D",
+  "syllables": [
+    "re",
+    "gard"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "ar",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

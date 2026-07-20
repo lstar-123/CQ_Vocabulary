@@ -1,0 +1,60 @@
+{
+  "word": "prefer ... to ...",
+  "ipa": "/prɪˈfɜːr tuː/",
+  "arpabet": "P R IH0 F ER1 T UW1",
+  "syllables": [
+    {
+      "text": "pre",
+      "stress": 0,
+      "segments": [
+        {
+          "text": "p",
+          "silent": false,
+          "rule": "consonant-p"
+        },
+        {
+          "text": "r",
+          "silent": false,
+          "rule": "consonant-r"
+        },
+        {
+          "text": "e",
+          "silent": false,
+          "rule": "vowel-e"
+        }
+      ]
+    },
+    {
+      "text": "fer",
+      "stress": 1,
+      "segments": [
+        {
+          "text": "f",
+          "silent": false,
+          "rule": "consonant-f"
+        },
+        {
+          "text": "er",
+          "silent": false,
+          "rule": "er"
+        }
+      ]
+    },
+    {
+      "text": "to",
+      "stress": 1,
+      "segments": [
+        {
+          "text": "t",
+          "silent": false,
+          "rule": "consonant-t"
+        },
+        {
+          "text": "o",
+          "silent": false,
+          "rule": "vowel-o"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "word": "change",
+  "ipa": "/tʃeɪndʒ/",
+  "arpabet": "CH EY1 N JH",
+  "syllables": [
+    "change"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "ch",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "ge",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "word": "official",
+  "ipa": "/əˈfɪʃəl/",
+  "arpabet": "AH0 F IH1 SH AH0 L",
+  "syllables": [
+    "of",
+    "fi",
+    "cial"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "ff",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "cial",
+      "silent": false
+    }
+  ]
+}

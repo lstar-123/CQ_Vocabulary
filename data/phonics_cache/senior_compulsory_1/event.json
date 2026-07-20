@@ -1,0 +1,35 @@
+{
+  "word": "event",
+  "ipa": "/ɪˈvɛnt/",
+  "arpabet": "IH0 V EH1 N T",
+  "syllables": [
+    "e",
+    "vent"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "word": "power",
+  "ipa": "/ˈpaʊə/",
+  "arpabet": "P AW1 ER0",
+  "syllables": [
+    "pow",
+    "er"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "ow",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    }
+  ]
+}

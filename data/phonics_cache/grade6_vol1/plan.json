@@ -1,0 +1,29 @@
+{
+  "word": "plan",
+  "ipa": "/plæn/",
+  "arpabet": "P L AE1 N",
+  "syllables": [
+    "plan"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    }
+  ]
+}

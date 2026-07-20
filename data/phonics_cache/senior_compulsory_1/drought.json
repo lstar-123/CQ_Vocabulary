@@ -1,0 +1,29 @@
+{
+  "word": "drought",
+  "ipa": "/draʊt/",
+  "arpabet": "D R AW1 T",
+  "syllables": [
+    "drought"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "ough",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

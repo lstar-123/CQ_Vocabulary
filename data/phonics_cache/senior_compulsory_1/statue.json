@@ -1,0 +1,39 @@
+{
+  "word": "statue",
+  "ipa": "/ˈstætʃuː/",
+  "arpabet": "S T AE1 CH UW0",
+  "syllables": [
+    "stat",
+    "ue"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

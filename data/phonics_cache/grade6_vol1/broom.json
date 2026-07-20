@@ -1,0 +1,29 @@
+{
+  "word": "broom",
+  "ipa": "/bruːm/",
+  "arpabet": "B R UW1 M",
+  "syllables": [
+    "broom"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "oo",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    }
+  ]
+}

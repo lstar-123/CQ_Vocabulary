@@ -1,0 +1,59 @@
+{
+  "word": "calligraphy",
+  "ipa": "/kəˈlɪɡrəfi/",
+  "arpabet": "K AH0 L IH1 G R AH0 F IY0",
+  "syllables": [
+    "cal",
+    "lig",
+    "ra",
+    "phy"
+  ],
+  "stress": [
+    0,
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "ph",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}

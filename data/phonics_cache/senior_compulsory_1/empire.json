@@ -1,0 +1,39 @@
+{
+  "word": "empire",
+  "ipa": "/ˈɛmpaɪər/",
+  "arpabet": "EH1 M P AY0 ER0",
+  "syllables": [
+    "em",
+    "pire"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

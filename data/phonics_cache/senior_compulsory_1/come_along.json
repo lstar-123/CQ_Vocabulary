@@ -1,0 +1,53 @@
+{
+  "word": "come along",
+  "ipa": "/kʌm əˈlɔːŋ/",
+  "arpabet": "K AH1 M AH0 L AO1 NG",
+  "syllables": [
+    "come",
+    "a",
+    "long"
+  ],
+  "stress": [
+    1,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "ng",
+      "silent": false
+    }
+  ]
+}

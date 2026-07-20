@@ -1,0 +1,35 @@
+{
+  "word": "medal",
+  "ipa": "/ˈmedəl/",
+  "arpabet": "M EH1 D AH0 L",
+  "syllables": [
+    "med",
+    "al"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    }
+  ]
+}

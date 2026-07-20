@@ -1,0 +1,31 @@
+{
+  "word": "city",
+  "ipa": "/ˈsɪti/",
+  "arpabet": "S IH1 T IY0",
+  "syllables": [
+    "cit",
+    "y"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}

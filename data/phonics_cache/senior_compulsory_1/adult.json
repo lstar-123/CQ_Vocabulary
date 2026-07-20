@@ -1,0 +1,35 @@
+{
+  "word": "adult",
+  "ipa": "/ˈædʌlt/",
+  "arpabet": "AE1 D AH0 L T",
+  "syllables": [
+    "a",
+    "dult"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

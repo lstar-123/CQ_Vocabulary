@@ -1,0 +1,61 @@
+{
+  "word": "personality",
+  "ipa": "/ˌpɜːrsəˈnæləti/",
+  "arpabet": "P ER2 S AH0 N AE1 L AH0 T IY0",
+  "syllables": [
+    "per",
+    "son",
+    "al",
+    "i",
+    "ty"
+  ],
+  "stress": [
+    2,
+    0,
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}

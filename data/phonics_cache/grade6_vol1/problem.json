@@ -1,0 +1,43 @@
+{
+  "word": "problem",
+  "ipa": "/ˈprɑbləm/",
+  "arpabet": "P R AA1 B L AH0 M",
+  "syllables": [
+    "prob",
+    "lem"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    }
+  ]
+}

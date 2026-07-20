@@ -1,0 +1,39 @@
+{
+  "word": "attract",
+  "ipa": "/əˈtrækt/",
+  "arpabet": "AH0 T R AE1 K T",
+  "syllables": [
+    "at",
+    "tract"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "tt",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

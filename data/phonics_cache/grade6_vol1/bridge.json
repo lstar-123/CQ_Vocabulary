@@ -1,0 +1,33 @@
+{
+  "word": "bridge",
+  "ipa": "/brɪdʒ/",
+  "arpabet": "B R IH1 JH",
+  "syllables": [
+    "bridge"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": true
+    },
+    {
+      "text": "ge",
+      "silent": false
+    }
+  ]
+}

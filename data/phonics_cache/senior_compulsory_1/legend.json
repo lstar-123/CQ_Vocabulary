@@ -1,0 +1,39 @@
+{
+  "word": "legend",
+  "ipa": "/ˈledʒənd/",
+  "arpabet": "L EH1 JH AH0 N D",
+  "syllables": [
+    "leg",
+    "end"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "word": "tortoise",
+  "ipa": "/ˈtɔːrtəs/",
+  "arpabet": "T AO1 R T AH0 S",
+  "syllables": [
+    "tor",
+    "toise"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "or",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "oi",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

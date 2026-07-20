@@ -1,0 +1,33 @@
+{
+  "word": "based",
+  "ipa": "/beɪst/",
+  "arpabet": "B EY1 S T",
+  "syllables": [
+    "based"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+/* ============ GROVE "CALM TECH" DESIGN SYSTEM ============ */
+:root {
+  --cream: #F8F5EE;
+  --mint: #E6F2E9;
+  --peach: #F9EAE3;
+  --sage: #58997A;
+  --sage-hover: #4A8568;
+  --sage-light: #EEF5F1;
+  --terracotta: #C86F50;
+  --text-headline: #222222;
+  --text-body: #555555;
+  --text-muted: #8C8C8C;
+  --white: #FFFFFF;
+  --pill-bg: #ECE8E1;
+  --pill-hover: #E0DBD2;
+  --input-border: #E8E5DE;
+  --divider: #EDE9E2;
+  --success: #58997A;
+  --danger: #C86F50;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 2px 8px rgba(0,0,0,0.05);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.05);
+  --radius-card: 12px;
+
+  /* ---- Phonics display colours ---- */
+  --phonics-normal: #000000;    /* idle / ended state   */
+  --phonics-playing: #58997A;   /* brand sage — playing normal letters */
+  --phonics-silent: #c7ccd3;    /* playing — silent letters */
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: var(--cream);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% 0%, #E6F2E9 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 80%, #F9EAE3 0%, transparent 55%);
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  color: var(--text-headline);
+  -webkit-font-smoothing: antialiased;
+}
+
+.app { width: 100%; max-width: 680px; }
+
+/* ============ HEADER ============ */
+.header { text-align: center; margin-bottom: 28px; }
+.header .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px; font-weight: 700; color: var(--text-headline);
+  letter-spacing: -0.5px; margin-bottom: 6px;
+}
+.header .logo .logo-dot {
+  display: inline-block; width: 10px; height: 10px;
+  background: var(--terracotta); border-radius: 50%;
+  margin-right: 4px; vertical-align: middle; margin-bottom: 6px;
+}
+.header .subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px; color: var(--text-body); font-weight: 400;
+}
+
+/* ============ BACK NAVIGATION ============ */
+.back-nav {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 8px 16px; margin-bottom: 16px;
+  font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500;
+  color: var(--sage); background: none; border: 1px solid var(--input-border);
+  border-radius: 999px; cursor: pointer; transition: all 0.2s;
+}
+.back-nav:hover {
+  background: var(--sage-light); border-color: var(--sage);
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 480px) {
+  .card { padding: 28px 20px 26px; }
+  .card .word-zh { font-size: 32px; }
+  .card .input-group { flex-direction: column; }
+  .btn { padding: 12px 20px; font-size: 14px; }
+  .stats { grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+  .stat { padding: 14px 8px; }
+  .stat .num { font-size: 22px; }
+  .result-card { padding: 28px 20px; }
+  .unit-select-card { padding: 28px 20px; }
+  .unit-select-card h2 { font-size: 24px; }
+  .header .logo { font-size: 28px; }
+  .flashcard { min-height: 280px; padding: 36px 24px 32px; }
+  .flashcard .fc-en-main { font-size: 34px; }
+  .flashcard .fc-zh-sub { font-size: 22px; }
+  .stats-summary-cards { grid-template-columns: 1fr 1fr; }
+  .chart-container { height: 220px; }
+  .auth-card { padding: 28px 20px; margin: 16px; }
+}

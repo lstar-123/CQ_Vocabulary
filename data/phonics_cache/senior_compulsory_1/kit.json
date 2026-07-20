@@ -1,0 +1,25 @@
+{
+  "word": "kit",
+  "ipa": "/kɪt/",
+  "arpabet": "K IH1 T",
+  "syllables": [
+    "kit"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "k",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

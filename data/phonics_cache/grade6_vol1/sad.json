@@ -1,0 +1,25 @@
+{
+  "word": "sad",
+  "ipa": "/sæd/",
+  "arpabet": "S AE1 D",
+  "syllables": [
+    "sad"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

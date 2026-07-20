@@ -1,0 +1,25 @@
+{
+  "word": "pack",
+  "ipa": "/pæk/",
+  "arpabet": "P AE1 K",
+  "syllables": [
+    "pack"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "ck",
+      "silent": false
+    }
+  ]
+}

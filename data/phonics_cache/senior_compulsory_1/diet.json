@@ -1,0 +1,43 @@
+{
+  "ipa": "/ˈdaɪət/",
+  "word": "diet",
+  "stress": [
+    1,
+    0
+  ],
+  "arpabet": "D AY1 AH0 T",
+  "segments": [
+    {
+      "ipa": "d",
+      "silent": false,
+      "letters": "d",
+      "phoneme": "D",
+      "syllable": 0
+    },
+    {
+      "ipa": "aɪ",
+      "silent": false,
+      "letters": "i",
+      "phoneme": "AY",
+      "syllable": 0
+    },
+    {
+      "ipa": "ə",
+      "silent": false,
+      "letters": "e",
+      "phoneme": "AH",
+      "syllable": 1
+    },
+    {
+      "ipa": "t",
+      "silent": false,
+      "letters": "t",
+      "phoneme": "T",
+      "syllable": 1
+    }
+  ],
+  "syllables": [
+    "di",
+    "et"
+  ]
+}

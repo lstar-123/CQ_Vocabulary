@@ -1,0 +1,61 @@
+{
+  "word": "first aid kit",
+  "ipa": "/ˈfɜːst ˈeɪd ˌkɪt/",
+  "arpabet": "F ER1 S T EY1 D K IH2 T",
+  "syllables": [
+    "first",
+    "aid",
+    "kit"
+  ],
+  "stress": [
+    1,
+    1,
+    2
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "ir",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "ai",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "k",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

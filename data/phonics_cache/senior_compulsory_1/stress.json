@@ -1,0 +1,33 @@
+{
+  "word": "stress",
+  "ipa": "/stres/",
+  "arpabet": "S T R EH1 S",
+  "syllables": [
+    "stress"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "ss",
+      "silent": false
+    }
+  ]
+}

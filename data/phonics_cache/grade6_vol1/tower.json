@@ -1,0 +1,27 @@
+{
+  "word": "tower",
+  "ipa": "/ˈtaʊər/",
+  "arpabet": "T AW1 ER0",
+  "syllables": [
+    "tow",
+    "er"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "ow",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    }
+  ]
+}

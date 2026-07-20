@@ -1,0 +1,67 @@
+{
+  "word": "washing machine",
+  "ipa": "/ˈwɒʃɪŋ məˈʃiːn/",
+  "arpabet": "W AA1 SH IH0 NG M AH0 SH IY1 N",
+  "syllables": [
+    "wash",
+    "ing",
+    "ma",
+    "chine"
+  ],
+  "stress": [
+    1,
+    0,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "w",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "sh",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "ng",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "ch",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

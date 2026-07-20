@@ -1,0 +1,33 @@
+{
+  "word": "tired",
+  "ipa": "/ˈtaɪərd/",
+  "arpabet": "T AY1 ER0 D",
+  "syllables": [
+    "tired"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "word": "strike",
+  "ipa": "/straɪk/",
+  "arpabet": "S T R AY1 K",
+  "syllables": [
+    "strike"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "k",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

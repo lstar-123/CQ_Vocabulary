@@ -1,0 +1,31 @@
+{
+  "word": "suffer",
+  "ipa": "/ˈsʌfər/",
+  "arpabet": "S AH1 F ER0",
+  "syllables": [
+    "suf",
+    "fer"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "ff",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "word": "date back to",
+  "ipa": "/deɪt bæk tuː/",
+  "arpabet": "D EY1 T B AE1 K T UW0",
+  "syllables": [
+    "date",
+    "back",
+    "to"
+  ],
+  "stress": [
+    1,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "ck",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    }
+  ]
+}

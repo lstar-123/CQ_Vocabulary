@@ -1,0 +1,25 @@
+{
+  "word": "act",
+  "ipa": "/ækt/",
+  "arpabet": "AE1 K T",
+  "syllables": [
+    "act"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

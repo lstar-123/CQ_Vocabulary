@@ -1,0 +1,45 @@
+{
+  "word": "suitable",
+  "ipa": "/ˈsuːtəbəl/",
+  "arpabet": "S UW1 T AH0 B AH0 L",
+  "syllables": [
+    "suit",
+    "a",
+    "ble"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "ui",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

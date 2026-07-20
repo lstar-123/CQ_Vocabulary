@@ -1,0 +1,35 @@
+{
+  "word": "typhoon",
+  "ipa": "/taɪˈfuːn/",
+  "arpabet": "T AY0 F UW1 N",
+  "syllables": [
+    "ty",
+    "phoon"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    },
+    {
+      "text": "ph",
+      "silent": false
+    },
+    {
+      "text": "oo",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    }
+  ]
+}

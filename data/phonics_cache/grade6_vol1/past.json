@@ -1,0 +1,29 @@
+{
+  "word": "past",
+  "ipa": "/pɑːst/",
+  "arpabet": "P AA1 S T",
+  "syllables": [
+    "past"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

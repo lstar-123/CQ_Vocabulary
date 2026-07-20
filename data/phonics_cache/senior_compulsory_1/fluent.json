@@ -1,0 +1,39 @@
+{
+  "word": "fluent",
+  "ipa": "/ˈfluːənt/",
+  "arpabet": "F L UW1 AH0 N T",
+  "syllables": [
+    "flu",
+    "ent"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

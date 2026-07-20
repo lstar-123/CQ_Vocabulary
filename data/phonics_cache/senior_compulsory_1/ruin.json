@@ -1,0 +1,31 @@
+{
+  "word": "ruin",
+  "ipa": "/ˈruːɪn/",
+  "arpabet": "R UW1 IH0 N",
+  "syllables": [
+    "ru",
+    "in"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    }
+  ]
+}

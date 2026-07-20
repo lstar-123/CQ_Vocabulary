@@ -1,0 +1,29 @@
+{
+  "word": "hike",
+  "ipa": "/haɪk/",
+  "arpabet": "HH AY1 K",
+  "syllables": [
+    "hike"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "h",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "k",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

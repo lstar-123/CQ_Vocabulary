@@ -1,0 +1,43 @@
+{
+  "word": "pretend",
+  "ipa": "/prɪˈtɛnd/",
+  "arpabet": "P R IH0 T EH1 N D",
+  "syllables": [
+    "pre",
+    "tend"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

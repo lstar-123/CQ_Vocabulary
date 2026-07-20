@@ -1,0 +1,33 @@
+{
+  "word": "build",
+  "ipa": "/bɪld/",
+  "arpabet": "B IH1 L D",
+  "syllables": [
+    "build"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

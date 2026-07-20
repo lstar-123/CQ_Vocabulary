@@ -1,0 +1,45 @@
+{
+  "word": "disaster",
+  "ipa": "/dɪˈzɑːstər/",
+  "arpabet": "D IH0 Z AA1 S T ER0",
+  "syllables": [
+    "di",
+    "sas",
+    "ter"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    }
+  ]
+}

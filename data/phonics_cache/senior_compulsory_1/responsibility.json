@@ -1,0 +1,79 @@
+{
+  "word": "responsibility",
+  "ipa": "/rɪˌspɒnsəˈbɪlɪti/",
+  "arpabet": "R IH0 S P AA2 N S AH0 B IH1 L AH0 T IY0",
+  "syllables": [
+    "re",
+    "spon",
+    "si",
+    "bi",
+    "li",
+    "ty"
+  ],
+  "stress": [
+    0,
+    2,
+    0,
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}

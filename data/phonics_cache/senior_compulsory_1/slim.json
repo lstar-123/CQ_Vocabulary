@@ -1,0 +1,29 @@
+{
+  "word": "slim",
+  "ipa": "/slɪm/",
+  "arpabet": "S L IH1 M",
+  "syllables": [
+    "slim"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    }
+  ]
+}

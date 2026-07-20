@@ -1,0 +1,39 @@
+{
+  "word": "athlete",
+  "ipa": "/ˈæθliːt/",
+  "arpabet": "AE1 TH L IY0 T",
+  "syllables": [
+    "ath",
+    "lete"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "th",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

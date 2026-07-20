@@ -1,0 +1,59 @@
+{
+  "word": "appreciate",
+  "ipa": "/əˈpriːʃieɪt/",
+  "arpabet": "AH0 P R IY1 SH IY0 EY0 T",
+  "syllables": [
+    "ap",
+    "pre",
+    "ci",
+    "ate"
+  ],
+  "stress": [
+    0,
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

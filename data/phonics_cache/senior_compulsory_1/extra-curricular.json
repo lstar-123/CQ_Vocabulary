@@ -1,0 +1,135 @@
+{
+  "word": "extra-curricular",
+  "ipa": "/ˌɛkstrəkəˈrɪkjələr/",
+  "arpabet": "EH1 K S T R AH0 K AH0 R IH1 K Y AH0 L ER0",
+  "syllables": [
+    "ex",
+    "tra",
+    "cur",
+    "ric",
+    "u",
+    "lar"
+  ],
+  "stress": [
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "letters": "e",
+      "phoneme": "EH",
+      "ipa": "ɛ",
+      "silent": false,
+      "syllable": 0
+    },
+    {
+      "letters": "x",
+      "phoneme": "K S",
+      "ipa": "ks",
+      "silent": false,
+      "syllable": 0
+    },
+    {
+      "letters": "t",
+      "phoneme": "T",
+      "ipa": "t",
+      "silent": false,
+      "syllable": 1
+    },
+    {
+      "letters": "r",
+      "phoneme": "R",
+      "ipa": "r",
+      "silent": false,
+      "syllable": 1
+    },
+    {
+      "letters": "a",
+      "phoneme": "AH",
+      "ipa": "ə",
+      "silent": false,
+      "syllable": 1
+    },
+    {
+      "letters": "-",
+      "phoneme": "",
+      "ipa": "",
+      "silent": true,
+      "syllable": 1
+    },
+    {
+      "letters": "c",
+      "phoneme": "K",
+      "ipa": "k",
+      "silent": false,
+      "syllable": 2
+    },
+    {
+      "letters": "u",
+      "phoneme": "AH",
+      "ipa": "ə",
+      "silent": false,
+      "syllable": 2
+    },
+    {
+      "letters": "r",
+      "phoneme": "R",
+      "ipa": "r",
+      "silent": false,
+      "syllable": 2
+    },
+    {
+      "letters": "r",
+      "phoneme": "R",
+      "ipa": "r",
+      "silent": false,
+      "syllable": 3
+    },
+    {
+      "letters": "i",
+      "phoneme": "IH",
+      "ipa": "ɪ",
+      "silent": false,
+      "syllable": 3
+    },
+    {
+      "letters": "c",
+      "phoneme": "K",
+      "ipa": "k",
+      "silent": false,
+      "syllable": 3
+    },
+    {
+      "letters": "u",
+      "phoneme": "Y",
+      "ipa": "j",
+      "silent": false,
+      "syllable": 4
+    },
+    {
+      "letters": "l",
+      "phoneme": "AH L",
+      "ipa": "əl",
+      "silent": false,
+      "syllable": 5
+    },
+    {
+      "letters": "a",
+      "phoneme": "ER",
+      "ipa": "ɚ",
+      "silent": false,
+      "syllable": 5
+    },
+    {
+      "letters": "r",
+      "phoneme": "",
+      "ipa": "",
+      "silent": true,
+      "syllable": 5
+    }
+  ]
+}

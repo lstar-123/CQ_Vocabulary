@@ -1,0 +1,25 @@
+{
+  "word": "east",
+  "ipa": "/iːst/",
+  "arpabet": "IY1 S T",
+  "syllables": [
+    "east"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "ea",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

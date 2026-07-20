@@ -1,0 +1,29 @@
+{
+  "word": "west",
+  "ipa": "/wɛst/",
+  "arpabet": "W EH1 S T",
+  "syllables": [
+    "west"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "w",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

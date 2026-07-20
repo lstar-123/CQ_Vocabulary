@@ -1,0 +1,39 @@
+{
+  "word": "symbol",
+  "ipa": "/ˈsɪmbəl/",
+  "arpabet": "S IH1 M B AH0 L",
+  "syllables": [
+    "sym",
+    "bol"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    }
+  ]
+}

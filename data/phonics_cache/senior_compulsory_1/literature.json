@@ -1,0 +1,43 @@
+{
+  "word": "literature",
+  "ipa": "/ˈlɪtərətʃər/",
+  "arpabet": "L IH1 T ER0 AH0 CH ER0",
+  "syllables": [
+    "lit",
+    "er",
+    "a",
+    "ture"
+  ],
+  "stress": [
+    1,
+    0,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "ture",
+      "silent": false
+    }
+  ]
+}

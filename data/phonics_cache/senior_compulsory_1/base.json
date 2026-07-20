@@ -1,0 +1,29 @@
+{
+  "word": "base",
+  "ipa": "/beɪs/",
+  "arpabet": "B EY1 S",
+  "syllables": [
+    "base"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

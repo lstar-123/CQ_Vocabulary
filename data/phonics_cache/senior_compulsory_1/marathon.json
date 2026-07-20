@@ -1,0 +1,45 @@
+{
+  "word": "marathon",
+  "ipa": "/ˈmærəθɒn/",
+  "arpabet": "M AE1 R AH0 TH AA2 N",
+  "syllables": [
+    "mar",
+    "a",
+    "thon"
+  ],
+  "stress": [
+    1,
+    0,
+    2
+  ],
+  "segments": [
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "th",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    }
+  ]
+}

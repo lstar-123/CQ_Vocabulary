@@ -1,0 +1,35 @@
+{
+  "word": "erupt",
+  "ipa": "/ɪˈrʌpt/",
+  "arpabet": "IH0 R AH1 P T",
+  "syllables": [
+    "e",
+    "rupt"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

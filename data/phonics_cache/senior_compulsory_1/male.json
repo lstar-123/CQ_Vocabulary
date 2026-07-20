@@ -1,0 +1,29 @@
+{
+  "word": "male",
+  "ipa": "/meɪl/",
+  "arpabet": "M EY1 L",
+  "syllables": [
+    "male"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

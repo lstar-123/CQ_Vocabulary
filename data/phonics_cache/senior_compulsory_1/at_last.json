@@ -1,0 +1,43 @@
+{
+  "word": "at last",
+  "ipa": "/æt lɑːst/",
+  "arpabet": "AE1 T L AE1 S T",
+  "syllables": [
+    "at",
+    "last"
+  ],
+  "stress": [
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

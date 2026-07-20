@@ -1,0 +1,51 @@
+{
+  "word": "landslide",
+  "ipa": "/ˈlændslaɪd/",
+  "arpabet": "L AE1 N D S L AY1 D",
+  "syllables": [
+    "land",
+    "slide"
+  ],
+  "stress": [
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

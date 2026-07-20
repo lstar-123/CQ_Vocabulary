@@ -1,0 +1,47 @@
+{
+  "word": "graceful",
+  "ipa": "/ˈɡreɪsfəl/",
+  "arpabet": "G R EY1 S F AH0 L",
+  "syllables": [
+    "grace",
+    "ful"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    }
+  ]
+}

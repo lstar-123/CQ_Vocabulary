@@ -1,0 +1,35 @@
+{
+  "word": "supply",
+  "ipa": "/səˈplaɪ/",
+  "arpabet": "S AH0 P L AY1",
+  "syllables": [
+    "sup",
+    "ply"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "pp",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}

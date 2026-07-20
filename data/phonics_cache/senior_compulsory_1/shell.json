@@ -1,0 +1,29 @@
+{
+  "word": "shell",
+  "ipa": "/ʃɛl/",
+  "arpabet": "SH EH1 L",
+  "syllables": [
+    "shell"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "sh",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    }
+  ]
+}

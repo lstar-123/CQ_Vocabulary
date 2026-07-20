@@ -1,0 +1,39 @@
+{
+  "word": "global",
+  "ipa": "/ˈɡloʊbəl/",
+  "arpabet": "G L OW1 B AH0 L",
+  "syllables": [
+    "glo",
+    "bal"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    }
+  ]
+}

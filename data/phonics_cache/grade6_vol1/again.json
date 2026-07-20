@@ -1,0 +1,31 @@
+{
+  "word": "again",
+  "ipa": "/əˈɡɛn/",
+  "arpabet": "AH0 G EH1 N",
+  "syllables": [
+    "a",
+    "gain"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "ai",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    }
+  ]
+}

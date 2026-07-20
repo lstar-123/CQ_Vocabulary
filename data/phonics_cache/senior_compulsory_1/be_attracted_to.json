@@ -1,0 +1,77 @@
+{
+  "word": "be attracted to",
+  "ipa": "/biː əˈtræktɪd tuː/",
+  "arpabet": "B IY1 AH0 T R AE1 K T IH0 D T UW1",
+  "syllables": [
+    "be",
+    "a",
+    "ttrac",
+    "ted",
+    "to"
+  ],
+  "stress": [
+    1,
+    0,
+    1,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "tt",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    }
+  ]
+}

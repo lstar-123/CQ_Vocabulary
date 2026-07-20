@@ -1,0 +1,39 @@
+{
+  "word": "effect",
+  "ipa": "/ɪˈfɛkt/",
+  "arpabet": "IH0 F EH1 K T",
+  "syllables": [
+    "ef",
+    "fect"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

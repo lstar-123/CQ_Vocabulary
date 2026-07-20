@@ -1,0 +1,29 @@
+{
+  "word": "flash",
+  "ipa": "/flæʃ/",
+  "arpabet": "F L AE1 SH",
+  "syllables": [
+    "flash"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "sh",
+      "silent": false
+    }
+  ]
+}

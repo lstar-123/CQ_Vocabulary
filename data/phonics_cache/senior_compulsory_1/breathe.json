@@ -1,0 +1,33 @@
+{
+  "word": "breathe",
+  "ipa": "/briːð/",
+  "arpabet": "B R IY1 DH",
+  "syllables": [
+    "breathe"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "ea",
+      "silent": false
+    },
+    {
+      "text": "th",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

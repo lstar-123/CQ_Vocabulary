@@ -1,0 +1,33 @@
+{
+  "word": "tongue",
+  "ipa": "/tʌŋ/",
+  "arpabet": "T AH1 NG",
+  "syllables": [
+    "tongue"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "ng",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": true
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "word": "crash",
+  "ipa": "/kræʃ/",
+  "arpabet": "K R AE1 SH",
+  "syllables": [
+    "crash"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "sh",
+      "silent": false
+    }
+  ]
+}

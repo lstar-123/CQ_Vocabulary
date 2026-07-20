@@ -1,0 +1,21 @@
+{
+  "word": "far",
+  "ipa": "/fɑːr/",
+  "arpabet": "F AA1 R",
+  "syllables": [
+    "far"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "ar",
+      "silent": false
+    }
+  ]
+}

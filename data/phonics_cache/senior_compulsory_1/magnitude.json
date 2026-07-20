@@ -1,0 +1,53 @@
+{
+  "word": "magnitude",
+  "ipa": "/ˈmæɡnɪtjuːd/",
+  "arpabet": "M AE1 G N AH0 T Y UW2 D",
+  "syllables": [
+    "mag",
+    "ni",
+    "tude"
+  ],
+  "stress": [
+    1,
+    0,
+    2
+  ],
+  "segments": [
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

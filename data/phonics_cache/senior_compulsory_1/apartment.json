@@ -1,0 +1,49 @@
+{
+  "word": "apartment",
+  "ipa": "/əˈpɑːrtmənt/",
+  "arpabet": "AH0 P AA1 R T M AH0 N T",
+  "syllables": [
+    "a",
+    "part",
+    "ment"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "ar",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

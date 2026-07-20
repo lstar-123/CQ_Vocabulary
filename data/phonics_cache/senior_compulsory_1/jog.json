@@ -1,0 +1,25 @@
+{
+  "word": "jog",
+  "ipa": "/dʒɒɡ/",
+  "arpabet": "JH AA1 G",
+  "syllables": [
+    "jog"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "j",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    }
+  ]
+}

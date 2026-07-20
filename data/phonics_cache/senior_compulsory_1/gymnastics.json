@@ -1,0 +1,57 @@
+{
+  "word": "gymnastics",
+  "ipa": "/dʒɪmˈnæstɪks/",
+  "arpabet": "JH IH0 M N AE1 S T IH0 K S",
+  "syllables": [
+    "gym",
+    "nas",
+    "tics"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    }
+  ]
+}

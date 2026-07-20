@@ -1,0 +1,55 @@
+{
+  "word": "supermarket",
+  "ipa": "/ˈsuːpərˌmɑːrkɪt/",
+  "arpabet": "S UW1 P ER0 M AA2 R K IH0 T",
+  "syllables": [
+    "su",
+    "per",
+    "mar",
+    "ket"
+  ],
+  "stress": [
+    1,
+    0,
+    2,
+    0
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "ar",
+      "silent": false
+    },
+    {
+      "text": "k",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

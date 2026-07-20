@@ -1,0 +1,45 @@
+{
+  "word": "character",
+  "ipa": "/ˈkærəktər/",
+  "arpabet": "K AE1 R AH0 K T ER0",
+  "syllables": [
+    "char",
+    "ac",
+    "ter"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "ch",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "word": "junior",
+  "ipa": "/ˈdʒuːnjər/",
+  "arpabet": "JH UW1 N Y ER0",
+  "syllables": [
+    "jun",
+    "ior"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "j",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    }
+  ]
+}

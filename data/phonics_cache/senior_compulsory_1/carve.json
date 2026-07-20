@@ -1,0 +1,29 @@
+{
+  "word": "carve",
+  "ipa": "/kɑːrv/",
+  "arpabet": "K AA1 R V",
+  "syllables": [
+    "carve"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "ar",
+      "silent": false
+    },
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

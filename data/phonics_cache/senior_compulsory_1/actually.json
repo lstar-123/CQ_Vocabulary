@@ -1,0 +1,51 @@
+{
+  "word": "actually",
+  "ipa": "/ˈæktʃuəli/",
+  "arpabet": "AE1 K CH UW0 AH0 L IY0",
+  "syllables": [
+    "ac",
+    "tu",
+    "al",
+    "ly"
+  ],
+  "stress": [
+    1,
+    0,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}

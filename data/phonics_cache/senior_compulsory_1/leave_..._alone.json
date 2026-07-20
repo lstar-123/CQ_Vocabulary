@@ -1,0 +1,115 @@
+{
+  "word": "leave ... alone",
+  "ipa": "/liːv əˈloʊn/",
+  "arpabet": "L IY1 V AH0 L OW1 N",
+  "syllables": [
+    "leave",
+    "a",
+    "lone"
+  ],
+  "stress": [
+    1,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "letters": "l",
+      "phoneme": "L",
+      "ipa": "l",
+      "silent": false,
+      "syllable": 0
+    },
+    {
+      "letters": "ea",
+      "phoneme": "IY",
+      "ipa": "iː",
+      "silent": false,
+      "syllable": 0
+    },
+    {
+      "letters": "v",
+      "phoneme": "V",
+      "ipa": "v",
+      "silent": false,
+      "syllable": 0
+    },
+    {
+      "letters": "e",
+      "phoneme": "",
+      "ipa": "",
+      "silent": true,
+      "syllable": 0
+    },
+    {
+      "letters": " ",
+      "phoneme": "",
+      "ipa": "",
+      "silent": true,
+      "syllable": 0
+    },
+    {
+      "letters": ".",
+      "phoneme": "",
+      "ipa": "",
+      "silent": true,
+      "syllable": 0
+    },
+    {
+      "letters": ".",
+      "phoneme": "",
+      "ipa": "",
+      "silent": true,
+      "syllable": 0
+    },
+    {
+      "letters": ".",
+      "phoneme": "",
+      "ipa": "",
+      "silent": true,
+      "syllable": 0
+    },
+    {
+      "letters": " ",
+      "phoneme": "",
+      "ipa": "",
+      "silent": true,
+      "syllable": 0
+    },
+    {
+      "letters": "a",
+      "phoneme": "AH",
+      "ipa": "ə",
+      "silent": false,
+      "syllable": 1
+    },
+    {
+      "letters": "l",
+      "phoneme": "L",
+      "ipa": "l",
+      "silent": false,
+      "syllable": 2
+    },
+    {
+      "letters": "o",
+      "phoneme": "OW",
+      "ipa": "oʊ",
+      "silent": false,
+      "syllable": 2
+    },
+    {
+      "letters": "n",
+      "phoneme": "N",
+      "ipa": "n",
+      "silent": false,
+      "syllable": 2
+    },
+    {
+      "letters": "e",
+      "phoneme": "",
+      "ipa": "",
+      "silent": true,
+      "syllable": 2
+    }
+  ]
+}

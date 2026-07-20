@@ -1,0 +1,39 @@
+{
+  "word": "female",
+  "ipa": "/ˈfiːmeɪl/",
+  "arpabet": "F IY1 M EY2 L",
+  "syllables": [
+    "fe",
+    "male"
+  ],
+  "stress": [
+    1,
+    2
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

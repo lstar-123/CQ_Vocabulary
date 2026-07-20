@@ -1,0 +1,45 @@
+{
+  "word": "champion",
+  "ipa": "/ˈtʃæmpiən/",
+  "arpabet": "CH AE1 M P IY0 AH0 N",
+  "syllables": [
+    "cham",
+    "pi",
+    "on"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "ch",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    }
+  ]
+}

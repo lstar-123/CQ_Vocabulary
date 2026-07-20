@@ -1,0 +1,84 @@
+{
+  "ipa": "/ˌsɪvɪlaɪˈzeɪʃən/",
+  "word": "civilisation (NAmE -ization)",
+  "stress": [
+    2,
+    0,
+    0,
+    0,
+    1
+  ],
+  "arpabet": "S IH2 V AH0 L AY0 Z EY1 SH AH0 N",
+  "segments": [
+    {
+      "ipa": "s",
+      "silent": false,
+      "letters": "c",
+      "phoneme": "S",
+      "syllable": 0
+    },
+    {
+      "ipa": "ɪ",
+      "silent": false,
+      "letters": "i",
+      "phoneme": "IH",
+      "syllable": 0
+    },
+    {
+      "ipa": "v",
+      "silent": false,
+      "letters": "v",
+      "phoneme": "V",
+      "syllable": 0
+    },
+    {
+      "ipa": "ə",
+      "silent": false,
+      "letters": "i",
+      "phoneme": "AH",
+      "syllable": 1
+    },
+    {
+      "ipa": "l",
+      "silent": false,
+      "letters": "l",
+      "phoneme": "L",
+      "syllable": 2
+    },
+    {
+      "ipa": "aɪ",
+      "silent": false,
+      "letters": "i",
+      "phoneme": "AY",
+      "syllable": 2
+    },
+    {
+      "ipa": "z",
+      "silent": false,
+      "letters": "s",
+      "phoneme": "Z",
+      "syllable": 3
+    },
+    {
+      "ipa": "eɪ",
+      "silent": false,
+      "letters": "a",
+      "phoneme": "EY",
+      "syllable": 3
+    },
+    {
+      "ipa": "ʃən",
+      "silent": false,
+      "letters": "tion",
+      "phoneme": "SH AH N",
+      "syllable": 4
+    }
+  ],
+  "syllables": [
+    "civ",
+    "i",
+    "li",
+    "sa",
+    "tion"
+  ]
+}

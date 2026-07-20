@@ -1,0 +1,31 @@
+{
+  "word": "annoy",
+  "ipa": "/əˈnɔɪ/",
+  "arpabet": "AH0 N OY1",
+  "syllables": [
+    "an",
+    "noy"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "oy",
+      "silent": false
+    }
+  ]
+}

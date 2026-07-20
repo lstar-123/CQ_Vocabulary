@@ -1,0 +1,66 @@
+{
+  "ipa": "/ˈɔːrɡənaɪz/",
+  "word": "organise (NAmE -ize)",
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "arpabet": "AO1 R G AH0 N AY0 Z",
+  "segments": [
+    {
+      "ipa": "ɔːr",
+      "silent": false,
+      "letters": "or",
+      "phoneme": "AO R",
+      "syllable": 0
+    },
+    {
+      "ipa": "ɡ",
+      "silent": false,
+      "letters": "g",
+      "phoneme": "G",
+      "syllable": 1
+    },
+    {
+      "ipa": "ə",
+      "silent": false,
+      "letters": "a",
+      "phoneme": "AH",
+      "syllable": 1
+    },
+    {
+      "ipa": "n",
+      "silent": false,
+      "letters": "n",
+      "phoneme": "N",
+      "syllable": 2
+    },
+    {
+      "ipa": "aɪ",
+      "silent": false,
+      "letters": "i",
+      "phoneme": "AY",
+      "syllable": 2
+    },
+    {
+      "ipa": "z",
+      "silent": false,
+      "letters": "s",
+      "phoneme": "Z",
+      "syllable": 2
+    },
+    {
+      "ipa": "",
+      "silent": true,
+      "letters": "e",
+      "phoneme": "",
+      "syllable": 2
+    }
+  ],
+  "syllables": [
+    "or",
+    "ga",
+    "nise"
+  ]
+}

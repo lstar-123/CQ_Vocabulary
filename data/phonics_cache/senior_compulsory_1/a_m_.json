@@ -1,0 +1,31 @@
+{
+  "word": "a.m.",
+  "ipa": "/eɪɛm/",
+  "arpabet": "EY1 EH1 M",
+  "syllables": [
+    "a.",
+    "m."
+  ],
+  "stress": [
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": ".",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": ".",
+      "silent": false
+    }
+  ]
+}

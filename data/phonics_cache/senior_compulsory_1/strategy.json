@@ -1,0 +1,49 @@
+{
+  "word": "strategy",
+  "ipa": "/ˈstrætədʒi/",
+  "arpabet": "S T R AE1 T AH0 JH IY0",
+  "syllables": [
+    "strat",
+    "e",
+    "gy"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}

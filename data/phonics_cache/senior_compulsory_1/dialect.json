@@ -1,0 +1,45 @@
+{
+  "word": "dialect",
+  "ipa": "/ˈdaɪəlɛkt/",
+  "arpabet": "D AY1 AH0 L EH0 K T",
+  "syllables": [
+    "di",
+    "a",
+    "lect"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "ipa": "/ˌɔːrɡənaɪˈzeɪʃən/",
+  "word": "organisation (NAmE -ization)",
+  "stress": [
+    2,
+    0,
+    0,
+    0,
+    1
+  ],
+  "arpabet": "AO2 R G AH0 N AY0 Z EY1 SH AH0 N",
+  "segments": [
+    {
+      "ipa": "ɔːr",
+      "silent": false,
+      "letters": "or",
+      "phoneme": "AO R",
+      "syllable": 0
+    },
+    {
+      "ipa": "ɡ",
+      "silent": false,
+      "letters": "g",
+      "phoneme": "G",
+      "syllable": 1
+    },
+    {
+      "ipa": "ə",
+      "silent": false,
+      "letters": "a",
+      "phoneme": "AH",
+      "syllable": 1
+    },
+    {
+      "ipa": "n",
+      "silent": false,
+      "letters": "n",
+      "phoneme": "N",
+      "syllable": 2
+    },
+    {
+      "ipa": "aɪ",
+      "silent": false,
+      "letters": "i",
+      "phoneme": "AY",
+      "syllable": 2
+    },
+    {
+      "ipa": "z",
+      "silent": false,
+      "letters": "s",
+      "phoneme": "Z",
+      "syllable": 3
+    },
+    {
+      "ipa": "eɪ",
+      "silent": false,
+      "letters": "a",
+      "phoneme": "EY",
+      "syllable": 3
+    },
+    {
+      "ipa": "ʃən",
+      "silent": false,
+      "letters": "tion",
+      "phoneme": "SH AH N",
+      "syllable": 4
+    }
+  ],
+  "syllables": [
+    "or",
+    "ga",
+    "ni",
+    "sa",
+    "tion"
+  ]
+}

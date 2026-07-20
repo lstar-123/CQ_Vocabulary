@@ -1,0 +1,39 @@
+{
+  "word": "thousand",
+  "ipa": "/ˈθaʊzənd/",
+  "arpabet": "TH AW1 Z AH0 N D",
+  "syllables": [
+    "thou",
+    "sand"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "th",
+      "silent": false
+    },
+    {
+      "text": "ou",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

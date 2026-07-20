@@ -1,0 +1,43 @@
+{
+  "word": "pull down",
+  "ipa": "/pʊl daʊn/",
+  "arpabet": "P UH1 L D AW1 N",
+  "syllables": [
+    "pull",
+    "down"
+  ],
+  "stress": [
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "ll",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "ow",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    }
+  ]
+}

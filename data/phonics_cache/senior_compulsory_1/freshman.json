@@ -1,0 +1,43 @@
+{
+  "word": "freshman",
+  "ipa": "/ˈfreʃmən/",
+  "arpabet": "F R EH1 SH M AH0 N",
+  "syllables": [
+    "fresh",
+    "man"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "sh",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    }
+  ]
+}

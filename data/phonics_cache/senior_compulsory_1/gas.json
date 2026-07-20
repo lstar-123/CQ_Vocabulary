@@ -1,0 +1,25 @@
+{
+  "word": "gas",
+  "ipa": "/ɡæs/",
+  "arpabet": "G AE1 S",
+  "syllables": [
+    "gas"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    }
+  ]
+}

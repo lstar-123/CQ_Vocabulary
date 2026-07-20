@@ -1,0 +1,25 @@
+{
+  "word": "quit",
+  "ipa": "/kwɪt/",
+  "arpabet": "K W IH1 T",
+  "syllables": [
+    "quit"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "qu",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

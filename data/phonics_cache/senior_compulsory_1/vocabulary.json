@@ -1,0 +1,57 @@
+{
+  "word": "vocabulary",
+  "ipa": "/vəˈkæbjəˌleri/",
+  "arpabet": "V AH0 K AE1 B Y AH0 L EH2 R IY0",
+  "syllables": [
+    "vo",
+    "cab",
+    "u",
+    "lar",
+    "y"
+  ],
+  "stress": [
+    0,
+    1,
+    0,
+    2,
+    0
+  ],
+  "segments": [
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "ar",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}

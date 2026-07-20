@@ -1,0 +1,49 @@
+{
+  "word": "specific",
+  "ipa": "/spəˈsɪfɪk/",
+  "arpabet": "S P AH0 S IH1 F IH0 K",
+  "syllables": [
+    "spe",
+    "ci",
+    "fic"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "word": "computer",
+  "ipa": "/kəmˈpjuːtər/",
+  "arpabet": "K AH0 M P Y UW1 T ER0",
+  "syllables": [
+    "com",
+    "pu",
+    "ter"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    }
+  ]
+}

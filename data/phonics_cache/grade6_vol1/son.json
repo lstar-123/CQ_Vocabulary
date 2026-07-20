@@ -1,0 +1,25 @@
+{
+  "word": "son",
+  "ipa": "/sʌn/",
+  "arpabet": "S AH1 N",
+  "syllables": [
+    "son"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    }
+  ]
+}

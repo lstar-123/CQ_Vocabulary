@@ -1,0 +1,37 @@
+{
+  "word": "radio",
+  "ipa": "/ˈreɪdioʊ/",
+  "arpabet": "R EY1 D IY0 OW0",
+  "syllables": [
+    "ra",
+    "di",
+    "o"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    }
+  ]
+}

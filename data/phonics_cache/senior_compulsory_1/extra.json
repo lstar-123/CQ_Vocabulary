@@ -1,0 +1,35 @@
+{
+  "word": "extra",
+  "ipa": "/ˈɛkstrə/",
+  "arpabet": "EH1 K S T R AH0",
+  "syllables": [
+    "ex",
+    "tra"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "x",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    }
+  ]
+}

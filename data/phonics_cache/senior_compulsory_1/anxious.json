@@ -1,0 +1,39 @@
+{
+  "word": "anxious",
+  "ipa": "/ˈæŋkʃəs/",
+  "arpabet": "AE1 NG K SH AH0 S",
+  "syllables": [
+    "anx",
+    "ious"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "x",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "ou",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "word": "refer",
+  "ipa": "/rɪˈfɜːr/",
+  "arpabet": "R IH0 F ER1",
+  "syllables": [
+    "re",
+    "fer"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    }
+  ]
+}

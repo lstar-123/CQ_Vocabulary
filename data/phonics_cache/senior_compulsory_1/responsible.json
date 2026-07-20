@@ -1,0 +1,63 @@
+{
+  "word": "responsible",
+  "ipa": "/rɪˈspɒnsəbəl/",
+  "arpabet": "R IH0 S P AA1 N S AH0 B AH0 L",
+  "syllables": [
+    "re",
+    "spon",
+    "si",
+    "ble"
+  ],
+  "stress": [
+    0,
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "word": "castle",
+  "ipa": "/ˈkæsəl/",
+  "arpabet": "K AE1 S AH0 L",
+  "syllables": [
+    "cas",
+    "tle"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": true
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

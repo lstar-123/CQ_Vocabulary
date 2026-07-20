@@ -1,0 +1,49 @@
+{
+  "word": "reference",
+  "ipa": "/ˈrɛfərəns/",
+  "arpabet": "R EH1 F AH0 R AH0 N S",
+  "syllables": [
+    "ref",
+    "er",
+    "ence"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

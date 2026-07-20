@@ -1,0 +1,33 @@
+{
+  "word": "plane",
+  "ipa": "/pleɪn/",
+  "arpabet": "P L EY1 N",
+  "syllables": [
+    "plane"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

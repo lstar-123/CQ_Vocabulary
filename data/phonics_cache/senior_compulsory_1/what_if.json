@@ -1,0 +1,39 @@
+{
+  "word": "what if",
+  "ipa": "/wɒt ɪf/",
+  "arpabet": "W AH1 T IH1 F",
+  "syllables": [
+    "what",
+    "if"
+  ],
+  "stress": [
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "wh",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    }
+  ]
+}

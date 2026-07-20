@@ -1,0 +1,25 @@
+{
+  "word": "south",
+  "ipa": "/saʊθ/",
+  "arpabet": "S AW1 TH",
+  "syllables": [
+    "south"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "ou",
+      "silent": false
+    },
+    {
+      "text": "th",
+      "silent": false
+    }
+  ]
+}

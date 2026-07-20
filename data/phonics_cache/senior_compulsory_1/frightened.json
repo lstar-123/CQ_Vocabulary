@@ -1,0 +1,49 @@
+{
+  "word": "frightened",
+  "ipa": "/ˈfraɪtənd/",
+  "arpabet": "F R AY1 T AH0 N D",
+  "syllables": [
+    "frigh",
+    "ten",
+    "ed"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "igh",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

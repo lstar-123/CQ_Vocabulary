@@ -1,0 +1,39 @@
+{
+  "word": "exchange",
+  "ipa": "/ɪksˈtʃeɪndʒ/",
+  "arpabet": "IH0 K S CH EY1 N JH",
+  "syllables": [
+    "ex",
+    "change"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "x",
+      "silent": false
+    },
+    {
+      "text": "ch",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "ge",
+      "silent": false
+    }
+  ]
+}

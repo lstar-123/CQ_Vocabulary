@@ -1,0 +1,35 @@
+{
+  "word": "foggy",
+  "ipa": "/ˈfɒɡi/",
+  "arpabet": "F AO1 G IY0",
+  "syllables": [
+    "fog",
+    "gy"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}

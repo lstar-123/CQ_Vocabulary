@@ -1,0 +1,59 @@
+{
+  "word": "suitable for",
+  "ipa": "/ˈsuːtəbəl fɔːr/",
+  "arpabet": "S UW1 T AH0 B AH0 L F AO1 R",
+  "syllables": [
+    "sui",
+    "ta",
+    "ble",
+    "for"
+  ],
+  "stress": [
+    1,
+    0,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "ui",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "or",
+      "silent": false
+    }
+  ]
+}

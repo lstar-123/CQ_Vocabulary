@@ -1,0 +1,45 @@
+{
+  "word": "stadium",
+  "ipa": "/ˈsteɪdiəm/",
+  "arpabet": "S T EY1 D IY0 AH0 M",
+  "syllables": [
+    "sta",
+    "di",
+    "um"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    }
+  ]
+}

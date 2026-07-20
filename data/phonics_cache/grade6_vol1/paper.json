@@ -1,0 +1,31 @@
+{
+  "word": "paper",
+  "ipa": "/ˈpeɪpər/",
+  "arpabet": "P EY1 P ER0",
+  "syllables": [
+    "pa",
+    "per"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    }
+  ]
+}

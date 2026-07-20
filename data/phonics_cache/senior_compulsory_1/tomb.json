@@ -1,0 +1,29 @@
+{
+  "word": "tomb",
+  "ipa": "/tuːm/",
+  "arpabet": "T UW1 M",
+  "syllables": [
+    "tomb"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "b",
+      "silent": true
+    }
+  ]
+}

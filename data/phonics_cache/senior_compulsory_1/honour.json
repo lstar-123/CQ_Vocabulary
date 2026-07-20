@@ -1,0 +1,35 @@
+{
+  "word": "honour",
+  "ipa": "/ˈɒnə/",
+  "arpabet": "AA1 N AH0",
+  "syllables": [
+    "hon",
+    "our"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "h",
+      "silent": true
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "ou",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    }
+  ]
+}

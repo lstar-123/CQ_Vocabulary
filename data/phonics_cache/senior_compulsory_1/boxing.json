@@ -1,0 +1,35 @@
+{
+  "word": "boxing",
+  "ipa": "/ˈbɑːksɪŋ/",
+  "arpabet": "B AA1 K S AH0 NG",
+  "syllables": [
+    "box",
+    "ing"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "x",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "ng",
+      "silent": false
+    }
+  ]
+}

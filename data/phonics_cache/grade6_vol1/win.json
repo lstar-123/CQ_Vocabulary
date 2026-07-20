@@ -1,0 +1,25 @@
+{
+  "word": "win",
+  "ipa": "/wɪn/",
+  "arpabet": "W IH1 N",
+  "syllables": [
+    "win"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "w",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    }
+  ]
+}

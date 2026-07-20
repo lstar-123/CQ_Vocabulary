@@ -1,0 +1,25 @@
+{
+  "word": "guy",
+  "ipa": "/ɡaɪ/",
+  "arpabet": "G AY1",
+  "syllables": [
+    "guy"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}

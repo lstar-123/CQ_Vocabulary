@@ -1,0 +1,39 @@
+{
+  "word": "percent",
+  "ipa": "/pərˈsɛnt/",
+  "arpabet": "P AH0 R S EH1 N T",
+  "syllables": [
+    "per",
+    "cent"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

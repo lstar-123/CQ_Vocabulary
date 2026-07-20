@@ -1,0 +1,29 @@
+{
+  "word": "fact",
+  "ipa": "/fækt/",
+  "arpabet": "F AE1 K T",
+  "syllables": [
+    "fact"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

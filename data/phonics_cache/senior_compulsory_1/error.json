@@ -1,0 +1,35 @@
+{
+  "word": "error",
+  "ipa": "/ˈɛrər/",
+  "arpabet": "EH1 R ER0",
+  "syllables": [
+    "er",
+    "ror"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "word": "bone",
+  "ipa": "/boʊn/",
+  "arpabet": "B OW1 N",
+  "syllables": [
+    "bone"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

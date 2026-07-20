@@ -1,0 +1,43 @@
+{
+  "word": "contact",
+  "ipa": "/ˈkɒntækt/",
+  "arpabet": "K AA1 N T AE0 K T",
+  "syllables": [
+    "con",
+    "tact"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

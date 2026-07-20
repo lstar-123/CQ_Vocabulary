@@ -1,0 +1,43 @@
+{
+  "word": "struggle",
+  "ipa": "/ˈstrʌɡəl/",
+  "arpabet": "S T R AH1 G AH0 L",
+  "syllables": [
+    "strug",
+    "gle"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "le",
+      "silent": false
+    }
+  ]
+}

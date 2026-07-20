@@ -1,0 +1,25 @@
+{
+  "word": "grow",
+  "ipa": "/ɡroʊ/",
+  "arpabet": "G R OW1",
+  "syllables": [
+    "grow"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "ow",
+      "silent": false
+    }
+  ]
+}

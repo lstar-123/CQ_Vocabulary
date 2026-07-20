@@ -1,0 +1,39 @@
+{
+  "word": "revive",
+  "ipa": "/rɪˈvaɪv/",
+  "arpabet": "R IH0 V AY1 V",
+  "syllables": [
+    "re",
+    "vive"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

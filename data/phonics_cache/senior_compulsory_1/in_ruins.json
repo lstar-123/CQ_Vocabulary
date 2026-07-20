@@ -1,0 +1,49 @@
+{
+  "word": "in ruins",
+  "ipa": "/ɪn ˈruːɪnz/",
+  "arpabet": "IH0 N R UW1 IH0 N Z",
+  "syllables": [
+    "in",
+    "ru",
+    "ins"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    }
+  ]
+}

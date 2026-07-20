@@ -1,0 +1,25 @@
+{
+  "word": "seat",
+  "ipa": "/siːt/",
+  "arpabet": "S IY1 T",
+  "syllables": [
+    "seat"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "ea",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

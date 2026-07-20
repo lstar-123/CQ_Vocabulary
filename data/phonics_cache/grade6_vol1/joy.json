@@ -1,0 +1,21 @@
+{
+  "word": "joy",
+  "ipa": "/dʒɔɪ/",
+  "arpabet": "JH OY1",
+  "syllables": [
+    "joy"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "j",
+      "silent": false
+    },
+    {
+      "text": "oy",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "word": "other than",
+  "ipa": "/ˈʌðər ðæn/",
+  "arpabet": "AH1 DH ER0 DH AE1 N",
+  "syllables": [
+    "oth",
+    "er",
+    "than"
+  ],
+  "stress": [
+    1,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "th",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "th",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    }
+  ]
+}

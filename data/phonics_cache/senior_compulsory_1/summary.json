@@ -1,0 +1,45 @@
+{
+  "word": "summary",
+  "ipa": "/ˈsʌməri/",
+  "arpabet": "S AH1 M ER0 IY0",
+  "syllables": [
+    "sum",
+    "ma",
+    "ry"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "word": "powerful",
+  "ipa": "/ˈpaʊərfəl/",
+  "arpabet": "P AW1 ER0 F AH0 L",
+  "syllables": [
+    "pow",
+    "er",
+    "ful"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "ow",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    }
+  ]
+}

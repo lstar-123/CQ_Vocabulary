@@ -1,0 +1,21 @@
+{
+  "word": "hear",
+  "ipa": "/hɪər/",
+  "arpabet": "HH IH1 R",
+  "syllables": [
+    "hear"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "h",
+      "silent": false
+    },
+    {
+      "text": "ear",
+      "silent": false
+    }
+  ]
+}

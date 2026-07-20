@@ -1,0 +1,29 @@
+{
+  "word": "BCE",
+  "ipa": "/ˌbiː siː ˈiː/",
+  "arpabet": "B IY2 S IY2 IY1",
+  "syllables": [
+    "B",
+    "C",
+    "E"
+  ],
+  "stress": [
+    2,
+    2,
+    1
+  ],
+  "segments": [
+    {
+      "text": "B",
+      "silent": false
+    },
+    {
+      "text": "C",
+      "silent": false
+    },
+    {
+      "text": "E",
+      "silent": false
+    }
+  ]
+}

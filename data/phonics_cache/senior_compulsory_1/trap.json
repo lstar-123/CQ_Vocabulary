@@ -1,0 +1,29 @@
+{
+  "word": "trap",
+  "ipa": "/træp/",
+  "arpabet": "T R AE1 P",
+  "syllables": [
+    "trap"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    }
+  ]
+}

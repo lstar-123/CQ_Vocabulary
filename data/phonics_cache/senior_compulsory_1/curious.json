@@ -1,0 +1,41 @@
+{
+  "word": "curious",
+  "ipa": "/ˈkjʊəriəs/",
+  "arpabet": "K Y UH1 R IY0 AH0 S",
+  "syllables": [
+    "cu",
+    "ri",
+    "ous"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "ou",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    }
+  ]
+}

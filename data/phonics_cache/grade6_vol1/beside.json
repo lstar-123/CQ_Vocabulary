@@ -1,0 +1,39 @@
+{
+  "word": "beside",
+  "ipa": "/bɪˈsaɪd/",
+  "arpabet": "B IH0 S AY1 D",
+  "syllables": [
+    "be",
+    "side"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

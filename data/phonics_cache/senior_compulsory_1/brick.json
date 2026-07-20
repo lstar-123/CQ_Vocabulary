@@ -1,0 +1,29 @@
+{
+  "word": "brick",
+  "ipa": "/brɪk/",
+  "arpabet": "B R IH1 K",
+  "syllables": [
+    "brick"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "ck",
+      "silent": false
+    }
+  ]
+}

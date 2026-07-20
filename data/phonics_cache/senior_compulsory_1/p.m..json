@@ -1,0 +1,43 @@
+{
+  "word": "p.m.",
+  "ipa": "/ˌpiːˈem/",
+  "arpabet": "P IY1 EH0 M",
+  "syllables": [
+    "p",
+    "m"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "letters": "p",
+      "phoneme": "P",
+      "ipa": "p",
+      "silent": false,
+      "syllable": 0
+    },
+    {
+      "letters": ".",
+      "phoneme": "",
+      "ipa": "",
+      "silent": true,
+      "syllable": 0
+    },
+    {
+      "letters": "m",
+      "phoneme": "M",
+      "ipa": "m",
+      "silent": false,
+      "syllable": 1
+    },
+    {
+      "letters": ".",
+      "phoneme": "",
+      "ipa": "",
+      "silent": true,
+      "syllable": 1
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "word": "emperor",
+  "ipa": "/ˈɛmpərər/",
+  "arpabet": "EH1 M P ER0 ER0",
+  "syllables": [
+    "em",
+    "per",
+    "or"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    }
+  ]
+}

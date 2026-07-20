@@ -1,0 +1,47 @@
+{
+  "word": "greenhouse",
+  "ipa": "/ˈɡriːnhaʊs/",
+  "arpabet": "G R IY1 N HH AW2 S",
+  "syllables": [
+    "green",
+    "house"
+  ],
+  "stress": [
+    1,
+    2
+  ],
+  "segments": [
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "ee",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "h",
+      "silent": false
+    },
+    {
+      "text": "ou",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

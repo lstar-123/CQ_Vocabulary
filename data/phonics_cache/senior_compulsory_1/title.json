@@ -1,0 +1,31 @@
+{
+  "word": "title",
+  "ipa": "/ˈtaɪtəl/",
+  "arpabet": "T AY1 T AH0 L",
+  "syllables": [
+    "ti",
+    "tle"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "le",
+      "silent": false
+    }
+  ]
+}

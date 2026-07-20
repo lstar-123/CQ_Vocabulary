@@ -1,0 +1,80 @@
+{
+  "word": "try one's best",
+  "ipa": "/traɪ wʌnz bɛst/",
+  "arpabet": "T R AY1 W AH1 N Z B EH1 S T",
+  "syllables": [
+    {
+      "text": "try",
+      "stress": 1,
+      "segments": [
+        {
+          "text": "t",
+          "silent": false,
+          "rule": "consonant-t"
+        },
+        {
+          "text": "r",
+          "silent": false,
+          "rule": "consonant-r"
+        },
+        {
+          "text": "y",
+          "silent": false,
+          "rule": "vowel-y"
+        }
+      ]
+    },
+    {
+      "text": "one's",
+      "stress": 1,
+      "segments": [
+        {
+          "text": "o",
+          "silent": false,
+          "rule": "vowel-o"
+        },
+        {
+          "text": "n",
+          "silent": false,
+          "rule": "consonant-n"
+        },
+        {
+          "text": "e",
+          "silent": true,
+          "rule": "silent-e"
+        },
+        {
+          "text": "'s",
+          "silent": false,
+          "rule": "possessive-s"
+        }
+      ]
+    },
+    {
+      "text": "best",
+      "stress": 1,
+      "segments": [
+        {
+          "text": "b",
+          "silent": false,
+          "rule": "consonant-b"
+        },
+        {
+          "text": "e",
+          "silent": false,
+          "rule": "vowel-e"
+        },
+        {
+          "text": "s",
+          "silent": false,
+          "rule": "consonant-s"
+        },
+        {
+          "text": "t",
+          "silent": false,
+          "rule": "consonant-t"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "word": "accommodation",
+  "ipa": "/əˌkɒməˈdeɪʃən/",
+  "arpabet": "AH0 K AA2 M AH0 D EY1 SH AH0 N",
+  "syllables": [
+    "ac",
+    "com",
+    "mo",
+    "da",
+    "tion"
+  ],
+  "stress": [
+    0,
+    2,
+    0,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "tion",
+      "silent": false
+    }
+  ]
+}

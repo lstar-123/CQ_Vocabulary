@@ -1,0 +1,25 @@
+{
+  "word": "beach",
+  "ipa": "/biːtʃ/",
+  "arpabet": "B IY1 CH",
+  "syllables": [
+    "beach"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "ea",
+      "silent": false
+    },
+    {
+      "text": "ch",
+      "silent": false
+    }
+  ]
+}

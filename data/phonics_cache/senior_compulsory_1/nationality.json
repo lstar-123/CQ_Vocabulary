@@ -1,0 +1,53 @@
+{
+  "word": "nationality",
+  "ipa": "/ˌnæʃəˈnælɪti/",
+  "arpabet": "N AE2 SH AH0 N AE1 L IH0 T IY0",
+  "syllables": [
+    "na",
+    "tion",
+    "al",
+    "i",
+    "ty"
+  ],
+  "stress": [
+    2,
+    0,
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "tion",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}

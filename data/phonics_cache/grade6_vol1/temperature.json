@@ -1,0 +1,47 @@
+{
+  "word": "temperature",
+  "ipa": "/ˈtɛmpərətʃər/",
+  "arpabet": "T EH1 M P ER0 AH0 CH ER0",
+  "syllables": [
+    "tem",
+    "per",
+    "a",
+    "ture"
+  ],
+  "stress": [
+    1,
+    0,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "ture",
+      "silent": false
+    }
+  ]
+}

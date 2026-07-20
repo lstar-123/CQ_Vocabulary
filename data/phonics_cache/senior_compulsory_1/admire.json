@@ -1,0 +1,39 @@
+{
+  "word": "admire",
+  "ipa": "/ədˈmaɪə/",
+  "arpabet": "AH0 D M AY1 AH0",
+  "syllables": [
+    "ad",
+    "mire"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

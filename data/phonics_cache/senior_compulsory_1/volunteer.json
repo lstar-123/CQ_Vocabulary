@@ -1,0 +1,49 @@
+{
+  "word": "volunteer",
+  "ipa": "/ˌvɒlənˈtɪr/",
+  "arpabet": "V AA2 L AH0 N T IH1 R",
+  "syllables": [
+    "vol",
+    "un",
+    "teer"
+  ],
+  "stress": [
+    2,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "ee",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    }
+  ]
+}

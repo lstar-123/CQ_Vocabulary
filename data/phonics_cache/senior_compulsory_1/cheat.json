@@ -1,0 +1,25 @@
+{
+  "word": "cheat",
+  "ipa": "/tʃiːt/",
+  "arpabet": "CH IY1 T",
+  "syllables": [
+    "cheat"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "ch",
+      "silent": false
+    },
+    {
+      "text": "ea",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

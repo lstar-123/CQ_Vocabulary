@@ -1,0 +1,39 @@
+{
+  "word": "affect",
+  "ipa": "/əˈfɛkt/",
+  "arpabet": "AH0 F EH1 K T",
+  "syllables": [
+    "af",
+    "fect"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

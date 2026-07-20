@@ -1,0 +1,27 @@
+{
+  "word": "nation",
+  "ipa": "/ˈneɪʃən/",
+  "arpabet": "N EY1 SH AH0 N",
+  "syllables": [
+    "na",
+    "tion"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "tion",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "word": "famous",
+  "ipa": "/ˈfeɪməs/",
+  "arpabet": "F EY1 M AH0 S",
+  "syllables": [
+    "fa",
+    "mous"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "ou",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    }
+  ]
+}

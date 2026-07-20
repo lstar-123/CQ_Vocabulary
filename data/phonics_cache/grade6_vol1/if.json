@@ -1,0 +1,21 @@
+{
+  "word": "if",
+  "ipa": "/ɪf/",
+  "arpabet": "IH1 F",
+  "syllables": [
+    "if"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    }
+  ]
+}

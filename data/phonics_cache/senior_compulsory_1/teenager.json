@@ -1,0 +1,41 @@
+{
+  "word": "teenager",
+  "ipa": "/ˈtiːneɪdʒər/",
+  "arpabet": "T IY1 N EY2 JH ER0",
+  "syllables": [
+    "teen",
+    "ag",
+    "er"
+  ],
+  "stress": [
+    1,
+    2,
+    0
+  ],
+  "segments": [
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "ee",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    }
+  ]
+}

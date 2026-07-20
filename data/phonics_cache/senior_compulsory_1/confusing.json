@@ -1,0 +1,49 @@
+{
+  "word": "confusing",
+  "ipa": "/kənˈfjuːzɪŋ/",
+  "arpabet": "K AH0 N F Y UW1 Z IH0 NG",
+  "syllables": [
+    "con",
+    "fus",
+    "ing"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "ng",
+      "silent": false
+    }
+  ]
+}

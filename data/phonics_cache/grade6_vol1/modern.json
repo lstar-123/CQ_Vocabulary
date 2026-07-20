@@ -1,0 +1,35 @@
+{
+  "word": "modern",
+  "ipa": "/ˈmɒdərn/",
+  "arpabet": "M AA1 D ER0 N",
+  "syllables": [
+    "mod",
+    "ern"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    }
+  ]
+}

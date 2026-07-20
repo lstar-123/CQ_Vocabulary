@@ -1,0 +1,29 @@
+{
+  "word": "host",
+  "ipa": "/hoʊst/",
+  "arpabet": "HH OW1 S T",
+  "syllables": [
+    "host"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "h",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

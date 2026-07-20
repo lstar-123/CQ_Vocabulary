@@ -1,0 +1,39 @@
+{
+  "word": "native",
+  "ipa": "/ˈneɪtɪv/",
+  "arpabet": "N EY1 T IH0 V",
+  "syllables": [
+    "na",
+    "tive"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

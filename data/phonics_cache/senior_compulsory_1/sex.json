@@ -1,0 +1,25 @@
+{
+  "word": "sex",
+  "ipa": "/sɛks/",
+  "arpabet": "S EH1 K S",
+  "syllables": [
+    "sex"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "x",
+      "silent": false
+    }
+  ]
+}

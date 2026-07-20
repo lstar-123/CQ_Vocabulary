@@ -1,0 +1,35 @@
+{
+  "word": "brochure",
+  "ipa": "/broʊˈʃʊr/",
+  "arpabet": "B R OW1 SH UH2 R",
+  "syllables": [
+    "bro",
+    "chure"
+  ],
+  "stress": [
+    1,
+    2
+  ],
+  "segments": [
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "ch",
+      "silent": false
+    },
+    {
+      "text": "ure",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "word": "aid",
+  "ipa": "/eɪd/",
+  "arpabet": "EY1 D",
+  "syllables": [
+    "aid"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "ai",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

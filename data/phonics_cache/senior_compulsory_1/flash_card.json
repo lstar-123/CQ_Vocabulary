@@ -1,0 +1,47 @@
+{
+  "word": "flash card",
+  "ipa": "/ˈflæʃ ˈkɑːrd/",
+  "arpabet": "F L AE1 SH K AA1 R D",
+  "syllables": [
+    "flash",
+    "card"
+  ],
+  "stress": [
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "sh",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "ar",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

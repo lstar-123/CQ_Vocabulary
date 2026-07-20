@@ -1,0 +1,39 @@
+{
+  "word": "happen",
+  "ipa": "/ˈhæpən/",
+  "arpabet": "HH AE1 P AH0 N",
+  "syllables": [
+    "hap",
+    "pen"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "h",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    }
+  ]
+}

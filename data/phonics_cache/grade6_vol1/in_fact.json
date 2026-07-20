@@ -1,0 +1,43 @@
+{
+  "word": "in fact",
+  "ipa": "/ɪn ˈfækt/",
+  "arpabet": "IH0 N F AE1 K T",
+  "syllables": [
+    "in",
+    "fact"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

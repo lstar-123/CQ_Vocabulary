@@ -1,0 +1,25 @@
+{
+  "word": "will",
+  "ipa": "/wɪl/",
+  "arpabet": "W IH1 L",
+  "syllables": [
+    "will"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "w",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "ll",
+      "silent": false
+    }
+  ]
+}

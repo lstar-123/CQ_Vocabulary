@@ -1,0 +1,57 @@
+{
+  "word": "determination",
+  "ipa": "/dɪˌtɜːrmɪˈneɪʃən/",
+  "arpabet": "D IH0 T ER2 M IH0 N EY1 SH AH0 N",
+  "syllables": [
+    "de",
+    "ter",
+    "mi",
+    "na",
+    "tion"
+  ],
+  "stress": [
+    0,
+    2,
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "tion",
+      "silent": false
+    }
+  ]
+}

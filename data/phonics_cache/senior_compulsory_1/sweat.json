@@ -1,0 +1,29 @@
+{
+  "word": "sweat",
+  "ipa": "/swɛt/",
+  "arpabet": "S W EH1 T",
+  "syllables": [
+    "sweat"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "w",
+      "silent": false
+    },
+    {
+      "text": "ea",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

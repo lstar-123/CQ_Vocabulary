@@ -1,0 +1,39 @@
+{
+  "word": "country",
+  "ipa": "/ˈkʌntri/",
+  "arpabet": "K AH1 N T R IY0",
+  "syllables": [
+    "coun",
+    "try"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "ou",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "word": "keep out",
+  "ipa": "/kiːp aʊt/",
+  "arpabet": "K IY1 P AW1 T",
+  "syllables": [
+    "keep",
+    "out"
+  ],
+  "stress": [
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "k",
+      "silent": false
+    },
+    {
+      "text": "ee",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "ou",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

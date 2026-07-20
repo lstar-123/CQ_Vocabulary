@@ -1,0 +1,25 @@
+{
+  "word": "goal",
+  "ipa": "/ɡoʊl/",
+  "arpabet": "G OW1 L",
+  "syllables": [
+    "goal"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "oa",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "word": "package tour",
+  "ipa": "/ˈpækɪdʒ tʊər/",
+  "arpabet": "P AE1 K AH0 JH T UH1 R",
+  "syllables": [
+    "pack",
+    "age",
+    "tour"
+  ],
+  "stress": [
+    1,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "ck",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "our",
+      "silent": false
+    }
+  ]
+}

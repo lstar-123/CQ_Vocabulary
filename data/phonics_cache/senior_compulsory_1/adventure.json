@@ -1,0 +1,41 @@
+{
+  "word": "adventure",
+  "ipa": "/ədˈvɛntʃər/",
+  "arpabet": "AH0 D V EH1 N CH ER0",
+  "syllables": [
+    "ad",
+    "ven",
+    "ture"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "ture",
+      "silent": false
+    }
+  ]
+}

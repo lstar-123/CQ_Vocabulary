@@ -1,0 +1,39 @@
+{
+  "word": "revise",
+  "ipa": "/rɪˈvaɪz/",
+  "arpabet": "R IH0 V AY1 Z",
+  "syllables": [
+    "re",
+    "vise"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

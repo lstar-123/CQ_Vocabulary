@@ -1,0 +1,45 @@
+{
+  "word": "impression",
+  "ipa": "/ɪmˈprɛʃən/",
+  "arpabet": "IH0 M P R EH1 SH AH0 N",
+  "syllables": [
+    "im",
+    "pres",
+    "sion"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "sion",
+      "silent": false
+    }
+  ]
+}

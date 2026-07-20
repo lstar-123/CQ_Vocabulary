@@ -1,0 +1,45 @@
+{
+  "word": "tsunami",
+  "ipa": "/tsuːˈnɑːmi/",
+  "arpabet": "T S UW0 N AA1 M IY0",
+  "syllables": [
+    "tsu",
+    "na",
+    "mi"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    }
+  ]
+}

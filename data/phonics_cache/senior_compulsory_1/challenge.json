@@ -1,0 +1,43 @@
+{
+  "word": "challenge",
+  "ipa": "/ˈtʃælɪndʒ/",
+  "arpabet": "CH AE1 L AH0 N JH",
+  "syllables": [
+    "chal",
+    "lenge"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "ch",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "ge",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "word": "youth",
+  "ipa": "/juːθ/",
+  "arpabet": "Y UW1 TH",
+  "syllables": [
+    "youth"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "y",
+      "silent": false
+    },
+    {
+      "text": "ou",
+      "silent": false
+    },
+    {
+      "text": "th",
+      "silent": false
+    }
+  ]
+}

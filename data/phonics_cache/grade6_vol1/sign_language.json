@@ -1,0 +1,69 @@
+{
+  "word": "sign language",
+  "ipa": "/ˈsaɪn ˌlæŋɡwɪdʒ/",
+  "arpabet": "S AY1 N L AE1 NG G W AH0 JH",
+  "syllables": [
+    "sign",
+    "lan",
+    "guage"
+  ],
+  "stress": [
+    1,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": true
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "word": "volcanic eruption",
+  "ipa": "/vɒlˈkænɪk ɪˈrʌpʃən/",
+  "arpabet": "V AA0 L K AE1 N IH0 K IH0 R AH1 P SH AH0 N",
+  "syllables": [
+    "vol",
+    "can",
+    "ic",
+    "e",
+    "rup",
+    "tion"
+  ],
+  "stress": [
+    0,
+    1,
+    0,
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "tion",
+      "silent": false
+    }
+  ]
+}

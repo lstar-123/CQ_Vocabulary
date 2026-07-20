@@ -1,0 +1,41 @@
+{
+  "word": "tornado",
+  "ipa": "/tɔːrˈneɪdoʊ/",
+  "arpabet": "T AO0 R N EY1 D OW0",
+  "syllables": [
+    "tor",
+    "na",
+    "do"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "or",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    }
+  ]
+}

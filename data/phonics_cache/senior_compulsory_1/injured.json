@@ -1,0 +1,35 @@
+{
+  "word": "injured",
+  "ipa": "/ˈɪndʒərd/",
+  "arpabet": "IH1 N JH ER0 D",
+  "syllables": [
+    "in",
+    "jured"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "j",
+      "silent": false
+    },
+    {
+      "text": "ure",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

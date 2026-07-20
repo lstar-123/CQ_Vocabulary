@@ -1,0 +1,29 @@
+{
+  "word": "flight",
+  "ipa": "/flaɪt/",
+  "arpabet": "F L AY1 T",
+  "syllables": [
+    "flight"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "igh",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "word": "addicted to",
+  "ipa": "/əˈdɪktɪd tuː/",
+  "arpabet": "AH0 D IH1 K T AH0 D T UW1",
+  "syllables": [
+    "ad",
+    "dict",
+    "ed",
+    "to"
+  ],
+  "stress": [
+    0,
+    1,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "dd",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    }
+  ]
+}

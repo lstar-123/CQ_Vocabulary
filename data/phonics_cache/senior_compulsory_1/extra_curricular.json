@@ -1,0 +1,89 @@
+{
+  "word": "extra-curricular",
+  "ipa": "/ˌɛkstrəkəˈrɪkjələr/",
+  "arpabet": "EH2 K S T R AH0 K AH0 R IH1 K Y AH0 L ER0",
+  "syllables": [
+    "ex",
+    "tra",
+    "-",
+    "cur",
+    "ri",
+    "cu",
+    "lar"
+  ],
+  "stress": [
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "x",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "-",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    }
+  ]
+}

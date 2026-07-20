@@ -1,0 +1,25 @@
+{
+  "word": "feel",
+  "ipa": "/fiːl/",
+  "arpabet": "F IY1 L",
+  "syllables": [
+    "feel"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "ee",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    }
+  ]
+}

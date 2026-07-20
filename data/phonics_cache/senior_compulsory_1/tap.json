@@ -1,0 +1,25 @@
+{
+  "word": "tap",
+  "ipa": "/tæp/",
+  "arpabet": "T AE1 P",
+  "syllables": [
+    "tap"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    }
+  ]
+}

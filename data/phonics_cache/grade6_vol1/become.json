@@ -1,0 +1,39 @@
+{
+  "word": "become",
+  "ipa": "/bɪˈkʌm/",
+  "arpabet": "B IH0 K AH1 M",
+  "syllables": [
+    "be",
+    "come"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

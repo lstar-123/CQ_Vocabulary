@@ -1,0 +1,35 @@
+{
+  "word": "Sydney",
+  "ipa": "/ˈsɪdni/",
+  "arpabet": "S IH1 D N IY0",
+  "syllables": [
+    "Syd",
+    "ney"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "S",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "ey",
+      "silent": false
+    }
+  ]
+}

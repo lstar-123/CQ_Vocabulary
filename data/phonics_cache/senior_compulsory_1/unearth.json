@@ -1,0 +1,31 @@
+{
+  "word": "unearth",
+  "ipa": "/ʌnˈɜːrθ/",
+  "arpabet": "AH0 N ER1 TH",
+  "syllables": [
+    "un",
+    "earth"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "ear",
+      "silent": false
+    },
+    {
+      "text": "th",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "word": "variety",
+  "ipa": "/vəˈraɪəti/",
+  "arpabet": "V AH0 R AY1 AH0 T IY0",
+  "syllables": [
+    "va",
+    "ri",
+    "e",
+    "ty"
+  ],
+  "stress": [
+    0,
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "ie",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}

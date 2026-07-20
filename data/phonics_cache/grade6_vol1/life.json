@@ -1,0 +1,29 @@
+{
+  "word": "life",
+  "ipa": "/laɪf/",
+  "arpabet": "L AY1 F",
+  "syllables": [
+    "life"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

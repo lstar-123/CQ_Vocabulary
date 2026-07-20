@@ -1,0 +1,35 @@
+{
+  "word": "shelter",
+  "ipa": "/ˈʃɛltər/",
+  "arpabet": "SH EH1 L T ER0",
+  "syllables": [
+    "shel",
+    "ter"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "sh",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "word": "check out",
+  "ipa": "/tʃɛk aʊt/",
+  "arpabet": "CH EH1 K AW1 T",
+  "syllables": [
+    "check",
+    "out"
+  ],
+  "stress": [
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "ch",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "ck",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "ou",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "word": "path",
+  "ipa": "/pæθ/",
+  "arpabet": "P AE1 TH",
+  "syllables": [
+    "path"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "th",
+      "silent": false
+    }
+  ]
+}

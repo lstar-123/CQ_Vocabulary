@@ -1,0 +1,35 @@
+{
+  "word": "damage",
+  "ipa": "/ˈdæmɪdʒ/",
+  "arpabet": "D AE1 M AH0 JH",
+  "syllables": [
+    "dam",
+    "age"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "ge",
+      "silent": false
+    }
+  ]
+}

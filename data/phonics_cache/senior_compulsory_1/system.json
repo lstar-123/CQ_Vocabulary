@@ -1,0 +1,39 @@
+{
+  "word": "system",
+  "ipa": "/ˈsɪstəm/",
+  "arpabet": "S IH1 S T AH0 M",
+  "syllables": [
+    "sys",
+    "tem"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    }
+  ]
+}

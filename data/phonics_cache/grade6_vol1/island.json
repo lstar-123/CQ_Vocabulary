@@ -1,0 +1,39 @@
+{
+  "word": "island",
+  "ipa": "/ˈaɪlənd/",
+  "arpabet": "AY1 L AH0 N D",
+  "syllables": [
+    "is",
+    "land"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": true
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

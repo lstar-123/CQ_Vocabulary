@@ -1,0 +1,43 @@
+{
+  "word": "give up",
+  "ipa": "/ˈɡɪv ˈʌp/",
+  "arpabet": "G IH1 V AH1 P",
+  "syllables": [
+    "give",
+    "up"
+  ],
+  "stress": [
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    }
+  ]
+}

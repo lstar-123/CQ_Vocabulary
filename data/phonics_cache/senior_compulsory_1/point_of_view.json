@@ -1,0 +1,61 @@
+{
+  "word": "point of view",
+  "ipa": "/pɔɪnt əv vjuː/",
+  "arpabet": "P OY1 N T AH0 V V Y UW1",
+  "syllables": [
+    "point",
+    "of",
+    "view"
+  ],
+  "stress": [
+    1,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "oi",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "ie",
+      "silent": false
+    },
+    {
+      "text": "w",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "word": "as if",
+  "ipa": "/ˈæz ˈɪf/",
+  "arpabet": "AE1 Z IH1 F",
+  "syllables": [
+    "as",
+    "if"
+  ],
+  "stress": [
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "word": "cut ... out",
+  "ipa": "/ˈkʌt aʊt/",
+  "arpabet": "K AH1 T AW1 T",
+  "syllables": [
+    "cut",
+    "out"
+  ],
+  "stress": [
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "letters": "c",
+      "phoneme": "K",
+      "ipa": "k",
+      "silent": false,
+      "syllable": 0
+    },
+    {
+      "letters": "u",
+      "phoneme": "AH",
+      "ipa": "ʌ",
+      "silent": false,
+      "syllable": 0
+    },
+    {
+      "letters": "t",
+      "phoneme": "T",
+      "ipa": "t",
+      "silent": false,
+      "syllable": 0
+    },
+    {
+      "letters": " ",
+      "phoneme": "",
+      "ipa": "",
+      "silent": true,
+      "syllable": 0
+    },
+    {
+      "letters": ".",
+      "phoneme": "",
+      "ipa": "",
+      "silent": true,
+      "syllable": 0
+    },
+    {
+      "letters": ".",
+      "phoneme": "",
+      "ipa": "",
+      "silent": true,
+      "syllable": 0
+    },
+    {
+      "letters": ".",
+      "phoneme": "",
+      "ipa": "",
+      "silent": true,
+      "syllable": 0
+    },
+    {
+      "letters": " ",
+      "phoneme": "",
+      "ipa": "",
+      "silent": true,
+      "syllable": 0
+    },
+    {
+      "letters": "o",
+      "phoneme": "AW",
+      "ipa": "aʊ",
+      "silent": false,
+      "syllable": 1
+    },
+    {
+      "letters": "u",
+      "phoneme": "AW",
+      "ipa": "aʊ",
+      "silent": false,
+      "syllable": 1
+    },
+    {
+      "letters": "t",
+      "phoneme": "T",
+      "ipa": "t",
+      "silent": false,
+      "syllable": 1
+    }
+  ]
+}

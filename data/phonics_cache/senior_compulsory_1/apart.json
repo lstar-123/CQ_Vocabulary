@@ -1,0 +1,31 @@
+{
+  "word": "apart",
+  "ipa": "/əˈpɑːrt/",
+  "arpabet": "AH0 P AA1 R T",
+  "syllables": [
+    "a",
+    "part"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "ar",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

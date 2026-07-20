@@ -1,0 +1,25 @@
+{
+  "word": "shock",
+  "ipa": "/ʃɒk/",
+  "arpabet": "SH AA1 K",
+  "syllables": [
+    "shock"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "sh",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "ck",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "word": "slide",
+  "ipa": "/slaɪd/",
+  "arpabet": "S L AY1 D",
+  "syllables": [
+    "slide"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

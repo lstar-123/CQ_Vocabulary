@@ -1,0 +1,25 @@
+{
+  "word": "sight",
+  "ipa": "/saɪt/",
+  "arpabet": "S AY1 T",
+  "syllables": [
+    "sight"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "igh",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

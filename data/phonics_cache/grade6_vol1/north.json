@@ -1,0 +1,25 @@
+{
+  "word": "north",
+  "ipa": "/nɔːrθ/",
+  "arpabet": "N AO1 R TH",
+  "syllables": [
+    "north"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "or",
+      "silent": false
+    },
+    {
+      "text": "th",
+      "silent": false
+    }
+  ]
+}

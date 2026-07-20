@@ -1,0 +1,55 @@
+{
+  "word": "take notes",
+  "ipa": "/ˈteɪk ˈnoʊts/",
+  "arpabet": "T EY1 K N OW1 T S",
+  "syllables": [
+    "take",
+    "notes"
+  ],
+  "stress": [
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "k",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    },
+    {
+      "text": "s",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "word": "outgoing",
+  "ipa": "/ˈaʊtˌɡoʊɪŋ/",
+  "arpabet": "AW1 T G OW2 IH0 NG",
+  "syllables": [
+    "out",
+    "go",
+    "ing"
+  ],
+  "stress": [
+    1,
+    2,
+    0
+  ],
+  "segments": [
+    {
+      "text": "ou",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "ng",
+      "silent": false
+    }
+  ]
+}

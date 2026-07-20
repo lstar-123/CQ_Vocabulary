@@ -1,0 +1,39 @@
+{
+  "word": "annoyed",
+  "ipa": "/əˈnɔɪd/",
+  "arpabet": "AH0 N OY1 D",
+  "syllables": [
+    "an",
+    "noyed"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "oy",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

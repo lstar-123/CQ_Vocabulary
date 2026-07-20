@@ -1,0 +1,39 @@
+{
+  "word": "package",
+  "ipa": "/ˈpækɪdʒ/",
+  "arpabet": "P AE1 K AH0 JH",
+  "syllables": [
+    "pack",
+    "age"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "ck",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

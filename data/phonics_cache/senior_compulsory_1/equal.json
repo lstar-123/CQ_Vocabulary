@@ -1,0 +1,31 @@
+{
+  "word": "equal",
+  "ipa": "/ˈiːkwəl/",
+  "arpabet": "IY1 K W AH0 L",
+  "syllables": [
+    "e",
+    "qual"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "qu",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    }
+  ]
+}

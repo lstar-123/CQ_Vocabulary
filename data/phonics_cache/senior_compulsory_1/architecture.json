@@ -1,0 +1,47 @@
+{
+  "word": "architecture",
+  "ipa": "/ˈɑːrkɪtektʃər/",
+  "arpabet": "AA1 R K AH0 T EH2 K CH ER0",
+  "syllables": [
+    "ar",
+    "chi",
+    "tec",
+    "ture"
+  ],
+  "stress": [
+    1,
+    0,
+    2,
+    0
+  ],
+  "segments": [
+    {
+      "text": "ar",
+      "silent": false
+    },
+    {
+      "text": "ch",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "ture",
+      "silent": false
+    }
+  ]
+}

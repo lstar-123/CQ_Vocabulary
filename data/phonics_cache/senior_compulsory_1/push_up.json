@@ -1,0 +1,41 @@
+{
+  "word": "push-up",
+  "ipa": "/ˈpʊʃʌp/",
+  "arpabet": "P UH1 SH AH2 P",
+  "syllables": [
+    "push",
+    "-",
+    "up"
+  ],
+  "stress": [
+    1,
+    0,
+    2
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "sh",
+      "silent": false
+    },
+    {
+      "text": "-",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    }
+  ]
+}

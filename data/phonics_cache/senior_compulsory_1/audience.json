@@ -1,0 +1,45 @@
+{
+  "word": "audience",
+  "ipa": "/ˈɔːdiəns/",
+  "arpabet": "AO1 D IY0 AH0 N S",
+  "syllables": [
+    "au",
+    "di",
+    "ence"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "au",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

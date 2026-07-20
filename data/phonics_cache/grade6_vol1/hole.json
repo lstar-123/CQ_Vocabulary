@@ -1,0 +1,29 @@
+{
+  "word": "hole",
+  "ipa": "/hoʊl/",
+  "arpabet": "HH OW1 L",
+  "syllables": [
+    "hole"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "h",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

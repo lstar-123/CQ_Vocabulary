@@ -1,0 +1,35 @@
+{
+  "word": "expert",
+  "ipa": "/ˈɛkspɜːrt/",
+  "arpabet": "EH1 K S P ER0 T",
+  "syllables": [
+    "ex",
+    "pert"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "x",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

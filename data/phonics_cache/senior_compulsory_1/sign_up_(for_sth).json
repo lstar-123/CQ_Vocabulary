@@ -1,0 +1,83 @@
+{
+  "word": "sign up (for sth)",
+  "ipa": "/ˈsaɪn ˈʌp (fɔːr ˈsʌmθɪŋ)/",
+  "arpabet": "S AY1 N AH1 P ( F AO1 R S AH1 M TH IH0 NG )",
+  "syllables": [
+    "sign",
+    "up",
+    "(",
+    "for",
+    "sth",
+    ")"
+  ],
+  "stress": [
+    1,
+    1,
+    0,
+    1,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": true
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "(",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "or",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "th",
+      "silent": false
+    },
+    {
+      "text": ")",
+      "silent": false
+    }
+  ]
+}

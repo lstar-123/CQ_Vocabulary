@@ -1,0 +1,31 @@
+{
+  "word": "major",
+  "ipa": "/ˈmeɪdʒər/",
+  "arpabet": "M EY1 JH ER0",
+  "syllables": [
+    "ma",
+    "jor"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "j",
+      "silent": false
+    },
+    {
+      "text": "or",
+      "silent": false
+    }
+  ]
+}

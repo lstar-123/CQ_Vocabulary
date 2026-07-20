@@ -1,0 +1,39 @@
+{
+  "word": "forest",
+  "ipa": "/ˈfɒrɪst/",
+  "arpabet": "F AO1 R AH0 S T",
+  "syllables": [
+    "for",
+    "est"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

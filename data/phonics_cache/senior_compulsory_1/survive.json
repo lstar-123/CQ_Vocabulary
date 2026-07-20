@@ -1,0 +1,39 @@
+{
+  "word": "survive",
+  "ipa": "/sərˈvaɪv/",
+  "arpabet": "S ER0 V AY1 V",
+  "syllables": [
+    "sur",
+    "vive"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "ur",
+      "silent": false
+    },
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "word": "work out",
+  "ipa": "/ˈwɜːrk ˈaʊt/",
+  "arpabet": "W ER1 K AW1 T",
+  "syllables": [
+    "work",
+    "out"
+  ],
+  "stress": [
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "w",
+      "silent": false
+    },
+    {
+      "text": "or",
+      "silent": false
+    },
+    {
+      "text": "k",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "ou",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

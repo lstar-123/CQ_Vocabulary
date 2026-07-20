@@ -1,0 +1,43 @@
+{
+  "word": "billion",
+  "ipa": "/ˈbɪljən/",
+  "arpabet": "B IH1 L Y AH0 N",
+  "syllables": [
+    "bil",
+    "lion"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    }
+  ]
+}

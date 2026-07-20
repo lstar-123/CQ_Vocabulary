@@ -1,0 +1,29 @@
+{
+  "word": "track",
+  "ipa": "/træk/",
+  "arpabet": "T R AE1 K",
+  "syllables": [
+    "track"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "ck",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "word": "prefer ... to ...",
+    "schema": "senior_compulsory_1",
+    "reason": "Validation: syllable[1]: segments join to \"ferr\", expected \"fer\"; all syllables reconstruct to \"preferrto\", expected \"prefer ... to ...\""
+  },
+  {
+    "word": "sign up (for sth)",
+    "schema": "senior_compulsory_1",
+    "reason": "Validation: all syllables reconstruct to \"signupforsth\", expected \"sign up (for sth)\""
+  }
+]

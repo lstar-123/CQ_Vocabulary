@@ -1,0 +1,49 @@
+{
+  "word": "astronaut",
+  "ipa": "/ˈæstrəˌnɔːt/",
+  "arpabet": "AE1 S T R AH0 N AO2 T",
+  "syllables": [
+    "as",
+    "tro",
+    "naut"
+  ],
+  "stress": [
+    1,
+    0,
+    2
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "au",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

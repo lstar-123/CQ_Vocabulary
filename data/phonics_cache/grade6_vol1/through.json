@@ -1,0 +1,25 @@
+{
+  "word": "through",
+  "ipa": "/θruː/",
+  "arpabet": "TH R UW1",
+  "syllables": [
+    "through"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "th",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "ough",
+      "silent": false
+    }
+  ]
+}

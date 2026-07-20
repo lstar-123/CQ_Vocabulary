@@ -1,0 +1,25 @@
+{
+  "word": "ship",
+  "ipa": "/ʃɪp/",
+  "arpabet": "SH IH1 P",
+  "syllables": [
+    "ship"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "sh",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    }
+  ]
+}

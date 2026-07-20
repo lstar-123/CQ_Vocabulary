@@ -1,0 +1,31 @@
+{
+  "word": "p.m.",
+  "ipa": "/piːɛm/",
+  "arpabet": "P IY1 EH1 M",
+  "syllables": [
+    "p.",
+    "m."
+  ],
+  "stress": [
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": ".",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": ".",
+      "silent": false
+    }
+  ]
+}

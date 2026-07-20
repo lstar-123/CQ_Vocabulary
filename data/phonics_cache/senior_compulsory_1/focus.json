@@ -1,0 +1,35 @@
+{
+  "word": "focus",
+  "ipa": "/ˈfoʊkəs/",
+  "arpabet": "F OW1 K AH0 S",
+  "syllables": [
+    "fo",
+    "cus"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    }
+  ]
+}

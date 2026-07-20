@@ -1,0 +1,51 @@
+{
+  "word": "evacuate",
+  "ipa": "/ɪˈvækjueɪt/",
+  "arpabet": "IH0 V AE1 K Y UW0 EY2 T",
+  "syllables": [
+    "e",
+    "vac",
+    "u",
+    "ate"
+  ],
+  "stress": [
+    0,
+    1,
+    0,
+    2
+  ],
+  "segments": [
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

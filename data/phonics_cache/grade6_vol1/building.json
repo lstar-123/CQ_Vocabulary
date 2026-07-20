@@ -1,0 +1,43 @@
+{
+  "word": "building",
+  "ipa": "/ˈbɪldɪŋ/",
+  "arpabet": "B IH1 L D IH0 NG",
+  "syllables": [
+    "buil",
+    "ding"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "ng",
+      "silent": false
+    }
+  ]
+}

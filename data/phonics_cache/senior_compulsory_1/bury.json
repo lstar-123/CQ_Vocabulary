@@ -1,0 +1,31 @@
+{
+  "word": "bury",
+  "ipa": "/ˈbɛri/",
+  "arpabet": "B EH1 R IY0",
+  "syllables": [
+    "bur",
+    "y"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "word": "architect",
+  "ipa": "/ˈɑːrkɪtekt/",
+  "arpabet": "AA1 R K AH0 T EH2 K T",
+  "syllables": [
+    "ar",
+    "chi",
+    "tect"
+  ],
+  "stress": [
+    1,
+    0,
+    2
+  ],
+  "segments": [
+    {
+      "text": "ar",
+      "silent": false
+    },
+    {
+      "text": "ch",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

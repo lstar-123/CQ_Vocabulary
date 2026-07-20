@@ -1,0 +1,25 @@
+{
+  "word": "gym",
+  "ipa": "/dʒɪm/",
+  "arpabet": "JH IH1 M",
+  "syllables": [
+    "gym"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    }
+  ]
+}

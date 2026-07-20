@@ -1,0 +1,43 @@
+{
+  "word": "high jump",
+  "ipa": "/ˈhaɪ dʒʌmp/",
+  "arpabet": "HH AY1 JH AH1 M P",
+  "syllables": [
+    "high",
+    "jump"
+  ],
+  "stress": [
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "h",
+      "silent": false
+    },
+    {
+      "text": "igh",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "j",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    }
+  ]
+}

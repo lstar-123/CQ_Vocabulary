@@ -1,0 +1,21 @@
+{
+  "word": "high",
+  "ipa": "/haɪ/",
+  "arpabet": "HH AY1",
+  "syllables": [
+    "high"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "h",
+      "silent": false
+    },
+    {
+      "text": "igh",
+      "silent": false
+    }
+  ]
+}

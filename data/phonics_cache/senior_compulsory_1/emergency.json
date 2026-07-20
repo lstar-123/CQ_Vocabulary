@@ -1,0 +1,51 @@
+{
+  "word": "emergency",
+  "ipa": "/ɪˈmɜːdʒənsi/",
+  "arpabet": "IH0 M ER1 JH AH0 N S IY0",
+  "syllables": [
+    "e",
+    "mer",
+    "gen",
+    "cy"
+  ],
+  "stress": [
+    0,
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}

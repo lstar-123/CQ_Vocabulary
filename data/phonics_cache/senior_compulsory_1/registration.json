@@ -1,0 +1,55 @@
+{
+  "word": "registration",
+  "ipa": "/ˌrɛdʒɪˈstreɪʃən/",
+  "arpabet": "R EH2 JH IH0 S T R EY1 SH AH0 N",
+  "syllables": [
+    "re",
+    "gis",
+    "tra",
+    "tion"
+  ],
+  "stress": [
+    2,
+    0,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "tion",
+      "silent": false
+    }
+  ]
+}

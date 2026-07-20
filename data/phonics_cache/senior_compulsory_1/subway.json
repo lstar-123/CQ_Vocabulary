@@ -1,0 +1,35 @@
+{
+  "word": "subway",
+  "ipa": "/ˈsʌbweɪ/",
+  "arpabet": "S AH1 B W EY0",
+  "syllables": [
+    "sub",
+    "way"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "w",
+      "silent": false
+    },
+    {
+      "text": "ay",
+      "silent": false
+    }
+  ]
+}

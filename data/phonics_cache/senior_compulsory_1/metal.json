@@ -1,0 +1,35 @@
+{
+  "word": "metal",
+  "ipa": "/ˈmɛtəl/",
+  "arpabet": "M EH1 T AH0 L",
+  "syllables": [
+    "met",
+    "al"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "word": "set an example",
+  "ipa": "/ˈset ən ɪɡˈzæmpəl/",
+  "arpabet": "S EH1 T AH0 N IH0 G Z AE1 M P AH0 L",
+  "syllables": [
+    "set",
+    "an",
+    "ex",
+    "am",
+    "ple"
+  ],
+  "stress": [
+    1,
+    0,
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "x",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

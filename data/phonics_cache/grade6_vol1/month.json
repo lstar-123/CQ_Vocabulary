@@ -1,0 +1,29 @@
+{
+  "word": "month",
+  "ipa": "/mʌnθ/",
+  "arpabet": "M AH1 N TH",
+  "syllables": [
+    "month"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "th",
+      "silent": false
+    }
+  ]
+}

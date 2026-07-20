@@ -1,0 +1,49 @@
+{
+  "word": "rather than",
+  "ipa": "/ˈræðər ðæn/",
+  "arpabet": "R AE1 DH AH0 R DH AE1 N",
+  "syllables": [
+    "rath",
+    "er",
+    "than"
+  ],
+  "stress": [
+    1,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "th",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "th",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "word": "wave",
+  "ipa": "/weɪv/",
+  "arpabet": "W EY1 V",
+  "syllables": [
+    "wave"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "w",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

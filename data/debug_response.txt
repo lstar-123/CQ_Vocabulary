@@ -1,0 +1,38 @@
+[
+  {
+    "word": "cat",
+    "ipa": "/kæt/",
+    "arpabet": "K AE1 T",
+    "syllables": ["cat"],
+    "stress": [1],
+    "segments": [
+      { "letters": "c", "phoneme": "k", "ipa": "k", "silent": false, "syllable": 0 },
+      { "letters": "a", "phoneme": "æ", "ipa": "æ", "silent": false, "syllable": 0 },
+      { "letters": "t", "phoneme": "t", "ipa": "t", "silent": false, "syllable": 0 }
+    ]
+  },
+  {
+    "word": "dog",
+    "ipa": "/dɔg/",
+    "arpabet": "D AO1 G",
+    "syllables": ["dog"],
+    "stress": [1],
+    "segments": [
+      { "letters": "d", "phoneme": "d", "ipa": "d", "silent": false, "syllable": 0 },
+      { "letters": "o", "phoneme": "ɔ", "ipa": "ɔ", "silent": false, "syllable": 0 },
+      { "letters": "g", "phoneme": "g", "ipa": "g", "silent": false, "syllable": 0 }
+    ]
+  },
+  {
+    "word": "bus",
+    "ipa": "/bʌs/",
+    "arpabet": "B AH1 S",
+    "syllables": ["bus"],
+    "stress": [1],
+    "segments": [
+      { "letters": "b", "phoneme": "b", "ipa": "b", "silent": false, "syllable": 0 },
+      { "letters": "u", "phoneme": "ʌ", "ipa": "ʌ", "silent": false, "syllable": 0 },
+      { "letters": "s", "phoneme": "s", "ipa": "s", "silent": false, "syllable": 0 }
+    ]
+  }
+]

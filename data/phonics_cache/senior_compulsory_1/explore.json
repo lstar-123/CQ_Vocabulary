@@ -1,0 +1,35 @@
+{
+  "word": "explore",
+  "ipa": "/ɪkˈsplɔːr/",
+  "arpabet": "IH0 K S P L AO1 R",
+  "syllables": [
+    "ex",
+    "plore"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "x",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "ore",
+      "silent": false
+    }
+  ]
+}

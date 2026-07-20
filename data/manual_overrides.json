@@ -1,0 +1,922 @@
+{
+  "_description": "Manual phonics overrides that always take priority over Claude-generated data. Add entries with reviewed=true to protect them from regeneration.",
+  "_usage": "Each key is the lowercase word. reviewed=true entries will never be overwritten by generate_phonics_dataset.py or review_phonics.py.",
+  "_example": "see entries below for actual overrides",
+  "diet": {
+    "reviewed": true,
+    "reviewed_by": "teacher",
+    "reviewed_at": "2026-07-12T10:00:00Z",
+    "phonics_data": {
+      "word": "diet",
+      "ipa": "/ˈdaɪət/",
+      "arpabet": "D AY1 AH0 T",
+      "syllables": [
+        "di",
+        "et"
+      ],
+      "stress": [
+        1,
+        0
+      ],
+      "segments": [
+        {
+          "text": "d",
+          "silent": false
+        },
+        {
+          "text": "i",
+          "silent": false
+        },
+        {
+          "text": "e",
+          "silent": false
+        },
+        {
+          "text": "t",
+          "silent": false
+        }
+      ]
+    }
+  },
+  "recognise (NAmE -ize)": {
+    "reviewed": true,
+    "reviewed_by": "teacher",
+    "reviewed_at": "2026-07-12T10:00:00Z",
+    "phonics_data": {
+      "word": "recognise",
+      "ipa": "/ˈrɛkəɡnaɪz/",
+      "arpabet": "R EH1 K AH0 G N AY0 Z",
+      "syllables": [
+        "re",
+        "cog",
+        "nise"
+      ],
+      "stress": [
+        1,
+        0,
+        0
+      ],
+      "segments": [
+        {
+          "text": "r",
+          "silent": false
+        },
+        {
+          "text": "e",
+          "silent": false
+        },
+        {
+          "text": "c",
+          "silent": false
+        },
+        {
+          "text": "o",
+          "silent": false
+        },
+        {
+          "text": "g",
+          "silent": false
+        },
+        {
+          "text": "n",
+          "silent": false
+        },
+        {
+          "text": "i",
+          "silent": false
+        },
+        {
+          "text": "s",
+          "silent": false
+        },
+        {
+          "text": "e",
+          "silent": true
+        }
+      ]
+    }
+  },
+  "organise (NAmE -ize)": {
+    "reviewed": true,
+    "reviewed_by": "teacher",
+    "reviewed_at": "2026-07-12T10:00:00Z",
+    "phonics_data": {
+      "word": "organise",
+      "ipa": "/ˈɔːrɡənaɪz/",
+      "arpabet": "AO1 R G AH0 N AY0 Z",
+      "syllables": [
+        "or",
+        "ga",
+        "nise"
+      ],
+      "stress": [
+        1,
+        0,
+        0
+      ],
+      "segments": [
+        {
+          "text": "or",
+          "silent": false
+        },
+        {
+          "text": "g",
+          "silent": false
+        },
+        {
+          "text": "a",
+          "silent": false
+        },
+        {
+          "text": "n",
+          "silent": false
+        },
+        {
+          "text": "i",
+          "silent": false
+        },
+        {
+          "text": "s",
+          "silent": false
+        },
+        {
+          "text": "e",
+          "silent": true
+        }
+      ]
+    }
+  },
+  "organisation (NAmE -ization)": {
+    "reviewed": true,
+    "reviewed_by": "teacher",
+    "reviewed_at": "2026-07-12T10:00:00Z",
+    "phonics_data": {
+      "word": "organisation",
+      "ipa": "/ˌɔːrɡənaɪˈzeɪʃən/",
+      "arpabet": "AO2 R G AH0 N AY0 Z EY1 SH AH0 N",
+      "syllables": [
+        "or",
+        "ga",
+        "ni",
+        "sa",
+        "tion"
+      ],
+      "stress": [
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      "segments": [
+        {
+          "text": "or",
+          "silent": false
+        },
+        {
+          "text": "g",
+          "silent": false
+        },
+        {
+          "text": "a",
+          "silent": false
+        },
+        {
+          "text": "n",
+          "silent": false
+        },
+        {
+          "text": "i",
+          "silent": false
+        },
+        {
+          "text": "s",
+          "silent": false
+        },
+        {
+          "text": "a",
+          "silent": false
+        },
+        {
+          "text": "tion",
+          "silent": false
+        }
+      ]
+    }
+  },
+  "civilisation (NAmE -ization)": {
+    "reviewed": true,
+    "reviewed_by": "teacher",
+    "reviewed_at": "2026-07-12T10:00:00Z",
+    "phonics_data": {
+      "word": "civilisation",
+      "ipa": "/ˌsɪvɪlaɪˈzeɪʃən/",
+      "arpabet": "S IH2 V AH0 L AY0 Z EY1 SH AH0 N",
+      "syllables": [
+        "civ",
+        "i",
+        "li",
+        "sa",
+        "tion"
+      ],
+      "stress": [
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      "segments": [
+        {
+          "text": "c",
+          "silent": false
+        },
+        {
+          "text": "i",
+          "silent": false
+        },
+        {
+          "text": "v",
+          "silent": false
+        },
+        {
+          "text": "i",
+          "silent": false
+        },
+        {
+          "text": "l",
+          "silent": false
+        },
+        {
+          "text": "i",
+          "silent": false
+        },
+        {
+          "text": "s",
+          "silent": false
+        },
+        {
+          "text": "a",
+          "silent": false
+        },
+        {
+          "text": "tion",
+          "silent": false
+        }
+      ]
+    }
+  },
+  "even if/though": {
+    "reviewed": true,
+    "reviewed_by": "teacher",
+    "reviewed_at": "2026-07-12T10:00:00Z",
+    "phonics_data": {
+      "word": "even if/though",
+      "ipa": "/ˈiːvən ɪf/ðoʊ/",
+      "arpabet": "IY1 V AH0 N IH1 F DH OW1",
+      "syllables": [
+        "e",
+        "ven",
+        "if",
+        "though"
+      ],
+      "stress": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "segments": [
+        {
+          "text": "e",
+          "silent": false
+        },
+        {
+          "text": "v",
+          "silent": false
+        },
+        {
+          "text": "e",
+          "silent": false
+        },
+        {
+          "text": "n",
+          "silent": false
+        },
+        {
+          "text": " ",
+          "silent": false
+        },
+        {
+          "text": "i",
+          "silent": false
+        },
+        {
+          "text": "f",
+          "silent": false
+        },
+        {
+          "text": "/",
+          "silent": false
+        },
+        {
+          "text": "t",
+          "silent": false
+        },
+        {
+          "text": "h",
+          "silent": false
+        },
+        {
+          "text": "ough",
+          "silent": false
+        }
+      ]
+    }
+  },
+  "compare ... with/to ...": {
+    "reviewed": true,
+    "reviewed_by": "teacher",
+    "reviewed_at": "2026-07-12T10:00:00Z",
+    "phonics_data": {
+      "word": "compare ... with/to ...",
+      "ipa": "/kəmˈpɛr wɪð/tuː/",
+      "arpabet": "K AH0 M P EH1 R W IH1 DH T UW1",
+      "syllables": [
+        "com",
+        "pare",
+        "with",
+        "to"
+      ],
+      "stress": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "segments": [
+        {
+          "text": "c",
+          "silent": false
+        },
+        {
+          "text": "o",
+          "silent": false
+        },
+        {
+          "text": "m",
+          "silent": false
+        },
+        {
+          "text": "p",
+          "silent": false
+        },
+        {
+          "text": "a",
+          "silent": false
+        },
+        {
+          "text": "r",
+          "silent": false
+        },
+        {
+          "text": "e",
+          "silent": false
+        },
+        {
+          "text": " ",
+          "silent": false
+        },
+        {
+          "text": ".",
+          "silent": false
+        },
+        {
+          "text": ".",
+          "silent": false
+        },
+        {
+          "text": ".",
+          "silent": false
+        },
+        {
+          "text": " ",
+          "silent": false
+        },
+        {
+          "text": "w",
+          "silent": false
+        },
+        {
+          "text": "i",
+          "silent": false
+        },
+        {
+          "text": "th",
+          "silent": false
+        },
+        {
+          "text": "/",
+          "silent": false
+        },
+        {
+          "text": "t",
+          "silent": false
+        },
+        {
+          "text": "o",
+          "silent": false
+        },
+        {
+          "text": " ",
+          "silent": false
+        },
+        {
+          "text": ".",
+          "silent": false
+        },
+        {
+          "text": ".",
+          "silent": false
+        },
+        {
+          "text": ".",
+          "silent": false
+        }
+      ]
+    }
+  },
+  "p.m.": {
+    "reviewed": true,
+    "reviewed_by": "teacher",
+    "reviewed_at": "2026-07-12T10:00:00Z",
+    "phonics_data": {
+      "word": "p.m.",
+      "ipa": "/piːɛm/",
+      "arpabet": "P IY1 EH1 M",
+      "syllables": [
+        {
+          "text": "p",
+          "stress": 1,
+          "segments": [
+            {
+              "text": "p",
+              "silent": false,
+              "rule": "consonant-p"
+            }
+          ]
+        },
+        {
+          "text": "m",
+          "stress": 1,
+          "segments": [
+            {
+              "text": "m",
+              "silent": false,
+              "rule": "consonant-m"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "a.m.": {
+    "reviewed": true,
+    "reviewed_by": "teacher",
+    "reviewed_at": "2026-07-12T10:00:00Z",
+    "phonics_data": {
+      "word": "a.m.",
+      "ipa": "/eɪɛm/",
+      "arpabet": "EY1 EH1 M",
+      "syllables": [
+        {
+          "text": "a",
+          "stress": 1,
+          "segments": [
+            {
+              "text": "a",
+              "silent": false,
+              "rule": "vowel-a"
+            }
+          ]
+        },
+        {
+          "text": "m",
+          "stress": 1,
+          "segments": [
+            {
+              "text": "m",
+              "silent": false,
+              "rule": "consonant-m"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "leave ... alone": {
+    "reviewed": true,
+    "reviewed_by": "teacher",
+    "reviewed_at": "2026-07-12T10:00:00Z",
+    "phonics_data": {
+      "word": "leave ... alone",
+      "ipa": "/liːv əˈloʊn/",
+      "arpabet": "L IY1 V AH0 L OW1 N",
+      "syllables": [
+        {
+          "text": "leave",
+          "stress": 1,
+          "segments": [
+            {
+              "text": "l",
+              "silent": false,
+              "rule": "consonant-l"
+            },
+            {
+              "text": "ea",
+              "silent": false,
+              "rule": "ea"
+            },
+            {
+              "text": "v",
+              "silent": false,
+              "rule": "consonant-v"
+            },
+            {
+              "text": "e",
+              "silent": true,
+              "rule": "magic-e"
+            }
+          ]
+        },
+        {
+          "text": "a",
+          "stress": 0,
+          "segments": [
+            {
+              "text": "a",
+              "silent": false,
+              "rule": "schwa"
+            }
+          ]
+        },
+        {
+          "text": "lone",
+          "stress": 1,
+          "segments": [
+            {
+              "text": "l",
+              "silent": false,
+              "rule": "consonant-l"
+            },
+            {
+              "text": "o",
+              "silent": false,
+              "rule": "vowel-o"
+            },
+            {
+              "text": "n",
+              "silent": false,
+              "rule": "consonant-n"
+            },
+            {
+              "text": "e",
+              "silent": true,
+              "rule": "magic-e"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "extra-curricular": {
+    "reviewed": true,
+    "reviewed_by": "teacher",
+    "reviewed_at": "2026-07-12T10:00:00Z",
+    "phonics_data": {
+      "word": "extra-curricular",
+      "ipa": "/ˌɛkstrəkəˈrɪkjələr/",
+      "arpabet": "EH2 K S T R AH0 K AH0 R IH1 K Y AH0 L ER0",
+      "syllables": [
+        {
+          "text": "ex",
+          "stress": 2,
+          "segments": [
+            {
+              "text": "e",
+              "silent": false,
+              "rule": "vowel-e"
+            },
+            {
+              "text": "x",
+              "silent": false,
+              "rule": "consonant-x"
+            }
+          ]
+        },
+        {
+          "text": "tra",
+          "stress": 0,
+          "segments": [
+            {
+              "text": "t",
+              "silent": false,
+              "rule": "consonant-t"
+            },
+            {
+              "text": "r",
+              "silent": false,
+              "rule": "consonant-r"
+            },
+            {
+              "text": "a",
+              "silent": false,
+              "rule": "schwa"
+            }
+          ]
+        },
+        {
+          "text": "cur",
+          "stress": 0,
+          "segments": [
+            {
+              "text": "c",
+              "silent": false,
+              "rule": "consonant-c"
+            },
+            {
+              "text": "ur",
+              "silent": false,
+              "rule": "ur"
+            }
+          ]
+        },
+        {
+          "text": "ri",
+          "stress": 0,
+          "segments": [
+            {
+              "text": "r",
+              "silent": false,
+              "rule": "consonant-r"
+            },
+            {
+              "text": "i",
+              "silent": false,
+              "rule": "vowel-i"
+            }
+          ]
+        },
+        {
+          "text": "cu",
+          "stress": 0,
+          "segments": [
+            {
+              "text": "c",
+              "silent": false,
+              "rule": "consonant-c"
+            },
+            {
+              "text": "u",
+              "silent": false,
+              "rule": "vowel-u"
+            }
+          ]
+        },
+        {
+          "text": "lar",
+          "stress": 0,
+          "segments": [
+            {
+              "text": "l",
+              "silent": false,
+              "rule": "consonant-l"
+            },
+            {
+              "text": "ar",
+              "silent": false,
+              "rule": "ar"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "push-up": {
+    "reviewed": true,
+    "reviewed_by": "teacher",
+    "reviewed_at": "2026-07-12T10:00:00Z",
+    "phonics_data": {
+      "word": "push-up",
+      "ipa": "/ˈpʊʃʌp/",
+      "arpabet": "P UH1 SH AH2 P",
+      "syllables": [
+        {
+          "text": "push",
+          "stress": 1,
+          "segments": [
+            {
+              "text": "p",
+              "silent": false,
+              "rule": "consonant-p"
+            },
+            {
+              "text": "u",
+              "silent": false,
+              "rule": "vowel-u"
+            },
+            {
+              "text": "sh",
+              "silent": false,
+              "rule": "sh"
+            }
+          ]
+        },
+        {
+          "text": "up",
+          "stress": 2,
+          "segments": [
+            {
+              "text": "u",
+              "silent": false,
+              "rule": "vowel-u"
+            },
+            {
+              "text": "p",
+              "silent": false,
+              "rule": "consonant-p"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "cut ... out": {
+    "reviewed": true,
+    "reviewed_by": "teacher",
+    "reviewed_at": "2026-07-12T10:00:00Z",
+    "phonics_data": {
+      "word": "cut ... out",
+      "ipa": "/kʌt aʊt/",
+      "arpabet": "K AH1 T AW1 T",
+      "syllables": [
+        {
+          "text": "cut",
+          "stress": 1,
+          "segments": [
+            {
+              "text": "c",
+              "silent": false,
+              "rule": "consonant-c"
+            },
+            {
+              "text": "u",
+              "silent": false,
+              "rule": "vowel-u"
+            },
+            {
+              "text": "t",
+              "silent": false,
+              "rule": "consonant-t"
+            }
+          ]
+        },
+        {
+          "text": "out",
+          "stress": 1,
+          "segments": [
+            {
+              "text": "ou",
+              "silent": false,
+              "rule": "ou"
+            },
+            {
+              "text": "t",
+              "silent": false,
+              "rule": "consonant-t"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "prefer ... to ...": {
+    "reviewed": true,
+    "reviewed_by": "teacher",
+    "reviewed_at": "2026-07-12T10:00:00Z",
+    "phonics_data": {
+      "word": "prefer ... to ...",
+      "ipa": "/prɪˈfɜːr tuː/",
+      "arpabet": "P R IH0 F ER1 T UW1",
+      "syllables": [
+        {
+          "text": "pre",
+          "stress": 0,
+          "segments": [
+            {
+              "text": "p",
+              "silent": false,
+              "rule": "consonant-p"
+            },
+            {
+              "text": "r",
+              "silent": false,
+              "rule": "consonant-r"
+            },
+            {
+              "text": "e",
+              "silent": false,
+              "rule": "vowel-e"
+            }
+          ]
+        },
+        {
+          "text": "fer",
+          "stress": 1,
+          "segments": [
+            {
+              "text": "f",
+              "silent": false,
+              "rule": "consonant-f"
+            },
+            {
+              "text": "er",
+              "silent": false,
+              "rule": "er"
+            }
+          ]
+        },
+        {
+          "text": "to",
+          "stress": 1,
+          "segments": [
+            {
+              "text": "t",
+              "silent": false,
+              "rule": "consonant-t"
+            },
+            {
+              "text": "o",
+              "silent": false,
+              "rule": "vowel-o"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "sign up (for sth)": {
+    "reviewed": true,
+    "reviewed_by": "teacher",
+    "reviewed_at": "2026-07-12T10:00:00Z",
+    "phonics_data": {
+      "word": "sign up (for sth)",
+      "ipa": "/saɪn ʌp/",
+      "arpabet": "S AY1 N AH1 P",
+      "syllables": [
+        {
+          "text": "sign",
+          "stress": 1,
+          "segments": [
+            {
+              "text": "s",
+              "silent": false,
+              "rule": "consonant-s"
+            },
+            {
+              "text": "i",
+              "silent": false,
+              "rule": "vowel-i"
+            },
+            {
+              "text": "g",
+              "silent": true,
+              "rule": "silent-g"
+            },
+            {
+              "text": "n",
+              "silent": false,
+              "rule": "consonant-n"
+            }
+          ]
+        },
+        {
+          "text": "up",
+          "stress": 1,
+          "segments": [
+            {
+              "text": "u",
+              "silent": false,
+              "rule": "vowel-u"
+            },
+            {
+              "text": "p",
+              "silent": false,
+              "rule": "consonant-p"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

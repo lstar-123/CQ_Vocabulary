@@ -1,0 +1,39 @@
+{
+  "word": "destroy",
+  "ipa": "/dɪˈstrɔɪ/",
+  "arpabet": "D IH0 S T R OY1",
+  "syllables": [
+    "de",
+    "stroy"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "oy",
+      "silent": false
+    }
+  ]
+}

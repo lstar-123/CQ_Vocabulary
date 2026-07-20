@@ -1,0 +1,43 @@
+{
+  "word": "make it",
+  "ipa": "/ˈmeɪk ˈɪt/",
+  "arpabet": "M EY1 K IH1 T",
+  "syllables": [
+    "make",
+    "it"
+  ],
+  "stress": [
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "k",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

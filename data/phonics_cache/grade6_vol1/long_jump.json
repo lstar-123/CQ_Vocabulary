@@ -1,0 +1,47 @@
+{
+  "word": "long jump",
+  "ipa": "/ˈlɒŋ dʒʌmp/",
+  "arpabet": "L AO1 NG JH AH1 M P",
+  "syllables": [
+    "long",
+    "jump"
+  ],
+  "stress": [
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "ng",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "j",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    }
+  ]
+}

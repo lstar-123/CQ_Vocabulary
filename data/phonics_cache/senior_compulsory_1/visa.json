@@ -1,0 +1,31 @@
+{
+  "word": "visa",
+  "ipa": "/ˈviːzə/",
+  "arpabet": "V IY1 Z AH0",
+  "syllables": [
+    "vi",
+    "sa"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    }
+  ]
+}

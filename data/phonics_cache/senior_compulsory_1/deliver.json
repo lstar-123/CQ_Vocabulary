@@ -1,0 +1,41 @@
+{
+  "word": "deliver",
+  "ipa": "/dɪˈlɪvər/",
+  "arpabet": "D IH0 L IH1 V ER0",
+  "syllables": [
+    "de",
+    "liv",
+    "er"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    }
+  ]
+}

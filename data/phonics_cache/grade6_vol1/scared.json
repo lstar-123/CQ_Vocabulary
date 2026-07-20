@@ -1,0 +1,29 @@
+{
+  "word": "scared",
+  "ipa": "/skɛərd/",
+  "arpabet": "S K EH1 R D",
+  "syllables": [
+    "scared"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "are",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

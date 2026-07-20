@@ -1,0 +1,89 @@
+{
+  "word": "pretend to do sth",
+  "ipa": "/prɪˈtend tə ˈduː ˈsʌmθɪŋ/",
+  "arpabet": "P R IH0 T EH1 N D T AH0 D UW1 S AH1 M TH IH0 NG",
+  "syllables": [
+    "pre",
+    "tend",
+    "to",
+    "do",
+    "sth"
+  ],
+  "stress": [
+    0,
+    1,
+    0,
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "h",
+      "silent": false
+    }
+  ]
+}

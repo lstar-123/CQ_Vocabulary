@@ -1,0 +1,31 @@
+{
+  "word": "lecture",
+  "ipa": "/ˈlɛktʃər/",
+  "arpabet": "L EH1 K CH ER0",
+  "syllables": [
+    "lec",
+    "ture"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "ture",
+      "silent": false
+    }
+  ]
+}

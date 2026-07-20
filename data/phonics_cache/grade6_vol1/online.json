@@ -1,0 +1,39 @@
+{
+  "word": "online",
+  "ipa": "/ˈɒnlaɪn/",
+  "arpabet": "AO1 N L AY0 N",
+  "syllables": [
+    "on",
+    "line"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

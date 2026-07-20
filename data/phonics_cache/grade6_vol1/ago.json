@@ -1,0 +1,27 @@
+{
+  "word": "ago",
+  "ipa": "/əˈɡoʊ/",
+  "arpabet": "AH0 G OW1",
+  "syllables": [
+    "a",
+    "go"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    }
+  ]
+}

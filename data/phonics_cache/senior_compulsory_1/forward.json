@@ -1,0 +1,35 @@
+{
+  "word": "forward",
+  "ipa": "/ˈfɔːrwərd/",
+  "arpabet": "F AO1 R W ER0 D",
+  "syllables": [
+    "for",
+    "ward"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "or",
+      "silent": false
+    },
+    {
+      "text": "w",
+      "silent": false
+    },
+    {
+      "text": "ar",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

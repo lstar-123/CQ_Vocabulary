@@ -1,0 +1,39 @@
+{
+  "word": "picnic",
+  "ipa": "/ˈpɪknɪk/",
+  "arpabet": "P IH1 K N IH0 K",
+  "syllables": [
+    "pic",
+    "nic"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "word": "rescue",
+  "ipa": "/ˈrɛskjuː/",
+  "arpabet": "R EH1 S K Y UW0",
+  "syllables": [
+    "res",
+    "cue"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "ue",
+      "silent": false
+    }
+  ]
+}

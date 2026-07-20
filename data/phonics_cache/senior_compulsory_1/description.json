@@ -1,0 +1,49 @@
+{
+  "word": "description",
+  "ipa": "/dɪˈskrɪpʃən/",
+  "arpabet": "D IH0 S K R IH1 P SH AH0 N",
+  "syllables": [
+    "de",
+    "scrip",
+    "tion"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "tion",
+      "silent": false
+    }
+  ]
+}

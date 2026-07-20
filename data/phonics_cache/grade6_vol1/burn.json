@@ -1,0 +1,25 @@
+{
+  "word": "burn",
+  "ipa": "/bɜːrn/",
+  "arpabet": "B ER1 N",
+  "syllables": [
+    "burn"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "ur",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    }
+  ]
+}

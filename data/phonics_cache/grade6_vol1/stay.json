@@ -1,0 +1,25 @@
+{
+  "word": "stay",
+  "ipa": "/steɪ/",
+  "arpabet": "S T EY1",
+  "syllables": [
+    "stay"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "ay",
+      "silent": false
+    }
+  ]
+}

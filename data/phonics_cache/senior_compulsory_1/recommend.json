@@ -1,0 +1,53 @@
+{
+  "word": "recommend",
+  "ipa": "/ˌrɛkəˈmɛnd/",
+  "arpabet": "R EH2 K AH0 M EH1 N D",
+  "syllables": [
+    "re",
+    "com",
+    "mend"
+  ],
+  "stress": [
+    2,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

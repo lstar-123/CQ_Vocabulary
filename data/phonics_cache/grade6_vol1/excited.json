@@ -1,0 +1,45 @@
+{
+  "word": "excited",
+  "ipa": "/ɪkˈsaɪtɪd/",
+  "arpabet": "IH0 K S AY1 T IH0 D",
+  "syllables": [
+    "ex",
+    "ci",
+    "ted"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "x",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

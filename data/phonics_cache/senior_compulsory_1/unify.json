@@ -1,0 +1,37 @@
+{
+  "word": "unify",
+  "ipa": "/ˈjuːnɪfaɪ/",
+  "arpabet": "Y UW1 N IH0 F AY0",
+  "syllables": [
+    "u",
+    "ni",
+    "fy"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}

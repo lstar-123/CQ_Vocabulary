@@ -1,0 +1,80 @@
+{
+  "ipa": "/ˈrɛkəɡnaɪz/",
+  "word": "recognise (NAmE -ize)",
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "arpabet": "R EH1 K AH0 G N AY0 Z",
+  "segments": [
+    {
+      "ipa": "r",
+      "silent": false,
+      "letters": "r",
+      "phoneme": "R",
+      "syllable": 0
+    },
+    {
+      "ipa": "ɛ",
+      "silent": false,
+      "letters": "e",
+      "phoneme": "EH",
+      "syllable": 0
+    },
+    {
+      "ipa": "k",
+      "silent": false,
+      "letters": "c",
+      "phoneme": "K",
+      "syllable": 1
+    },
+    {
+      "ipa": "ə",
+      "silent": false,
+      "letters": "o",
+      "phoneme": "AH",
+      "syllable": 1
+    },
+    {
+      "ipa": "ɡ",
+      "silent": false,
+      "letters": "g",
+      "phoneme": "G",
+      "syllable": 1
+    },
+    {
+      "ipa": "n",
+      "silent": false,
+      "letters": "n",
+      "phoneme": "N",
+      "syllable": 2
+    },
+    {
+      "ipa": "aɪ",
+      "silent": false,
+      "letters": "i",
+      "phoneme": "AY",
+      "syllable": 2
+    },
+    {
+      "ipa": "z",
+      "silent": false,
+      "letters": "s",
+      "phoneme": "Z",
+      "syllable": 2
+    },
+    {
+      "ipa": "",
+      "silent": true,
+      "letters": "e",
+      "phoneme": "",
+      "syllable": 2
+    }
+  ],
+  "syllables": [
+    "re",
+    "cog",
+    "nise"
+  ]
+}

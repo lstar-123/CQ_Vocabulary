@@ -1,0 +1,25 @@
+{
+  "word": "surf",
+  "ipa": "/sɜːrf/",
+  "arpabet": "S ER1 F",
+  "syllables": [
+    "surf"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "ur",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    }
+  ]
+}

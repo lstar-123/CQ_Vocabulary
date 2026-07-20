@@ -1,0 +1,45 @@
+{
+  "word": "behaviour",
+  "ipa": "/bɪˈheɪvjər/",
+  "arpabet": "B IH0 HH EY1 V Y ER0",
+  "syllables": [
+    "be",
+    "hav",
+    "iour"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "h",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "our",
+      "silent": false
+    }
+  ]
+}

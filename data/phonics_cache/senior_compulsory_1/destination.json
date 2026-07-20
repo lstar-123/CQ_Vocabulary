@@ -1,0 +1,51 @@
+{
+  "word": "destination",
+  "ipa": "/ˌdɛstɪˈneɪʃən/",
+  "arpabet": "D EH2 S T AH0 N EY1 SH AH0 N",
+  "syllables": [
+    "des",
+    "ti",
+    "na",
+    "tion"
+  ],
+  "stress": [
+    2,
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "tion",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "word": "debate",
+  "ipa": "/dɪˈbeɪt/",
+  "arpabet": "D AH0 B EY1 T",
+  "syllables": [
+    "de",
+    "bate"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "b",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "word": "still",
+  "ipa": "/stɪl/",
+  "arpabet": "S T IH1 L",
+  "syllables": [
+    "still"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "ll",
+      "silent": false
+    }
+  ]
+}

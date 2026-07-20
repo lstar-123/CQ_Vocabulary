@@ -1,0 +1,35 @@
+{
+  "word": "apply",
+  "ipa": "/əˈplaɪ/",
+  "arpabet": "AH0 P L AY1",
+  "syllables": [
+    "ap",
+    "ply"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}

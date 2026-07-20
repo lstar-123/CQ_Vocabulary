@@ -1,0 +1,29 @@
+{
+  "word": "flood",
+  "ipa": "/flʌd/",
+  "arpabet": "F L AH1 D",
+  "syllables": [
+    "flood"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "oo",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

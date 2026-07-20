@@ -1,0 +1,35 @@
+{
+  "word": "unique",
+  "ipa": "/juːˈniːk/",
+  "arpabet": "Y UW0 N IY1 K",
+  "syllables": [
+    "u",
+    "nique"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "qu",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

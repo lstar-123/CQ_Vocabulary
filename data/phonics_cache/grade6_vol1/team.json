@@ -1,0 +1,25 @@
+{
+  "word": "team",
+  "ipa": "/tiːm/",
+  "arpabet": "T IY1 M",
+  "syllables": [
+    "team"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "ea",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "word": "formal",
+  "ipa": "/ˈfɔːrməl/",
+  "arpabet": "F AO1 R M AH0 L",
+  "syllables": [
+    "for",
+    "mal"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "or",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    }
+  ]
+}

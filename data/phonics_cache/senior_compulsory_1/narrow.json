@@ -1,0 +1,31 @@
+{
+  "word": "narrow",
+  "ipa": "/ˈnæroʊ/",
+  "arpabet": "N AE1 R OW0",
+  "syllables": [
+    "nar",
+    "row"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "rr",
+      "silent": false
+    },
+    {
+      "text": "ow",
+      "silent": false
+    }
+  ]
+}

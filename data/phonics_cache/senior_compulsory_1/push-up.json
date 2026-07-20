@@ -1,0 +1,57 @@
+{
+  "word": "push-up",
+  "ipa": "/ˈpʊʃ.ʌp/",
+  "arpabet": "P UH1 SH AH2 P",
+  "syllables": [
+    "push",
+    "up"
+  ],
+  "stress": [
+    1,
+    2
+  ],
+  "segments": [
+    {
+      "letters": "p",
+      "phoneme": "P",
+      "ipa": "p",
+      "silent": false,
+      "syllable": 0
+    },
+    {
+      "letters": "u",
+      "phoneme": "UH",
+      "ipa": "ʊ",
+      "silent": false,
+      "syllable": 0
+    },
+    {
+      "letters": "sh",
+      "phoneme": "SH",
+      "ipa": "ʃ",
+      "silent": false,
+      "syllable": 0
+    },
+    {
+      "letters": "-",
+      "phoneme": "",
+      "ipa": "",
+      "silent": true,
+      "syllable": 0
+    },
+    {
+      "letters": "u",
+      "phoneme": "AH",
+      "ipa": "ʌ",
+      "silent": false,
+      "syllable": 1
+    },
+    {
+      "letters": "p",
+      "phoneme": "P",
+      "ipa": "p",
+      "silent": false,
+      "syllable": 1
+    }
+  ]
+}

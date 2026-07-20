@@ -1,0 +1,37 @@
+{
+  "word": "solution",
+  "ipa": "/səˈluːʃən/",
+  "arpabet": "S AH0 L UW1 SH AH0 N",
+  "syllables": [
+    "so",
+    "lu",
+    "tion"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "tion",
+      "silent": false
+    }
+  ]
+}

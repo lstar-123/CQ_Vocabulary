@@ -1,0 +1,67 @@
+{
+  "word": "look forward to",
+  "ipa": "/lʊk ˈfɔːrwərd tuː/",
+  "arpabet": "L UH1 K F AO1 R W AH0 R D T UW1",
+  "syllables": [
+    "look",
+    "for",
+    "ward",
+    "to"
+  ],
+  "stress": [
+    1,
+    1,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "oo",
+      "silent": false
+    },
+    {
+      "text": "k",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "or",
+      "silent": false
+    },
+    {
+      "text": "w",
+      "silent": false
+    },
+    {
+      "text": "ar",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    }
+  ]
+}

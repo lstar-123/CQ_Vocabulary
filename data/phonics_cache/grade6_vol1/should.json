@@ -1,0 +1,25 @@
+{
+  "word": "should",
+  "ipa": "/ʃʊd/",
+  "arpabet": "SH UH1 D",
+  "syllables": [
+    "should"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "sh",
+      "silent": false
+    },
+    {
+      "text": "oul",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

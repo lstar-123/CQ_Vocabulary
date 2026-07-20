@@ -1,0 +1,25 @@
+{
+  "word": "gap",
+  "ipa": "/ɡæp/",
+  "arpabet": "G AE1 P",
+  "syllables": [
+    "gap"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "word": "length",
+  "ipa": "/lɛŋkθ/",
+  "arpabet": "L EH1 NG K TH",
+  "syllables": [
+    "length"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "ng",
+      "silent": false
+    },
+    {
+      "text": "th",
+      "silent": false
+    }
+  ]
+}

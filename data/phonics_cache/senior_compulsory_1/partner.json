@@ -1,0 +1,35 @@
+{
+  "word": "partner",
+  "ipa": "/ˈpɑːrtnər/",
+  "arpabet": "P AA1 R T N ER0",
+  "syllables": [
+    "part",
+    "ner"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "ar",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    }
+  ]
+}

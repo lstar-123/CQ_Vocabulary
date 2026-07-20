@@ -1,0 +1,35 @@
+{
+  "word": "soccer",
+  "ipa": "/ˈsɑːkər/",
+  "arpabet": "S AA1 K ER0",
+  "syllables": [
+    "soc",
+    "cer"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    }
+  ]
+}

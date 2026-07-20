@@ -1,0 +1,89 @@
+{
+  "ipa": "/kəmˈpɛr wɪð/tuː/",
+  "word": "compare ... with/to ...",
+  "stress": [
+    0,
+    1,
+    1,
+    1
+  ],
+  "arpabet": "K AH0 M P EH1 R W IH1 DH T UW1",
+  "segments": [
+    {
+      "ipa": "k",
+      "silent": false,
+      "letters": "c",
+      "phoneme": "K",
+      "syllable": 0
+    },
+    {
+      "ipa": "ə",
+      "silent": false,
+      "letters": "o",
+      "phoneme": "AH",
+      "syllable": 0
+    },
+    {
+      "ipa": "m",
+      "silent": false,
+      "letters": "m",
+      "phoneme": "M",
+      "syllable": 0
+    },
+    {
+      "ipa": "p",
+      "silent": false,
+      "letters": "p",
+      "phoneme": "P",
+      "syllable": 1
+    },
+    {
+      "ipa": "ɛr",
+      "silent": false,
+      "letters": "are",
+      "phoneme": "EH R",
+      "syllable": 1
+    },
+    {
+      "ipa": "w",
+      "silent": false,
+      "letters": "w",
+      "phoneme": "W",
+      "syllable": 2
+    },
+    {
+      "ipa": "ɪ",
+      "silent": false,
+      "letters": "i",
+      "phoneme": "IH",
+      "syllable": 2
+    },
+    {
+      "ipa": "ð",
+      "silent": false,
+      "letters": "th",
+      "phoneme": "DH",
+      "syllable": 2
+    },
+    {
+      "ipa": "t",
+      "silent": false,
+      "letters": "t",
+      "phoneme": "T",
+      "syllable": 3
+    },
+    {
+      "ipa": "uː",
+      "silent": false,
+      "letters": "o",
+      "phoneme": "UW",
+      "syllable": 3
+    }
+  ],
+  "syllables": [
+    "com",
+    "pare",
+    "with",
+    "to"
+  ]
+}

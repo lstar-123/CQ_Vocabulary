@@ -1,0 +1,21 @@
+{
+  "word": "sea",
+  "ipa": "/siː/",
+  "arpabet": "S IY1",
+  "syllables": [
+    "sea"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "ea",
+      "silent": false
+    }
+  ]
+}

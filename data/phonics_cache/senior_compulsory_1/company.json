@@ -1,0 +1,45 @@
+{
+  "word": "company",
+  "ipa": "/ˈkʌmpəni/",
+  "arpabet": "K AH1 M P AH0 N IY0",
+  "syllables": [
+    "com",
+    "pa",
+    "ny"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}

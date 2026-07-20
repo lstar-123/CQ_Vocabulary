@@ -1,0 +1,43 @@
+{
+  "word": "on hand",
+  "ipa": "/ɒn hænd/",
+  "arpabet": "AA1 N HH AE1 N D",
+  "syllables": [
+    "on",
+    "hand"
+  ],
+  "stress": [
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "h",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

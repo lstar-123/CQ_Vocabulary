@@ -1,0 +1,39 @@
+{
+  "word": "million",
+  "ipa": "/ˈmɪljən/",
+  "arpabet": "M IH1 L Y AH0 N",
+  "syllables": [
+    "mil",
+    "lion"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "ll",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    }
+  ]
+}

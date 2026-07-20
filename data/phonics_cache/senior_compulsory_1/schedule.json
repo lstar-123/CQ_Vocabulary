@@ -1,0 +1,43 @@
+{
+  "word": "schedule",
+  "ipa": "/ˈʃɛdjuːl/",
+  "arpabet": "SH EH1 D Y UW0 L",
+  "syllables": [
+    "sche",
+    "dule"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "ch",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

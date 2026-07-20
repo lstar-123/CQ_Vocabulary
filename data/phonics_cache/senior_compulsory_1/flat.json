@@ -1,0 +1,29 @@
+{
+  "word": "flat",
+  "ipa": "/flæt/",
+  "arpabet": "F L AE1 T",
+  "syllables": [
+    "flat"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

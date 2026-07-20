@@ -1,0 +1,35 @@
+{
+  "word": "detail",
+  "ipa": "/ˈdiːteɪl/",
+  "arpabet": "D IY1 T EY0 L",
+  "syllables": [
+    "de",
+    "tail"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "ai",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "word": "plate",
+  "ipa": "/pleɪt/",
+  "arpabet": "P L EY1 T",
+  "syllables": [
+    "plate"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

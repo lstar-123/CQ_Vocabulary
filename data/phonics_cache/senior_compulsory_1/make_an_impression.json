@@ -1,0 +1,81 @@
+{
+  "word": "make an impression",
+  "ipa": "/meɪk æn ɪmˈprɛʃən/",
+  "arpabet": "M EY1 K AE0 N IH0 M P R EH1 SH AH0 N",
+  "syllables": [
+    "make",
+    "an",
+    "im",
+    "pres",
+    "sion"
+  ],
+  "stress": [
+    1,
+    0,
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "k",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "sion",
+      "silent": false
+    }
+  ]
+}

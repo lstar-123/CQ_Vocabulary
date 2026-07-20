@@ -1,0 +1,39 @@
+{
+  "word": "captain",
+  "ipa": "/ˈkæptɪn/",
+  "arpabet": "K AE1 P T AH0 N",
+  "syllables": [
+    "cap",
+    "tain"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "ai",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    }
+  ]
+}

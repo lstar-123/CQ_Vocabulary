@@ -1,0 +1,75 @@
+{
+  "ipa": "/ˈiːvən ɪf/ðoʊ/",
+  "word": "even if/though",
+  "stress": [
+    1,
+    0,
+    1,
+    1
+  ],
+  "arpabet": "IY1 V AH0 N IH1 F DH OW1",
+  "segments": [
+    {
+      "ipa": "iː",
+      "silent": false,
+      "letters": "e",
+      "phoneme": "IY",
+      "syllable": 0
+    },
+    {
+      "ipa": "v",
+      "silent": false,
+      "letters": "v",
+      "phoneme": "V",
+      "syllable": 1
+    },
+    {
+      "ipa": "ə",
+      "silent": false,
+      "letters": "e",
+      "phoneme": "AH",
+      "syllable": 1
+    },
+    {
+      "ipa": "n",
+      "silent": false,
+      "letters": "n",
+      "phoneme": "N",
+      "syllable": 1
+    },
+    {
+      "ipa": "ɪ",
+      "silent": false,
+      "letters": "i",
+      "phoneme": "IH",
+      "syllable": 2
+    },
+    {
+      "ipa": "f",
+      "silent": false,
+      "letters": "f",
+      "phoneme": "F",
+      "syllable": 2
+    },
+    {
+      "ipa": "ð",
+      "silent": false,
+      "letters": "th",
+      "phoneme": "DH",
+      "syllable": 3
+    },
+    {
+      "ipa": "oʊ",
+      "silent": false,
+      "letters": "ough",
+      "phoneme": "OW",
+      "syllable": 3
+    }
+  ],
+  "syllables": [
+    "e",
+    "ven",
+    "if",
+    "though"
+  ]
+}

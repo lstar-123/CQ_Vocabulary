@@ -1,0 +1,45 @@
+{
+  "word": "volcano",
+  "ipa": "/vɒlˈkeɪnəʊ/",
+  "arpabet": "V AA0 L K EY1 N OW0",
+  "syllables": [
+    "vol",
+    "ca",
+    "no"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "v",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    }
+  ]
+}

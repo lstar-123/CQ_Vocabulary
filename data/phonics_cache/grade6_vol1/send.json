@@ -1,0 +1,29 @@
+{
+  "word": "send",
+  "ipa": "/sɛnd/",
+  "arpabet": "S EH1 N D",
+  "syllables": [
+    "send"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

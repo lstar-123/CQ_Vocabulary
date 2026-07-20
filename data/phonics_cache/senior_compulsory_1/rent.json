@@ -1,0 +1,29 @@
+{
+  "word": "rent",
+  "ipa": "/rɛnt/",
+  "arpabet": "R EH1 N T",
+  "syllables": [
+    "rent"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

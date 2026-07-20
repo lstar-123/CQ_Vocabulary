@@ -1,0 +1,45 @@
+{
+  "word": "semester",
+  "ipa": "/sɪˈmɛstər/",
+  "arpabet": "S IH0 M EH1 S T AH0 R",
+  "syllables": [
+    "se",
+    "mes",
+    "ter"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    }
+  ]
+}

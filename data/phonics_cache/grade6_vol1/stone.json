@@ -1,0 +1,33 @@
+{
+  "word": "stone",
+  "ipa": "/stoʊn/",
+  "arpabet": "S T OW1 N",
+  "syllables": [
+    "stone"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

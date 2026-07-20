@@ -1,0 +1,47 @@
+{
+  "word": "lose heart",
+  "ipa": "/ˈluːz ˈhɑːrt/",
+  "arpabet": "L UW1 Z HH AA1 R T",
+  "syllables": [
+    "lose",
+    "heart"
+  ],
+  "stress": [
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "h",
+      "silent": false
+    },
+    {
+      "text": "ear",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

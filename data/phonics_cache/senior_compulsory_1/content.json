@@ -1,0 +1,43 @@
+{
+  "word": "content",
+  "ipa": "/ˈkɒntɛnt/",
+  "arpabet": "K AA1 N T EH0 N T",
+  "syllables": [
+    "con",
+    "tent"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    }
+  ]
+}

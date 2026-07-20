@@ -1,0 +1,39 @@
+{
+  "word": "soldier",
+  "ipa": "/ˈsoʊldʒər/",
+  "arpabet": "S OW1 L JH ER0",
+  "syllables": [
+    "sol",
+    "dier"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    }
+  ]
+}

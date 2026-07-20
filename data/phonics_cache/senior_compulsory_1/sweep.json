@@ -1,0 +1,29 @@
+{
+  "word": "sweep",
+  "ipa": "/swiːp/",
+  "arpabet": "S W IY1 P",
+  "syllables": [
+    "sweep"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "w",
+      "silent": false
+    },
+    {
+      "text": "ee",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "word": "in the open air",
+  "ipa": "/ɪn ðə ˈəʊpən ɛə/",
+  "arpabet": "IH0 N DH AH0 OW1 P AH0 N EH1 R",
+  "syllables": [
+    "in",
+    "the",
+    "o",
+    "pen",
+    "air"
+  ],
+  "stress": [
+    0,
+    0,
+    1,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "th",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "air",
+      "silent": false
+    }
+  ]
+}

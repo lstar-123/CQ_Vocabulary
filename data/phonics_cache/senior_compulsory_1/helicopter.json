@@ -1,0 +1,59 @@
+{
+  "word": "helicopter",
+  "ipa": "/ˈhɛlɪkɒptər/",
+  "arpabet": "HH EH1 L AH0 K AA2 P T AH0 R",
+  "syllables": [
+    "hel",
+    "i",
+    "cop",
+    "ter"
+  ],
+  "stress": [
+    1,
+    0,
+    2,
+    0
+  ],
+  "segments": [
+    {
+      "text": "h",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    }
+  ]
+}

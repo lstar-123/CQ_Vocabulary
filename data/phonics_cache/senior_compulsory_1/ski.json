@@ -1,0 +1,25 @@
+{
+  "word": "ski",
+  "ipa": "/skiː/",
+  "arpabet": "S K IY1",
+  "syllables": [
+    "ski"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "k",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "word": "style",
+  "ipa": "/staɪl/",
+  "arpabet": "S T AY1 L",
+  "syllables": [
+    "style"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

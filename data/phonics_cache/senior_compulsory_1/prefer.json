@@ -1,0 +1,35 @@
+{
+  "word": "prefer",
+  "ipa": "/prɪˈfɜːr/",
+  "arpabet": "P R IH0 F ER1",
+  "syllables": [
+    "pre",
+    "fer"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    }
+  ]
+}

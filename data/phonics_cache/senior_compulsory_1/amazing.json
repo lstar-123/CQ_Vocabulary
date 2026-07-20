@@ -1,0 +1,41 @@
+{
+  "word": "amazing",
+  "ipa": "/əˈmeɪzɪŋ/",
+  "arpabet": "AH0 M EY1 Z IH0 NG",
+  "syllables": [
+    "a",
+    "maz",
+    "ing"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "z",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "ng",
+      "silent": false
+    }
+  ]
+}

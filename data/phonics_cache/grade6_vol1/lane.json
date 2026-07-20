@@ -1,0 +1,29 @@
+{
+  "word": "lane",
+  "ipa": "/leɪn/",
+  "arpabet": "L EY1 N",
+  "syllables": [
+    "lane"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    }
+  ]
+}

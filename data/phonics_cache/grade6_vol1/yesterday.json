@@ -1,0 +1,45 @@
+{
+  "word": "yesterday",
+  "ipa": "/ˈjɛstərdeɪ/",
+  "arpabet": "Y EH1 S T ER0 D EY0",
+  "syllables": [
+    "yes",
+    "ter",
+    "day"
+  ],
+  "stress": [
+    1,
+    0,
+    0
+  ],
+  "segments": [
+    {
+      "text": "y",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "ay",
+      "silent": false
+    }
+  ]
+}

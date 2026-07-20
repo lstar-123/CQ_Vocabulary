@@ -1,0 +1,39 @@
+{
+  "word": "amazed",
+  "ipa": "/əˈmeɪzd/",
+  "arpabet": "AH0 M EY1 Z D",
+  "syllables": [
+    "a",
+    "mazed"
+  ],
+  "stress": [
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "z",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "d",
+      "silent": false
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "word": "tennis",
+  "ipa": "/ˈtɛnɪs/",
+  "arpabet": "T EH1 N AH0 S",
+  "syllables": [
+    "ten",
+    "nis"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "nn",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    }
+  ]
+}

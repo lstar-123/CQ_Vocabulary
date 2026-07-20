@@ -1,0 +1,45 @@
+{
+  "word": "tomorrow",
+  "ipa": "/təˈmɒroʊ/",
+  "arpabet": "T AH0 M AO1 R OW0",
+  "syllables": [
+    "to",
+    "mor",
+    "row"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "m",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "ow",
+      "silent": false
+    }
+  ]
+}

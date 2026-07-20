@@ -1,0 +1,75 @@
+{
+  "word": "junior high school",
+  "ipa": "/ˈdʒuːnjər haɪ skuːl/",
+  "arpabet": "JH UW1 N Y AH0 R HH AY0 S K UW1 L",
+  "syllables": [
+    "jun",
+    "ior",
+    "high",
+    "school"
+  ],
+  "stress": [
+    1,
+    0,
+    0,
+    1
+  ],
+  "segments": [
+    {
+      "text": "j",
+      "silent": false
+    },
+    {
+      "text": "u",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "h",
+      "silent": false
+    },
+    {
+      "text": "igh",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "ch",
+      "silent": false
+    },
+    {
+      "text": "oo",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    }
+  ]
+}

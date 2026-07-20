@@ -1,0 +1,21 @@
+{
+  "word": "row",
+  "ipa": "/roʊ/",
+  "arpabet": "R OW1",
+  "syllables": [
+    "row"
+  ],
+  "stress": [
+    1
+  ],
+  "segments": [
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "ow",
+      "silent": false
+    }
+  ]
+}

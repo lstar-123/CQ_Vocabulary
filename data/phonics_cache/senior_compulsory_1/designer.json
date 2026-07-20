@@ -1,0 +1,45 @@
+{
+  "word": "designer",
+  "ipa": "/dɪˈzaɪnər/",
+  "arpabet": "D IH0 Z AY1 N ER0",
+  "syllables": [
+    "de",
+    "sign",
+    "er"
+  ],
+  "stress": [
+    0,
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "d",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "s",
+      "silent": false
+    },
+    {
+      "text": "i",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": true
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "er",
+      "silent": false
+    }
+  ]
+}

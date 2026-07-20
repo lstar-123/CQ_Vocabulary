@@ -1,0 +1,39 @@
+{
+  "word": "petrol",
+  "ipa": "/ˈpɛtrəl/",
+  "arpabet": "P EH1 T R AH0 L",
+  "syllables": [
+    "pet",
+    "rol"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "p",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    }
+  ]
+}

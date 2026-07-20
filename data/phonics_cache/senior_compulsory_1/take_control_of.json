@@ -1,0 +1,79 @@
+{
+  "word": "take control of",
+  "ipa": "/teɪk kənˈtroʊl ʌv/",
+  "arpabet": "T EY1 K K AH0 N T R OW1 L AH1 V",
+  "syllables": [
+    "take",
+    "con",
+    "trol",
+    "of"
+  ],
+  "stress": [
+    1,
+    0,
+    1,
+    1
+  ],
+  "segments": [
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "k",
+      "silent": false
+    },
+    {
+      "text": "e",
+      "silent": true
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "c",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "t",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "l",
+      "silent": false
+    },
+    {
+      "text": " ",
+      "silent": false
+    },
+    {
+      "text": "o",
+      "silent": false
+    },
+    {
+      "text": "f",
+      "silent": false
+    }
+  ]
+}

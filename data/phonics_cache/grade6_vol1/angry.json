@@ -1,0 +1,35 @@
+{
+  "word": "angry",
+  "ipa": "/ˈæŋɡri/",
+  "arpabet": "AE1 NG G R IY0",
+  "syllables": [
+    "an",
+    "gry"
+  ],
+  "stress": [
+    1,
+    0
+  ],
+  "segments": [
+    {
+      "text": "a",
+      "silent": false
+    },
+    {
+      "text": "n",
+      "silent": false
+    },
+    {
+      "text": "g",
+      "silent": false
+    },
+    {
+      "text": "r",
+      "silent": false
+    },
+    {
+      "text": "y",
+      "silent": false
+    }
+  ]
+}
