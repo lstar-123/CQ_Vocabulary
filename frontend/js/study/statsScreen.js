@@ -216,7 +216,23 @@ export function createStatsScreen() {
         const sc = s.score_pct >= 80 ? '#58997A' : s.score_pct >= 60 ? '#C8A87A' : '#C86F50';
         const date = s.completed_at ? new Date(s.completed_at).toLocaleDateString('zh-CN', { year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit' }) : '';
         const un = s.unit_ids.split(',').map(x => { const id = parseInt(x.trim()); const u = StatsState.statsAllUnits.find(u=>u.id===id); return u ? u.name : `Unit ${id}`; }).join(', ');
-        return `<div class="history-item" data-sid="${s.id}"><div class="hi-score" style="color:${sc}">${s.score_pct}%</div><div class="hi-info"><div style="font-weight:600;font-size:14px;color:var(--text-headline);">${s.correct_count}/${s.total_count} 正确</div><div class="hi-meta">${date} · ${formatDuration(s.duration_seconds)}</div></div><span class="hi-units">${un}</span><span class="hi-arrow">▼</span></div><div class="history-detail" id="histDetail${s.id}" style="display:none;"></div>`;
+        return `<div class="history-item" data-sid="${s.id}">
+          <div class="hi-card-header">
+            <span class="hi-unit-tag">${escapeHtml(un)}</span>
+            <span class="hi-score-badge" style="background:${sc};color:#fff;">${s.score_pct}%</span>
+          </div>
+          <div class="hi-card-stats">
+            <div class="hi-stat-item"><span class="hi-stat-val">${s.correct_count}/${s.total_count}</span><span class="hi-stat-lbl">正确/总数</span></div>
+            <div class="hi-stat-item"><span class="hi-stat-val" style="color:${sc}">${s.score_pct}%</span><span class="hi-stat-lbl">正确率</span></div>
+            <div class="hi-stat-item"><span class="hi-stat-val">${s.total_count}</span><span class="hi-stat-lbl">学习单词</span></div>
+          </div>
+          <div class="hi-card-footer">
+            <span class="hi-date">${date}</span>
+            <span class="hi-duration">${escapeHtml(formatDuration(s.duration_seconds))}</span>
+            <span class="hi-expand-icon">▼</span>
+          </div>
+        </div>
+        <div class="history-detail" id="histDetail${s.id}" style="display:none;"></div>`;
       }).join('');
       const tp = data.total_pages, tt = data.total;
       if (tp <= 1) { document.getElementById('historyPagination').innerHTML = ''; return; }
