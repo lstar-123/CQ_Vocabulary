@@ -133,6 +133,13 @@ body {
   transition: all 0.2s;
 }
 .user-bar .btn-logout:hover { border-color: var(--terracotta); color: var(--terracotta); }
+.user-bar .btn-download-android {
+  background: var(--sage); color: var(--white); text-decoration: none;
+  padding: 5px 16px; border-radius: 999px; cursor: pointer;
+  font-size: 12px; font-weight: 500; font-family: 'Inter', sans-serif;
+  transition: all 0.2s; display: inline-flex; align-items: center; gap: 4px;
+}
+.user-bar .btn-download-android:hover { background: var(--sage-hover); }
 
 /* ============ TAB BAR ============ */
 .tab-bar {
@@ -976,6 +983,7 @@ body {
   /* User bar */
   .user-bar { flex-wrap: wrap; gap: 8px; font-size: 12px; }
   .user-bar .btn-logout { padding: 6px 14px; font-size: 11px; min-height: 32px; }
+  .user-bar .btn-download-android { padding: 6px 14px; font-size: 11px; }
 
   /* ── Unit Selection ── */
   .unit-select-card { padding: 24px 20px; }
@@ -1299,6 +1307,7 @@ body {
   <div class="user-bar" id="userBar" style="display:none;">
     <span>👤</span>
     <span class="user-name user-name-clickable" id="userNameDisplay" title="点击查看个人信息" onclick="if(window._openProfile)window._openProfile()"></span>
+    <a class="btn-download-android" href="/downloads/VocabularyMemorization.apk" title="下载 Android APP" id="btnDownloadApp">📱 Android App</a>
     <button class="btn-logout" id="btnLogout">退出登录</button>
   </div>
 

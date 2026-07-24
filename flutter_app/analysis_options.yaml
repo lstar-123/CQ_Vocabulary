@@ -1,0 +1,63 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # ── Critical ──
+    - always_declare_return_types
+    - avoid_dynamic_calls
+    - avoid_empty_else
+    - avoid_print
+    - avoid_redundant_argument_values
+    - avoid_returning_null_for_void
+    - avoid_unused_constructor_parameters
+    - cancel_subscriptions
+    - empty_statements
+    - no_duplicate_case_values
+    - unawaited_futures
+
+    # ── Naming ──
+    - camel_case_types
+    - camel_case_extensions
+
+    # ── Style ──
+    - always_use_package_imports
+    - directives_ordering
+    - eol_at_end_of_file
+    - no_leading_underscores_for_local_identifiers
+    - prefer_const_constructors
+    - prefer_const_declarations
+    - prefer_final_locals
+    - prefer_single_quotes
+    - require_trailing_commas
+    - sort_constructors_first
+
+    # ── Modern Dart ──
+    - use_super_parameters
+
+    # ── Widget best practices ──
+    - use_key_in_widget_constructors
+    - avoid_unnecessary_containers
+    - sized_box_for_whitespace
+
+    # ── Code quality ──
+    - avoid_function_literals_in_foreach_calls
+    - avoid_init_to_null
+    - avoid_shadowing_type_parameters
+    - curly_braces_in_flow_control_structures
+    - prefer_conditional_assignment
+    - prefer_contains
+    - prefer_for_elements_to_map_fromIterable
+    - prefer_if_null_operators
+    - prefer_is_empty
+    - prefer_null_aware_operators
+    - use_collection_literals_when_possible
+
+analyzer:
+  errors:
+    missing_return: error
+    dead_code: error
+    unused_import: error
+    unused_local_variable: warning
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"

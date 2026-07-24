@@ -1,0 +1,51 @@
+name: vocabulary_memorization
+description: Vocabulary Memorization - Flutter Android App
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.2.0
+  flutter: '>=3.16.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ── Networking ──
+  dio: ^5.4.0
+  dio_cookie_manager: ^3.1.0
+  cookie_jar: ^4.0.0
+
+  # ── State Management ──
+  riverpod: ^2.5.0
+  flutter_riverpod: ^2.5.0
+
+  # ── Router ──
+  go_router: ^14.0.0
+
+  # ── UI ──
+  google_fonts: ^6.1.0
+  fl_chart: ^0.68.0
+
+  # ── Storage ──
+  flutter_secure_storage: ^9.2.0
+  shared_preferences: ^2.2.0
+  path_provider: ^2.1.0
+
+  # ── Audio ──
+  audioplayers: ^6.1.0
+
+  # ── Utilities ──
+  intl: ^0.19.0
+  logger: ^2.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  mocktail: ^1.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets: []
