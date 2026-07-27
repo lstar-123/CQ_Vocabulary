@@ -2,7 +2,7 @@ from collections import defaultdict
 
 from flask import Blueprint, request, jsonify
 
-from ..models import db, User, QuizSession, QuizAnswer, BOOK_SCHEMAS, get_book_models
+from ..models import db, User, QuizSession, QuizAnswer, GroupMemoryHistory, BOOK_SCHEMAS, get_book_models
 from ..decorators import teacher_required
 
 teacher_bp = Blueprint('teacher', __name__)
@@ -148,6 +148,135 @@ def get_student_session_detail(student_id, session_id):
         'book_schema': session_record.book_schema,
         'completed_at': session_record.completed_at.isoformat() if session_record.completed_at else None,
         'answers': answer_list
+    })
+
+
+# ----------------------------------------------------------------
+# Group learning history for a student
+# ----------------------------------------------------------------
+@teacher_bp.route('/students/<int:student_id>/group-history')
+@teacher_required
+def get_student_group_history(student_id):
+    student = db.session.get(User, student_id)
+    if not student:
+        return jsonify({'error': '学生不存在'}), 404
+
+    book_schema = request.args.get('book_schema')
+
+    query = GroupMemoryHistory.query.filter_by(user_id=student.id)
+    if book_schema:
+        query = query.filter_by(book_schema=book_schema)
+
+    records = query.order_by(GroupMemoryHistory.finished_at.desc()).all()
+
+    # Collect (book_schema, unit_id) pairs to resolve unit names
+    book_unit_pairs = defaultdict(set)
+    for r in records:
+        book_unit_pairs[r.book_schema].add(r.unit_id)
+
+    unit_map = {}  # (book_schema, unit_id) -> name
+    for bs, unit_ids in book_unit_pairs.items():
+        UnitModel, _ = get_book_models(bs)
+        units = UnitModel.query.filter(UnitModel.id.in_(unit_ids)).all()
+        for u in units:
+            unit_map[(bs, u.id)] = u.name
+
+    # Build per-unit, per-round memory degree summary
+    # unit_key -> round_index -> {groups_completed, total_errors, total_duration, has_round_complete}
+    unit_rounds = defaultdict(lambda: defaultdict(lambda: {
+        'groups_completed': 0,
+        'total_errors': 0,
+        'total_duration_seconds': 0,
+        'has_round_complete': False,
+        'has_unit_complete': False,
+        'group_details': [],
+    }))
+
+    for r in records:
+        unit_name = unit_map.get((r.book_schema, r.unit_id), f'单元#{r.unit_id}')
+        ur = unit_rounds[(r.unit_id, unit_name, r.book_schema)][r.round_index]
+
+        if r.event_type == 'group_complete':
+            ur['groups_completed'] += 1
+            ur['total_errors'] += (r.error_count or 0)
+            ur['total_duration_seconds'] += (r.duration_seconds or 0)
+            ur['group_details'].append({
+                'id': r.id,
+                'group_index': r.group_index,
+                'group_size': r.group_size,
+                'error_count': r.error_count or 0,
+                'error_words': r.error_words or [],
+                'duration_seconds': r.duration_seconds,
+                'finished_at': r.finished_at.isoformat() if r.finished_at else None,
+            })
+        elif r.event_type == 'round_complete':
+            ur['has_round_complete'] = True
+        elif r.event_type == 'unit_complete':
+            ur['has_unit_complete'] = True
+
+    # Build sorted summary
+    unit_summaries = []
+    for (unit_id, unit_name, book_schema), rounds in sorted(unit_rounds.items()):
+        round_list = []
+        total_rounds_completed = 0
+        is_unit_complete = False
+
+        for round_idx in sorted(rounds.keys()):
+            rd = rounds[round_idx]
+            if rd['has_round_complete'] or rd['has_unit_complete']:
+                total_rounds_completed += 1
+            if rd['has_unit_complete']:
+                is_unit_complete = True
+
+            round_list.append({
+                'round_index': round_idx,
+                'groups_completed': rd['groups_completed'],
+                'total_errors': rd['total_errors'],
+                'total_duration_seconds': rd['total_duration_seconds'],
+                'is_round_complete': rd['has_round_complete'] or rd['has_unit_complete'],
+                'group_details': sorted(rd['group_details'],
+                                        key=lambda g: g['group_index'] or 0),
+            })
+
+        unit_summaries.append({
+            'unit_id': unit_id,
+            'unit_name': unit_name,
+            'book_schema': book_schema,
+            'total_rounds_completed': total_rounds_completed,
+            'is_unit_complete': is_unit_complete,
+            'rounds': round_list,
+        })
+
+    # Raw records list
+    record_list = []
+    for r in records:
+        unit_name = unit_map.get((r.book_schema, r.unit_id), f'单元#{r.unit_id}')
+        if r.event_type == 'unit_complete':
+            label = f'🏆 Unit 完成'
+        elif r.event_type == 'round_complete':
+            label = f'第{r.round_index + 1}轮 完成'
+        else:
+            label = f'第{r.round_index + 1}轮 · 第{r.group_index}组'
+
+        record_list.append({
+            'id': r.id,
+            'unit_id': r.unit_id,
+            'unit_name': unit_name,
+            'book_schema': r.book_schema,
+            'event_type': r.event_type,
+            'round_index': r.round_index,
+            'group_index': r.group_index,
+            'group_size': r.group_size,
+            'label': label,
+            'duration_seconds': r.duration_seconds,
+            'error_count': r.error_count or 0,
+            'error_words': r.error_words or [],
+            'finished_at': r.finished_at.isoformat() if r.finished_at else None,
+        })
+
+    return jsonify({
+        'records': record_list,
+        'unit_summaries': unit_summaries,
     })
 
 

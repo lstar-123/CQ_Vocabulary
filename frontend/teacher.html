@@ -190,6 +190,123 @@ body {
 }
 .student-detail .no-sessions { text-align: center; color: var(--text-muted); font-size: 13px; padding: 12px; }
 
+/* ============ SUB-TABS (within student detail) ============ */
+.sub-tab-bar {
+  display: flex; gap: 0; margin-bottom: 16px;
+  background: var(--white); border-radius: 999px;
+  padding: 4px; box-shadow: var(--shadow-sm);
+  border: 1px solid var(--input-border);
+}
+.sub-tab-btn {
+  flex: 1; padding: 10px 16px; font-size: 13px; font-weight: 500;
+  border: none; border-radius: 999px; cursor: pointer;
+  background: transparent; color: var(--text-body);
+  transition: all 0.25s; font-family: 'Inter', sans-serif;
+}
+.sub-tab-btn.active {
+  background: var(--sage); color: #fff;
+  box-shadow: 0 2px 6px rgba(88,153,122,0.25);
+}
+.sub-tab-btn:hover:not(.active) { color: var(--text-headline); background: var(--pill-bg); }
+
+/* ============ UNIT MEMORY CARD ============ */
+.unit-memory-card {
+  background: var(--white); border-radius: var(--radius-card);
+  padding: 18px 20px; margin-bottom: 14px;
+  border: 1px solid var(--input-border);
+  box-shadow: var(--shadow-sm);
+}
+.unit-memory-card .umc-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 14px;
+}
+.unit-memory-card .umc-title {
+  font-weight: 700; font-size: 15px; color: var(--text-headline);
+  display: flex; align-items: center; gap: 8px;
+}
+.unit-memory-card .umc-badge {
+  display: inline-block; padding: 3px 10px; border-radius: 999px;
+  font-size: 11px; font-weight: 600;
+}
+.umc-badge.complete { background: var(--sage-light); color: var(--sage); }
+.umc-badge.in-progress { background: var(--peach); color: var(--terracotta); }
+.unit-memory-card .umc-rounds-label {
+  font-size: 12px; color: var(--text-muted); font-family: 'Inter', sans-serif;
+}
+
+/* Round bar row */
+.round-bar-row {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 10px; padding: 8px 12px;
+  background: var(--cream); border-radius: 8px;
+}
+.round-bar-row:last-child { margin-bottom: 0; }
+.round-bar-row .round-label {
+  font-size: 12px; font-weight: 600; color: var(--text-body);
+  min-width: 52px; font-family: 'Inter', sans-serif;
+}
+.round-bar-row .round-progress-wrap {
+  flex: 1; display: flex; flex-direction: column; gap: 4px;
+}
+.round-bar-row .round-progress-bar {
+  height: 8px; background: var(--pill-bg);
+  border-radius: 999px; overflow: hidden;
+}
+.round-bar-row .round-progress-fill {
+  height: 100%; border-radius: 999px;
+  transition: width 0.4s ease;
+  background: var(--sage);
+}
+.round-bar-row .round-progress-fill.low { background: var(--terracotta); }
+.round-bar-row .round-progress-fill.mid { background: #C8A87A; }
+.round-bar-row .round-progress-fill.high { background: var(--sage); }
+.round-bar-row .round-meta {
+  font-size: 11px; color: var(--text-muted);
+  font-family: 'Inter', sans-serif; min-width: 80px; text-align: right;
+}
+.round-bar-row .round-check {
+  font-size: 16px; min-width: 24px; text-align: center;
+}
+
+/* Group event timeline */
+.group-timeline { margin-top: 8px; }
+.group-timeline-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 14px; margin-bottom: 4px;
+  background: var(--white); border-radius: 8px;
+  border: 1px solid var(--input-border);
+  font-size: 12px; font-family: 'Inter', sans-serif;
+}
+.group-timeline-item .gti-icon {
+  font-size: 16px; min-width: 24px; text-align: center;
+}
+.group-timeline-item .gti-label { flex: 1; color: var(--text-headline); font-weight: 500; }
+.group-timeline-item .gti-meta { color: var(--text-muted); text-align: right; }
+.group-timeline-item .gti-errors {
+  color: var(--terracotta); font-weight: 600; font-size: 11px;
+}
+
+/* Unit summary filter row */
+.unit-summary-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 12px;
+}
+.unit-summary-header .filter-label {
+  font-size: 12px; font-weight: 600; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.8px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Memory degree overview chip */
+.memory-degree-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 14px; border-radius: 999px;
+  font-size: 12px; font-weight: 600; font-family: 'Inter', sans-serif;
+}
+.memory-degree-chip.excellent { background: var(--sage-light); color: var(--sage); }
+.memory-degree-chip.good { background: #E6F2E9; color: #4A8568; }
+.memory-degree-chip.fair { background: var(--peach); color: var(--terracotta); }
+
 /* ============ SESSION ITEM ============ */
 .session-item {
   background: var(--white); border-radius: 10px;
@@ -399,6 +516,26 @@ body {
 
   /* No data */
   .no-data { padding: 32px 16px; font-size: 13px; }
+
+  /* Sub-tabs */
+  .sub-tab-bar { margin-bottom: 12px; }
+  .sub-tab-btn { padding: 9px 10px; font-size: 12px; }
+
+  /* Unit memory cards */
+  .unit-memory-card { padding: 14px 16px; }
+  .unit-memory-card .umc-header { flex-wrap: wrap; gap: 6px; }
+  .unit-memory-card .umc-title { font-size: 14px; flex-wrap: wrap; }
+
+  /* Round bar rows */
+  .round-bar-row { gap: 6px; padding: 6px 8px; flex-wrap: wrap; }
+  .round-bar-row .round-label { min-width: 42px; font-size: 11px; }
+  .round-bar-row .round-meta { min-width: auto; font-size: 10px; }
+  .round-bar-row .round-check { min-width: 20px; font-size: 14px; }
+
+  /* Group timeline */
+  .group-timeline-item { padding: 6px 10px; gap: 6px; font-size: 11px; }
+  .group-timeline-item .gti-icon { min-width: 20px; font-size: 14px; }
+  .group-timeline-item .gti-meta { font-size: 10px; }
 }
 </style>
 </head>
@@ -666,17 +803,47 @@ async function toggleStudent(studentId) {
   // Hide all others
   document.querySelectorAll('.student-detail').forEach(d => d.style.display = 'none');
 
-  if (detailDiv.innerHTML) {
+    if (detailDiv.innerHTML) {
     detailDiv.style.display = 'block';
     return;
   }
 
+  // Build sub-tab structure
+  detailDiv.innerHTML = `
+    <div class="sub-tab-bar">
+      <button class="sub-tab-btn active" id="subTabQuiz${studentId}" onclick="event.stopPropagation();switchStudentSubTab(${studentId}, 'quiz')">📝 测验记录</button>
+      <button class="sub-tab-btn" id="subTabGroup${studentId}" onclick="event.stopPropagation();switchStudentSubTab(${studentId}, 'group')">🧠 分组学习</button>
+    </div>
+    <div id="subContent${studentId}"></div>
+  `;
+  detailDiv.style.display = 'block';
+
+  // Load quiz tab by default
+  loadStudentQuizSessions(studentId);
+}
+
+async function switchStudentSubTab(studentId, tab) {
+  document.getElementById('subTabQuiz' + studentId).classList.toggle('active', tab === 'quiz');
+  document.getElementById('subTabGroup' + studentId).classList.toggle('active', tab === 'group');
+
+  if (tab === 'quiz') {
+    loadStudentQuizSessions(studentId);
+  } else {
+    loadStudentGroupHistory(studentId);
+  }
+}
+
+// ── Quiz sessions sub-tab ─────────────────────────────────
+async function loadStudentQuizSessions(studentId) {
+  const container = document.getElementById('subContent' + studentId);
+  container.innerHTML = '<div class="no-sessions" style="padding:16px;">加载中...</div>';
+
   try {
     const sessions = await apiFetch(`/api/teacher/students/${studentId}/sessions`);
     if (sessions.length === 0) {
-      detailDiv.innerHTML = '<div class="no-sessions">该学生还没有答题记录</div>';
+      container.innerHTML = '<div class="no-sessions">该学生还没有测验记录</div>';
     } else {
-      detailDiv.innerHTML = sessions.map(s => {
+      container.innerHTML = sessions.map(s => {
         const sc = s.score_pct >= 80 ? '#58997A' : s.score_pct >= 60 ? '#C8A87A' : '#C86F50';
         const dt = s.completed_at ? new Date(s.completed_at).toLocaleDateString('zh-CN', {
           year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit'
@@ -694,12 +861,144 @@ async function toggleStudent(studentId) {
         `;
       }).join('');
     }
-    detailDiv.style.display = 'block';
   } catch (e) {
-    detailDiv.innerHTML = '<div class="no-sessions" style="color:var(--terracotta);">加载失败</div>';
-    detailDiv.style.display = 'block';
+    container.innerHTML = '<div class="no-sessions" style="color:var(--terracotta);">加载失败</div>';
   }
 }
+
+// ── Group learning history sub-tab ────────────────────────
+async function loadStudentGroupHistory(studentId) {
+  const container = document.getElementById('subContent' + studentId);
+  container.innerHTML = '<div class="no-sessions" style="padding:16px;">加载中...</div>';
+
+  try {
+    const data = await apiFetch(`/api/teacher/students/${studentId}/group-history`);
+    renderGroupHistory(container, data);
+  } catch (e) {
+    container.innerHTML = '<div class="no-sessions" style="color:var(--terracotta);">加载失败：' + escapeHtml(e.message) + '</div>';
+  }
+}
+
+function renderGroupHistory(container, data) {
+  const { records, unit_summaries } = data;
+
+  if (!unit_summaries || unit_summaries.length === 0) {
+    container.innerHTML = '<div class="no-sessions">该学生还没有分组学习记录</div>';
+    return;
+  }
+
+  let html = '';
+
+  // ── Unit Memory Cards ──────────────────────────────────
+  html += '<div class="unit-summary-header"><span class="filter-label">📊 各单元记忆程度</span></div>';
+
+  unit_summaries.forEach(us => {
+    const isComplete = us.is_unit_complete;
+    const badgeCls = isComplete ? 'complete' : 'in-progress';
+    const badgeText = isComplete ? '已完成' : '进行中';
+
+    // Determine overall memory degree
+    let degreeLabel = '', degreeCls = '';
+    if (us.total_rounds_completed >= 3) {
+      const lastRound = us.rounds[us.rounds.length - 1];
+      const totalWords = lastRound.groups_completed * (lastRound.group_details[0]?.group_size || 5);
+      const errorRate = totalWords > 0 ? lastRound.total_errors / totalWords : 1;
+      if (errorRate < 0.1) { degreeLabel = '优秀'; degreeCls = 'excellent'; }
+      else if (errorRate < 0.25) { degreeLabel = '良好'; degreeCls = 'good'; }
+      else { degreeLabel = '需加强'; degreeCls = 'fair'; }
+    } else if (us.total_rounds_completed >= 1) {
+      degreeLabel = '进行中'; degreeCls = 'fair';
+    } else {
+      degreeLabel = '刚开始'; degreeCls = 'fair';
+    }
+
+    html += `
+      <div class="unit-memory-card">
+        <div class="umc-header">
+          <div class="umc-title">
+            📖 ${escapeHtml(us.unit_name)}
+            <span class="umc-badge ${badgeCls}">${badgeText}</span>
+            <span class="memory-degree-chip ${degreeCls}">🧠 ${degreeLabel}</span>
+          </div>
+          <div class="umc-rounds-label">${us.total_rounds_completed} 轮完成</div>
+        </div>
+    `;
+
+    // Render each round
+    us.rounds.forEach(rd => {
+      const roundNum = rd.round_index + 1;
+      const groupSize = rd.group_details.length > 0 ? (rd.group_details[0].group_size || 5) : 5;
+      const totalWordsInRound = rd.groups_completed * groupSize;
+      const accuracy = totalWordsInRound > 0
+        ? Math.round((1 - rd.total_errors / totalWordsInRound) * 100)
+        : 100;
+      const fillCls = accuracy >= 90 ? 'high' : accuracy >= 70 ? 'mid' : 'low';
+      const checkIcon = rd.is_round_complete ? '✅' : '🔄';
+      const durationMin = rd.total_duration_seconds > 0
+        ? Math.round(rd.total_duration_seconds / 60) + '分钟'
+        : '';
+
+      html += `
+        <div class="round-bar-row">
+          <div class="round-label">第${roundNum}轮</div>
+          <div class="round-progress-wrap">
+            <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-body);">
+              <span>${rd.groups_completed} 组 · ${totalWordsInRound} 词</span>
+              <span>正确率 ${accuracy}%</span>
+            </div>
+            <div class="round-progress-bar">
+              <div class="round-progress-fill ${fillCls}" style="width:${accuracy}%;"></div>
+            </div>
+          </div>
+          <div class="round-meta">
+            ${rd.total_errors > 0 ? '<span style="color:var(--terracotta);">❌' + rd.total_errors + '</span>' : '✨ 0错'}
+            ${durationMin ? ' · ' + durationMin : ''}
+          </div>
+          <div class="round-check">${checkIcon}</div>
+        </div>
+      `;
+    });
+
+    html += '</div>';
+  });
+
+  // ── Recent Group Events Timeline ───────────────────────
+  if (records && records.length > 0) {
+    html += '<div class="unit-summary-header" style="margin-top:8px;"><span class="filter-label">📜 最近学习记录</span></div>';
+    html += '<div class="group-timeline">';
+    const recentRecords = records.slice(0, 20);
+    recentRecords.forEach(r => {
+      const dt = r.finished_at ? new Date(r.finished_at).toLocaleDateString('zh-CN', {
+        month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit'
+      }) : '';
+      const iconMap = {
+        'unit_complete': '🏆',
+        'round_complete': '✅',
+        'group_complete': '📦'
+      };
+      const icon = iconMap[r.event_type] || '📌';
+      html += `
+        <div class="group-timeline-item">
+          <div class="gti-icon">${icon}</div>
+          <div class="gti-label">
+            ${escapeHtml(r.unit_name)} · ${escapeHtml(r.label)}
+            ${r.group_size ? '<span style="font-weight:400;color:var(--text-muted);">（' + r.group_size + '词）</span>' : ''}
+          </div>
+          ${r.error_count > 0 ? '<div class="gti-errors">❌' + r.error_count + '</div>' : '<div class="gti-errors" style="color:var(--sage);">✓</div>'}
+          <div class="gti-meta">${dt}</div>
+        </div>
+      `;
+    });
+    if (records.length > 20) {
+      html += '<div class="group-timeline-item" style="justify-content:center;color:var(--text-muted);">... 还有 ' + (records.length - 20) + ' 条记录</div>';
+    }
+    html += '</div>';
+  }
+
+  container.innerHTML = html;
+}
+
+
 
 async function toggleSession(studentId, sessionId) {
   const detailDiv = document.getElementById('sessd' + sessionId);
