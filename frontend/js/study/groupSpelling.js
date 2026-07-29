@@ -55,14 +55,32 @@ export function startGroupSpelling() {
       <span class="gs-result" id="gsi-result-${i}"></span>
     </div>
   `).join('');
-  // Anti-prediction: blur-refocus on each keystroke to reset mobile keyboard suggestions
+  // Anti-prediction: insert zero-width space between characters so
+  // the mobile keyboard sees isolated letters instead of words.
+  const ZWS = '​';
+  const ZWS_RE = new RegExp(ZWS, 'g');
   document.querySelectorAll('#groupSpellingInputs input').forEach(inp => {
     inp.addEventListener('input', function() {
-      const val = inp.value;
-      if (val === inp._lastVal) return;
-      inp._lastVal = val;
-      inp.blur();
-      setTimeout(() => { inp.focus(); inp.setSelectionRange(val.length, val.length); }, 10);
+      const cursorWas = inp.selectionStart;
+      const before = inp.value.slice(0, cursorWas).replace(ZWS_RE, '');
+      const after = inp.value.slice(cursorWas).replace(ZWS_RE, '');
+      const clean = before + after;
+      let result = '';
+      for (const ch of clean) { result += ch + ZWS; }
+      inp.value = result;
+      inp.setSelectionRange(Math.min(before.length * 2, result.length), Math.min(before.length * 2, result.length));
+    });
+    // One Backspace = delete one visible char (letter + trailing ZWS)
+    inp.addEventListener('keydown', function(e) {
+      if (e.key === 'Backspace') {
+        const pos = inp.selectionStart;
+        if (pos > 0 && inp.value[pos - 1] === ZWS) {
+          e.preventDefault();
+          inp.value = inp.value.slice(0, pos - 2) + inp.value.slice(pos);
+          inp.setSelectionRange(pos - 2, pos - 2);
+          inp.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+      }
     });
   });
   document.getElementById('gsi-input-0')?.focus();

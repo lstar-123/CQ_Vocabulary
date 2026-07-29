@@ -102,7 +102,7 @@ function submitGroupSpelling() {
   let allCorrect = true;
   group.words.forEach((w, i) => {
     const input = document.getElementById(`gsi-input-${i}`);
-    const ua = input ? input.value.trim() : '';
+    const ua = input ? input.value.replace(/​/g, '').trim() : '';
     const ok = checkEquivalent(ua, w.english);
     if (!ok) allCorrect = false;
     results.push({ word: w, userAnswer: ua, isCorrect: ok });

@@ -51,23 +51,54 @@ export function createQuizScreen({ allUnits, selectedUnitIds }) {
     showQuestion();
   }
 
-  // Set up anti-prediction on the input (once)
+  // ── Anti-prediction via zero-width spaces ──────────────────
+  // Insert ​ between characters so the keyboard sees isolated
+  // letters instead of words — prevents prediction bar on mobile.
+  // The ZWS chars are invisible; stripped on submit.
+
+  const ZWS = '​';
+  const ZWS_RE = new RegExp(ZWS, 'g');
+
+  function _reinsertZWS(input) {
+    const cursorWas = input.selectionStart;
+    const before = input.value.slice(0, cursorWas).replace(ZWS_RE, '');
+    const after  = input.value.slice(cursorWas).replace(ZWS_RE, '');
+    const clean  = before + after;
+    let result = '';
+    for (const ch of clean) { result += ch + ZWS; }
+    input.value = result;
+    const newCursor = Math.min(before.length * 2, result.length);
+    input.setSelectionRange(newCursor, newCursor);
+  }
+
   function _setupAntiPrediction() {
     const input = document.getElementById('answerInput');
     if (input._antiPredictionSetup) return;
     input._antiPredictionSetup = true;
-    // Blur-refocus on each keystroke to reset mobile keyboard prediction
-    input.addEventListener('input', function() {
-      const val = input.value;
-      if (val === input._lastVal) return;
-      input._lastVal = val;
-      input.blur();
-      setTimeout(() => { input.focus(); input.setSelectionRange(val.length, val.length); }, 10);
-    });
-    // Submit on Enter
+
+    input.addEventListener('input', function() { _reinsertZWS(input); });
+
+    // One Backspace = delete one visible char (letter + its trailing ZWS)
     input.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') { e.preventDefault(); submitAnswer(); }
+      if (e.key === 'Backspace') {
+        const pos = input.selectionStart;
+        if (pos > 0 && input.value[pos - 1] === ZWS) {
+          e.preventDefault();
+          const before = input.value.slice(0, pos - 2);
+          const after = input.value.slice(pos);
+          input.value = before + after;
+          input.setSelectionRange(pos - 2, pos - 2);
+          input.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        submitAnswer();
+      }
     });
+  }
+
+  function _cleanInput(input) {
+    return input.value.replace(ZWS_RE, '');
   }
 
   function showQuestion() {
@@ -78,7 +109,6 @@ export function createQuizScreen({ allUnits, selectedUnitIds }) {
     document.getElementById('counter').textContent = `${QuizState.currentIndex + 1} / ${QuizState.quizWords.length}`;
     document.getElementById('progressFill').style.width = `${(QuizState.currentIndex / QuizState.quizWords.length) * 100}%`;
     const input = document.getElementById('answerInput');
-    input._lastVal = '';
     input.value = '';
     input.focus();
     startTimer();
@@ -86,7 +116,7 @@ export function createQuizScreen({ allUnits, selectedUnitIds }) {
 
   function submitAnswer() {
     const input = document.getElementById('answerInput');
-    const userAnswer = input.value.trim();
+    const userAnswer = _cleanInput(input).trim();
     if (!userAnswer) return;
     const w = QuizState.quizWords[QuizState.currentIndex];
     const isCorrect = checkEquivalent(userAnswer, w.english);
