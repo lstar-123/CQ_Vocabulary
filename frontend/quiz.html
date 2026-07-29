@@ -823,6 +823,45 @@ body {
   margin-top: -14px; margin-bottom: 12px; padding: 20px;
   border: 1px solid var(--input-border); border-top: none;
 }
+.detail-toggle-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 16px; flex-wrap: wrap; gap: 8px;
+}
+.detail-toggle-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px; font-weight: 600; color: var(--text-headline);
+}
+.detail-toggle-group {
+  display: inline-flex; border: 1px solid var(--input-border);
+  border-radius: 8px; overflow: hidden;
+}
+.detail-toggle-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px; font-weight: 500; padding: 6px 14px;
+  border: none; cursor: pointer; background: transparent;
+  color: var(--text-muted); transition: all 0.15s; white-space: nowrap;
+}
+.detail-toggle-btn:not(:last-child) { border-right: 1px solid var(--input-border); }
+.detail-toggle-btn:hover { background: var(--sage-light); color: var(--sage); }
+.detail-toggle-btn.active { background: var(--sage); color: #fff; }
+.history-detail.show-wrong-only .detail-table .correct-row { display: none; }
+.btn-retest-wrong {
+  display: block; width: 100%; margin-top: 16px;
+  padding: 10px 0; font-family: 'Inter', sans-serif;
+  font-size: 14px; font-weight: 600;
+  border: 2px solid var(--sage); border-radius: 10px;
+  cursor: pointer; background: var(--sage-light);
+  color: var(--sage); transition: all 0.2s;
+}
+.btn-retest-wrong:hover { background: var(--sage); color: #fff; }
+.btn-retest-done {
+  display: block; width: 100%; max-width: 300px; margin: 24px auto 0;
+  padding: 12px 0; font-family: 'Inter', sans-serif;
+  font-size: 15px; font-weight: 600; border: none;
+  border-radius: 12px; cursor: pointer;
+  background: var(--sage); color: #fff; transition: all 0.2s;
+}
+.btn-retest-done:hover { opacity: 0.9; }
 .no-data {
   text-align: center; padding: 48px 20px;
   color: var(--text-muted); font-size: 14px;
@@ -1374,7 +1413,7 @@ body {
       <div class="word-zh" id="wordZh"></div>
       <div class="word-hint" id="wordHint">请输入对应的英文翻译</div>
       <div class="input-group">
-        <input type="text" id="answerInput" placeholder="输入英文翻译..." autocomplete="off">
+        <input type="text" id="answerInput" placeholder="输入英文翻译..." autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off">
         <button class="btn btn-primary" id="submitBtn">确认</button>
       </div>
     </div>
@@ -1597,6 +1636,7 @@ function showHome() {
   }
   stopTimer();
   QuizState.results = [];
+  QuizState.isRetest = false;
   // Stop any ongoing playback
   PlaybackController.destroy();
   // Hide all screens, show home
@@ -1679,10 +1719,11 @@ const { GroupActions, GroupNavigator, submitGroupSpelling, exitGroupLearning } =
 const { buildGroupMode, selectGroupUnit } = createGroupMode({ allUnits, GroupNavigator });
 _buildGroupMode = buildGroupMode;
 const { LearningModes, switchStudyMode, buildStudyMode } = createStudyMode({ allUnits, allWordsGrouped, englishVisible, studyMode, buildGroupMode, exitGroupLearning });
-const { buildStatsScreen, switchTrendUnit, switchHistoryUnit, goHistoryPage, toggleHistoryDetail } = createStatsScreen();
-const { startQuiz, submitAnswer, backToSelect, exitQuiz } = createQuizScreen({ allUnits, selectedUnitIds });
+const { startQuiz, submitAnswer, backToSelect, exitQuiz, startRetestQuiz } = createQuizScreen({ allUnits, selectedUnitIds });
+const { buildStatsScreen, switchTrendUnit, switchHistoryUnit, goHistoryPage, toggleHistoryDetail } = createStatsScreen({ startRetestQuiz });
 const { openProfile, closeProfile, switchBook } = createProfileScreen({ allWordsGrouped, currentTab, onUnitSelection: buildUnitSelection, onStudyMode: buildStudyMode, onStatsScreen: buildStatsScreen });
 window._openProfile = openProfile;
+window._switchTab = switchTab;
 
 // ==================== EVENT BINDINGS (moved to js/*Events.js) ====================
 bindAuthEvents({ handleAuthSubmit: () => handleAuthSubmit(showMainApp), renderAuthForm });

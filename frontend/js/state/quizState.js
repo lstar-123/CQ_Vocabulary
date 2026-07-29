@@ -3,4 +3,5 @@ export const QuizState = {
   quizWords: [],
   currentIndex: 0,
   results: [],
+  isRetest: false,
 };

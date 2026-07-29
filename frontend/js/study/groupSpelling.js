@@ -51,8 +51,7 @@ export function startGroupSpelling() {
     <div class="group-spell-item" id="gsi-${i}">
       <span class="gs-index">${i + 1}</span>
       <span class="gs-zh">${escapeHtml(w.chinese)}</span>
-      <input type="text" id="gsi-input-${i}" placeholder="输入英文拼写…" autocomplete="off"
-             >
+      <input type="text" id="gsi-input-${i}" placeholder="输入英文拼写…" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off">
       <span class="gs-result" id="gsi-result-${i}"></span>
     </div>
   `).join('');

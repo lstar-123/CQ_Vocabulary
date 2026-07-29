@@ -5,7 +5,7 @@ import { ensureBookList, getBookList } from '../book/bookSelection.js';
 import { StatsState } from '../state/statsState.js';
 import { currentUser } from '../state/auth.js';
 
-export function createStatsScreen() {
+export function createStatsScreen({ startRetestQuiz } = {}) {
 
   async function buildStatsScreen() {
     const book = currentUser.current_book;
@@ -249,13 +249,43 @@ export function createStatsScreen() {
 
   async function toggleHistoryDetail(sessionId) {
     const dd = document.getElementById('histDetail' + sessionId);
-    if (dd.style.display !== 'none') { dd.style.display = 'none'; return; }
-    document.querySelectorAll('.history-detail').forEach(d => d.style.display = 'none');
-    if (dd.innerHTML) { dd.style.display = 'block'; return; }
+    if (dd.style.display !== 'none') { dd.style.display = 'none'; dd.classList.remove('show-wrong-only'); return; }
+    document.querySelectorAll('.history-detail').forEach(d => { d.style.display = 'none'; d.classList.remove('show-wrong-only'); });
+    if (dd.innerHTML) { dd.style.display = 'block'; dd.classList.remove('show-wrong-only'); return; }
     try {
       const detail = await apiFetch(`/api/history/${sessionId}`);
-      dd.innerHTML = `<table class="detail-table"><thead><tr><th>#</th><th>中文</th><th>你的答案</th><th>正确答案</th><th></th></tr></thead><tbody>${detail.answers.map((a,i) => `<tr><td>${i+1}</td><td class="zh">${escapeHtml(a.chinese)}</td><td class="${a.is_correct?'correct-ans':'user-ans'}">${escapeHtml(a.user_answer)}</td><td class="correct-ans">${escapeHtml(a.english)}</td><td class="icon">${a.is_correct?'✓':'✗'}</td></tr>`).join('')}</tbody></table>`;
+      const totalWrong = detail.answers.filter(a => !a.is_correct).length;
+      dd.innerHTML = `
+        <div class="detail-toggle-bar">
+          <span class="detail-toggle-label">答题详情</span>
+          <div class="detail-toggle-group">
+            <button class="detail-toggle-btn active" data-filter="all">全部单词</button>
+            <button class="detail-toggle-btn" data-filter="wrong">错误单词${totalWrong > 0 ? ' (' + totalWrong + ')' : ''}</button>
+          </div>
+        </div>
+        <table class="detail-table"><thead><tr><th>#</th><th>中文</th><th>你的答案</th><th>正确答案</th><th></th></tr></thead><tbody>${detail.answers.map((a,i) => `<tr class="${a.is_correct?'correct-row':'wrong-row'}" data-is-correct="${a.is_correct}"><td>${i+1}</td><td class="zh">${escapeHtml(a.chinese)}</td><td class="${a.is_correct?'correct-ans':'user-ans'}">${escapeHtml(a.user_answer)}</td><td class="correct-ans">${escapeHtml(a.english)}</td><td class="icon">${a.is_correct?'✓':'✗'}</td></tr>`).join('')}</tbody></table>
+        ${totalWrong > 0 ? `<button class="btn-retest-wrong" id="btnRetest-${sessionId}">🔄 重新测验错误单词</button>` : ''}`;
       dd.style.display = 'block';
+      // Bind toggle click handlers
+      dd.querySelectorAll('.detail-toggle-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          dd.querySelectorAll('.detail-toggle-btn').forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          if (this.dataset.filter === 'wrong') {
+            dd.classList.add('show-wrong-only');
+          } else {
+            dd.classList.remove('show-wrong-only');
+          }
+        });
+      });
+      // Bind retest button
+      const retestBtn = dd.querySelector('.btn-retest-wrong');
+      if (retestBtn && typeof startRetestQuiz === 'function') {
+        retestBtn.addEventListener('click', () => {
+          const wrongs = detail.answers.filter(a => !a.is_correct);
+          startRetestQuiz(wrongs);
+        });
+      }
     } catch(e) { dd.innerHTML = '<div style="padding:12px;color:var(--terracotta);">加载详情失败</div>'; dd.style.display = 'block'; }
   }
 

@@ -7,6 +7,30 @@ import { currentUser } from '../state/auth.js';
 
 export function createQuizScreen({ allUnits, selectedUnitIds }) {
 
+  let _retestCallback = null;
+
+  function startRetestQuiz(wrongAnswers) {
+    if (!wrongAnswers || wrongAnswers.length === 0) return;
+    // Build minimal word objects for the quiz
+    const words = wrongAnswers.map(a => ({
+      id: a.word_id || 0,
+      chinese: a.chinese || '',
+      english: a.english || '',
+      unit_name: '',
+    }));
+    QuizState.quizWords = words;
+    QuizState.currentIndex = 0;
+    QuizState.results = [];
+    QuizState.isRetest = true;
+    setQuizStartTime(Date.now());
+    document.getElementById('selectScreen').style.display = 'none';
+    document.getElementById('quizScreen').style.display = 'block';
+    document.getElementById('resultsScreen').style.display = 'none';
+    document.getElementById('statsScreen').style.display = 'none';
+    document.getElementById('unitTag').textContent = 'Retest (' + words.length + ' words)';
+    showQuestion();
+  }
+
   async function startQuiz() {
     if (selectedUnitIds.size === 0) return;
     const book = currentUser.current_book;
@@ -57,12 +81,14 @@ export function createQuizScreen({ allUnits, selectedUnitIds }) {
     const wrong = total - correct;
     const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0;
     const dur = getElapsedSeconds();
-    try {
-      await apiFetch('/api/quiz/submit', { method:'POST', body: JSON.stringify({
-        unit_ids: Array.from(selectedUnitIds), duration_seconds: dur, book_schema: currentUser.current_book,
-        answers: QuizState.results.map(r => ({ word_id: r.word_id, user_answer: r.userAnswer, is_correct: r.isCorrect }))
-      })});
-    } catch(e) { console.error('Failed to save quiz result:', e); }
+    if (!QuizState.isRetest) {
+      try {
+        await apiFetch('/api/quiz/submit', { method:'POST', body: JSON.stringify({
+          unit_ids: Array.from(selectedUnitIds), duration_seconds: dur, book_schema: currentUser.current_book,
+          answers: QuizState.results.map(r => ({ word_id: r.word_id, user_answer: r.userAnswer, is_correct: r.isCorrect }))
+        })});
+      } catch(e) { console.error('Failed to save quiz result:', e); }
+    }
     const sc = document.getElementById('scoreCircle');
     sc.textContent = accuracy + '%';
     sc.style.background = accuracy >= 90 ? '#58997A' : accuracy >= 70 ? '#7AB89A' : accuracy >= 50 ? '#C8A87A' : '#C86F50';
@@ -81,9 +107,37 @@ export function createQuizScreen({ allUnits, selectedUnitIds }) {
       <td class="${r.isCorrect?'correct-ans':'user-ans'}">${escapeHtml(r.userAnswer)}</td>
       <td class="correct-ans">${escapeHtml(r.word.english)}</td>
       <td class="icon">${r.isCorrect?'✓':'✗'}</td></tr>`).join('');
+
+    // Retest mode: change restart button
+    if (QuizState.isRetest) {
+      const btnRestart = document.getElementById('btnRestart');
+      btnRestart.textContent = '完成 / 返回记录';
+      btnRestart.className = 'btn-retest-done';
+      btnRestart.onclick = retestDone;
+    } else {
+      const btnRestart = document.getElementById('btnRestart');
+      btnRestart.textContent = '重新选择';
+      btnRestart.className = 'btn-restart';
+      btnRestart.onclick = backToSelect;
+    }
+  }
+
+  function retestDone() {
+    stopTimer();
+    QuizState.results = [];
+    QuizState.isRetest = false;
+    document.getElementById('quizScreen').style.display = 'none';
+    document.getElementById('resultsScreen').style.display = 'none';
+    document.getElementById('progressFill').style.width = '0%';
+    // Simply show stats screen without rebuilding — preserves expanded card state
+    document.getElementById('statsScreen').style.display = 'block';
   }
 
   function backToSelect() {
+    if (QuizState.isRetest) {
+      retestDone();
+      return;
+    }
     if (document.getElementById('quizScreen').style.display !== 'none' && QuizState.results.length > 0) {
       if (!confirm('确定要退出吗？\n\n当前测验进度将不会保存，下次进入时需要重新开始。')) return;
     }
@@ -96,6 +150,10 @@ export function createQuizScreen({ allUnits, selectedUnitIds }) {
   }
 
   function exitQuiz() {
+    if (QuizState.isRetest) {
+      retestDone();
+      return;
+    }
     if (QuizState.results.length > 0) {
       if (!confirm('确定要退出测验吗？\n\n当前测验进度将不会保存。')) return;
     }
@@ -107,5 +165,5 @@ export function createQuizScreen({ allUnits, selectedUnitIds }) {
     document.getElementById('progressFill').style.width = '0%';
   }
 
-  return { startQuiz, submitAnswer, backToSelect, exitQuiz };
+  return { startQuiz, submitAnswer, backToSelect, exitQuiz, startRetestQuiz };
 }
