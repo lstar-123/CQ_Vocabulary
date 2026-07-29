@@ -28,6 +28,7 @@ export function createQuizScreen({ allUnits, selectedUnitIds }) {
     document.getElementById('resultsScreen').style.display = 'none';
     document.getElementById('statsScreen').style.display = 'none';
     document.getElementById('unitTag').textContent = 'Retest (' + words.length + ' words)';
+    _setupAntiPrediction();
     showQuestion();
   }
 
@@ -46,7 +47,27 @@ export function createQuizScreen({ allUnits, selectedUnitIds }) {
     document.getElementById('quizScreen').style.display = 'block';
     document.getElementById('resultsScreen').style.display = 'none';
     document.getElementById('unitTag').textContent = names.join(', ');
+    _setupAntiPrediction();
     showQuestion();
+  }
+
+  // Set up anti-prediction on the input (once)
+  function _setupAntiPrediction() {
+    const input = document.getElementById('answerInput');
+    if (input._antiPredictionSetup) return;
+    input._antiPredictionSetup = true;
+    // Blur-refocus on each keystroke to reset mobile keyboard prediction
+    input.addEventListener('input', function() {
+      const val = input.value;
+      if (val === input._lastVal) return;
+      input._lastVal = val;
+      input.blur();
+      setTimeout(() => { input.focus(); input.setSelectionRange(val.length, val.length); }, 10);
+    });
+    // Submit on Enter
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') { e.preventDefault(); submitAnswer(); }
+    });
   }
 
   function showQuestion() {
@@ -56,8 +77,10 @@ export function createQuizScreen({ allUnits, selectedUnitIds }) {
     document.getElementById('wordHint').textContent = '请输入对应的英文翻译';
     document.getElementById('counter').textContent = `${QuizState.currentIndex + 1} / ${QuizState.quizWords.length}`;
     document.getElementById('progressFill').style.width = `${(QuizState.currentIndex / QuizState.quizWords.length) * 100}%`;
-    document.getElementById('answerInput').value = '';
-    document.getElementById('answerInput').focus();
+    const input = document.getElementById('answerInput');
+    input._lastVal = '';
+    input.value = '';
+    input.focus();
     startTimer();
   }
 
@@ -66,7 +89,8 @@ export function createQuizScreen({ allUnits, selectedUnitIds }) {
     const userAnswer = input.value.trim();
     if (!userAnswer) return;
     const w = QuizState.quizWords[QuizState.currentIndex];
-    QuizState.results.push({ word_id: w.id, word: w, userAnswer, isCorrect: checkEquivalent(userAnswer, w.english) });
+    const isCorrect = checkEquivalent(userAnswer, w.english);
+    QuizState.results.push({ word_id: w.id, word: w, userAnswer, isCorrect });
     QuizState.currentIndex++;
     if (QuizState.currentIndex < QuizState.quizWords.length) { showQuestion(); }
     else { showResults(); }

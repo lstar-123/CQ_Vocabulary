@@ -1036,6 +1036,8 @@ body {
   .card .input-group { flex-direction: column; gap: 10px; }
   .card input { padding: 14px 16px; font-size: 15px; }
   .btn { padding: 14px 24px; font-size: 14px; min-height: 44px; }
+  .btn-primary { padding: 14px 24px; font-size: 14px; min-height: 44px; }
+  .btn { padding: 14px 24px; font-size: 14px; min-height: 44px; }
 
   /* Quiz results */
   .stats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
@@ -1413,7 +1415,7 @@ body {
       <div class="word-zh" id="wordZh"></div>
       <div class="word-hint" id="wordHint">请输入对应的英文翻译</div>
       <div class="input-group">
-        <input type="text" id="answerInput" name="quiz_answer" placeholder="输入英文翻译..." autocomplete="nope" spellcheck="false" autocorrect="off" autocapitalize="off" inputmode="text">
+        <input type="text" id="answerInput" placeholder="输入英文翻译..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
         <button class="btn btn-primary" id="submitBtn">确认</button>
       </div>
     </div>
