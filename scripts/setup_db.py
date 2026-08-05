@@ -55,25 +55,126 @@ def create_database(cfg):
 
 
 def parse_markdown(filepath):
-    """Parse vocabulary markdown file. Returns list of {unit_name, words}."""
+    """Parse vocabulary markdown file. Returns list of {name, words}.
+
+    Handles both the new table format (BeiJing edition) and the original
+    markdown format with ## Unit headers.
+    """
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    # Detect BeiJing table format: "| 序号 |"
+    if re.search(r'\|\s*序号\s*\|', content):
+        return _parse_table_format(content)
+
+    # Original format with ## Unit headers
+    return _parse_unit_format(content)
+
+
+def _parse_table_format(content):
+    """Parse table-format vocabulary (BeiJing Normal University edition)."""
+    units = []
+    unit_name = None
+    in_table = False
+    table_header_skipped = False
+
+    for line in content.split('\n'):
+        stripped = line.strip()
+        if not stripped:
+            continue
+
+        title_match = re.match(r'^#\s+(.+)$', stripped)
+        if title_match and not in_table:
+            unit_name = title_match.group(1).strip()
+            unit_name = re.sub(r'\s*单词表.*$', '', unit_name)
+            continue
+
+        if re.match(r'^\|\s*序号\s*\|', stripped):
+            in_table = True
+            table_header_skipped = False
+            continue
+
+        if in_table and not table_header_skipped and re.match(r'^\|[\s\-|]+$', stripped):
+            table_header_skipped = True
+            continue
+
+        if in_table and table_header_skipped:
+            parts = [p.strip() for p in stripped.split('|') if p.strip()]
+            if len(parts) >= 5:
+                english = parts[3].strip()
+                chinese = parts[4].strip()
+            elif len(parts) >= 2:
+                english = parts[-2].strip()
+                chinese = parts[-1].strip()
+            else:
+                continue
+
+            if english:
+                if unit_name is None:
+                    unit_name = 'Vocabulary'
+                if not units:
+                    units.append({'name': unit_name, 'words': []})
+                units[0]['words'].append({'english': english, 'chinese': chinese})
+
+    return units
+
+
+def _parse_unit_format(content):
+    """Parse original markdown format with ## Unit headers."""
     units = []
     current_unit = None
-    with open(filepath, 'r', encoding='utf-8') as f:
-        for line in f:
-            stripped = line.strip()
-            if not stripped:
+    in_table = False
+    table_header_skipped = False
+
+    for line in content.split('\n'):
+        stripped = line.strip()
+        if not stripped:
+            in_table = False
+            table_header_skipped = False
+            continue
+
+        # Section header: ## UNIT N or ### Lesson N etc.
+        section_match = re.match(r'^#+\s+(.+)$', stripped)
+        if section_match:
+            in_table = False
+            table_header_skipped = False
+            section_name = section_match.group(1).strip()
+
+            # Skip top-level title lines
+            if not re.match(r'^(Unit\s+\d+|Topic\s+Talk|Lesson|Unit)', section_name):
                 continue
-            unit_match = re.match(r'^#+\s*(Unit\s+\d+.*)$', stripped)
-            if unit_match:
-                current_unit = {'name': unit_match.group(1).strip(), 'words': []}
-                units.append(current_unit)
-                continue
-            word_match = re.match(r'^\s+-\s+(.+?)\s{2,}(.+?)\s*$', line)
-            if word_match and current_unit is not None:
-                current_unit['words'].append({
-                    'english': word_match.group(1).strip(),
-                    'chinese': word_match.group(2).strip()
-                })
+
+            current_unit = {'name': section_name, 'words': []}
+            units.append(current_unit)
+            continue
+
+        # Table header in unit format: | 单词/短语 | 中文意思 |
+        if re.match(r'^\|\s*单词', stripped) or re.match(r'^\|\s*英语', stripped):
+            in_table = True
+            table_header_skipped = False
+            continue
+
+        # Table separator: | --- | --- |
+        if in_table and not table_header_skipped and re.match(r'^\|[\s\-|]+$', stripped):
+            table_header_skipped = True
+            continue
+
+        # Table data row: | english | chinese |
+        table_row = re.match(r'^\|\s*(.+?)\s*\|\s*(.+?)\s*\|', stripped)
+        if table_row and current_unit is not None:
+            english = table_row.group(1).strip()
+            chinese = table_row.group(2).strip()
+            current_unit['words'].append({'english': english, 'chinese': chinese})
+            continue
+
+        # Legacy indented list: "  - english  chinese"
+        word_match = re.match(r'^\s+-\s+(.+?)\s{2,}(.+?)\s*$', line)
+        if word_match and current_unit is not None:
+            current_unit['words'].append({
+                'english': word_match.group(1).strip(),
+                'chinese': word_match.group(2).strip()
+            })
+
     return units
 
 
@@ -100,7 +201,7 @@ def main():
     w_conn.autocommit = True
     w_cur = w_conn.cursor()
 
-    for schema in ['grade6_vol1', 'senior_compulsory_1']:
+    for schema in ['grade6_vol1', 'senior_compulsory_1', 'senior_compulsory_1_beijing']:
         w_cur.execute(f'CREATE SCHEMA IF NOT EXISTS {schema}')
         print(f'  Schema "{schema}" ready.')
 
@@ -184,7 +285,7 @@ def main():
         )''',
     ]
 
-    for schema in ['grade6_vol1', 'senior_compulsory_1']:
+    for schema in ['grade6_vol1', 'senior_compulsory_1', 'senior_compulsory_1_beijing']:
         for sql in words_tables:
             try:
                 w_cur.execute(sql.format(schema=schema))
@@ -207,6 +308,7 @@ def main():
     book_files = [
         ('vocabulary_6_1.md', 'grade6_vol1', '六年级上册'),
         ('vocabulary_10_1.md', 'senior_compulsory_1', '高中必修一'),
+        ('vocabulary_10_1_BeiJing.md', 'senior_compulsory_1_beijing', '北师大必修一'),
     ]
 
     for filename, schema, display_name in book_files:

@@ -11,6 +11,7 @@ db = SQLAlchemy()
 BOOK_SCHEMAS = {
     'grade6_vol1': '六年级上册',
     'senior_compulsory_1': '高中必修一',
+    'senior_compulsory_1_beijing': '北师大必修一',
 }
 
 def get_book_models(schema_name):
@@ -18,6 +19,7 @@ def get_book_models(schema_name):
     registry = {
         'grade6_vol1': (Grade6Vol1Unit, Grade6Vol1Word),
         'senior_compulsory_1': (SeniorCompulsory1Unit, SeniorCompulsory1Word),
+        'senior_compulsory_1_beijing': (SeniorCompulsory1BeijingUnit, SeniorCompulsory1BeijingWord),
     }
     return registry.get(schema_name, (Grade6Vol1Unit, Grade6Vol1Word))
 
@@ -178,6 +180,35 @@ class SeniorCompulsory1Word(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     unit_id = db.Column(db.Integer, db.ForeignKey('senior_compulsory_1.units.id', ondelete='CASCADE'), nullable=False)
+    english = db.Column(db.String(255), nullable=False)
+    chinese = db.Column(db.String(255), nullable=False)
+    phonics_data = db.Column(db.JSON)
+    phonics_version = db.Column(db.Integer, default=1)
+    generated_by = db.Column(db.String(100))
+    generated_at = db.Column(db.DateTime)
+    reviewed = db.Column(db.Boolean, default=False)
+
+
+class SeniorCompulsory1BeijingUnit(db.Model):
+    __bind_key__ = 'words'
+    __tablename__ = 'units'
+    __table_args__ = {'schema': 'senior_compulsory_1_beijing'}
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), unique=True, nullable=False)
+    order_num = db.Column(db.Integer, nullable=False, default=0)
+
+    words = db.relationship('SeniorCompulsory1BeijingWord', backref='unit', lazy=True,
+                            order_by='SeniorCompulsory1BeijingWord.id')
+
+
+class SeniorCompulsory1BeijingWord(db.Model):
+    __bind_key__ = 'words'
+    __tablename__ = 'words'
+    __table_args__ = {'schema': 'senior_compulsory_1_beijing'}
+
+    id = db.Column(db.Integer, primary_key=True)
+    unit_id = db.Column(db.Integer, db.ForeignKey('senior_compulsory_1_beijing.units.id', ondelete='CASCADE'), nullable=False)
     english = db.Column(db.String(255), nullable=False)
     chinese = db.Column(db.String(255), nullable=False)
     phonics_data = db.Column(db.JSON)

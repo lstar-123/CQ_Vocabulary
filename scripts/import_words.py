@@ -3,6 +3,7 @@
 Usage:
     python import_words.py                           # default: grade6_vol1, vocabulary_6_1.md
     python import_words.py --schema senior_compulsory_1 --file data/vocabulary_10_1.md
+    python import_words.py --schema senior_compulsory_1_beijing --file data/vocabulary_10_1_BeiJing.md
 """
 import os
 import re
@@ -18,7 +19,18 @@ load_dotenv()
 
 
 def parse_markdown(filepath):
-    """Parse vocabulary markdown file into structured data.
+    """Parse vocabulary markdown file (list format) into structured data.
+
+    Expected format:
+        ## UNIT 1 LIFE CHOICES
+        ### Topic Talk
+        | 单词/短语     | 中文意思                         |
+        | ------------- | -------------------------------- |
+        | senior        | 较高的，高级的                   |
+
+    Also supports older indented-list format:
+        # Unit 1
+          - english  chinese
 
     Returns:
         list of { 'unit_name': str, 'words': [{ 'english': str, 'chinese': str }] }
@@ -27,27 +39,144 @@ def parse_markdown(filepath):
     current_unit = None
 
     with open(filepath, 'r', encoding='utf-8') as f:
-        for line in f:
-            line_stripped = line.strip()
+        content = f.read()
 
-            # Skip empty lines
-            if not line_stripped:
+    # Detect format: if file has "| 序号 |" table header, use table parser
+    if re.search(r'\|\s*序号\s*\|', content):
+        return parse_table_markdown(filepath)
+
+    lines = content.split('\n')
+
+    # State machine for the markdown table format with #/##/### headers
+    in_table = False
+    table_header_skipped = False
+
+    for line in lines:
+        line_stripped = line.strip()
+
+        if not line_stripped:
+            in_table = False
+            table_header_skipped = False
+            continue
+
+        # Detect section header: ## UNIT N or ### Lesson N etc.
+        section_match = re.match(r'^#+\s+(.+)$', line_stripped)
+        if section_match:
+            in_table = False
+            table_header_skipped = False
+            section_name = section_match.group(1).strip()
+
+            # Skip the top-level title (e.g., "# 高中英语必修一 单词表")
+            if not re.match(r'^Unit\s+\d+', section_name) and not re.match(r'^(Topic\s+Talk|Lesson|Unit)', section_name):
                 continue
 
-            # Detect unit header: "- Unit N" (at start of line, no leading spaces)
-            unit_match = re.match(r'^#+\s*(Unit\s+\d+.*)$', line_stripped)
-            if unit_match:
-                current_unit = {'unit_name': unit_match.group(1).strip(), 'words': []}
-                units.append(current_unit)
+            current_unit = {'unit_name': section_name, 'words': []}
+            units.append(current_unit)
+            continue
+
+        # Detect table header line: | 单词/短语 | 中文意思 |
+        if re.match(r'^\|\s*单词', line_stripped) or re.match(r'^\|\s*英语', line_stripped):
+            in_table = True
+            table_header_skipped = False
+            continue
+
+        # Detect table separator: | --- | --- |
+        if in_table and not table_header_skipped and re.match(r'^\|[\s\-|]+$', line_stripped):
+            table_header_skipped = True
+            continue
+
+        # Detect table data row: | english | chinese |
+        table_row = re.match(r'^\|\s*(.+?)\s*\|\s*(.+?)\s*\|', line_stripped)
+        if table_row and current_unit is not None:
+            english = table_row.group(1).strip()
+            chinese = table_row.group(2).strip()
+            current_unit['words'].append({'english': english, 'chinese': chinese})
+            continue
+
+        # Legacy indented list format: "  - english  chinese"
+        word_match = re.match(r'^\s+-\s+(.+?)\s{2,}(.+?)\s*$', line)
+        if word_match and current_unit is not None:
+            english = word_match.group(1).strip()
+            chinese = word_match.group(2).strip()
+            current_unit['words'].append({'english': english, 'chinese': chinese})
+
+    return units
+
+
+def parse_table_markdown(filepath):
+    """Parse table-format vocabulary markdown (BeiJing Normal University format).
+
+    Format:
+        # Title
+        | 序号 | 核心词排序 | 词频 | 单词 | 释义 |
+        |------|------|------|------|------|
+        | 1 | 41 | 36 | patience | 耐心 |
+
+    Since there are no unit divisions, all words go into a single unit
+    named after the file's title.
+
+    Returns:
+        list of { 'unit_name': str, 'words': [{ 'english': str, 'chinese': str }] }
+    """
+    units = []
+    unit_name = None
+
+    with open(filepath, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+
+    in_table = False
+    table_header_skipped = False
+
+    for line in lines:
+        line_stripped = line.strip()
+
+        if not line_stripped:
+            continue
+
+        # Title line: "# 高中英语必修一 单词表（北师大版）"
+        title_match = re.match(r'^#\s+(.+)$', line_stripped)
+        if title_match and not in_table:
+            unit_name = title_match.group(1).strip()
+            # Remove "单词表" suffix for cleaner name
+            unit_name = re.sub(r'\s*单词表.*$', '', unit_name)
+            continue
+
+        # Table header: | 序号 | 核心词排序 | 词频 | 单词 | 释义 |
+        if re.match(r'^\|\s*序号\s*\|', line_stripped):
+            in_table = True
+            table_header_skipped = False
+            continue
+
+        # Table separator: |------|------|------|------|------|
+        if in_table and not table_header_skipped and re.match(r'^\|[\s\-|]+$', line_stripped):
+            table_header_skipped = True
+            continue
+
+        # Data row: | 1 | 41 | 36 | patience | 耐心 |
+        # Some rows have empty columns: | 145 | | | secondary | 中等教育；中级的；次要的 |
+        if in_table and table_header_skipped:
+            parts = line_stripped.split('|')
+            # parts: ['', ' 1 ', ' 41 ', ' 36 ', ' patience ', ' 耐心 ', '']
+            # Filter out empty first/last from split
+            parts = [p.strip() for p in parts if p.strip()]
+            if len(parts) >= 5:
+                # Format: 序号, 核心词排序, 词频, 单词, 释义
+                english = parts[3].strip()
+                chinese = parts[4].strip()
+            elif len(parts) >= 2:
+                # Fallback: assume last two non-empty are english and chinese
+                english = parts[-2].strip()
+                chinese = parts[-1].strip()
+            else:
                 continue
 
-            # Detect word line: indented "- english  chinese"
-            # English and Chinese are separated by 2+ spaces
-            word_match = re.match(r'^\s+-\s+(.+?)\s{2,}(.+?)\s*$', line)
-            if word_match and current_unit is not None:
-                english = word_match.group(1).strip()
-                chinese = word_match.group(2).strip()
-                current_unit['words'].append({'english': english, 'chinese': chinese})
+            if english:
+                if unit_name is None:
+                    unit_name = 'Vocabulary'
+                # Create unit on first word
+                if not units:
+                    units.append({'unit_name': unit_name, 'words': []})
+                units[0]['words'].append({'english': english, 'chinese': chinese})
 
     return units
 
@@ -101,10 +230,10 @@ def import_to_db(units, schema_name):
 def main():
     parser = argparse.ArgumentParser(description='Import vocabulary from markdown into a word book schema.')
     parser.add_argument('--schema', default='grade6_vol1',
-                        choices=['grade6_vol1', 'senior_compulsory_1'],
+                        choices=['grade6_vol1', 'senior_compulsory_1', 'senior_compulsory_1_beijing'],
                         help='Target schema in vocab_quiz_words (default: grade6_vol1)')
     parser.add_argument('--file', default=None,
-                        help='Path to markdown file (default: data/vocabulary_6_1.md for grade6_vol1)')
+                        help='Path to markdown file (default: auto-detected from schema)')
     args = parser.parse_args()
 
     # Resolve default file path based on schema
@@ -116,6 +245,7 @@ def main():
         default_files = {
             'grade6_vol1': 'data/vocabulary_6_1.md',
             'senior_compulsory_1': 'data/vocabulary_10_1.md',
+            'senior_compulsory_1_beijing': 'data/vocabulary_10_1_BeiJing.md',
         }
         filepath = os.path.join(
             os.path.dirname(__file__), '..',
