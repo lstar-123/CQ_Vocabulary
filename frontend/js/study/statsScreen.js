@@ -4,8 +4,15 @@ import { apiFetch } from '../api.js';
 import { ensureBookList, getBookList } from '../book/bookSelection.js';
 import { StatsState } from '../state/statsState.js';
 import { currentUser } from '../state/auth.js';
+import { countUp } from '../ui/anim.js';
+import { showToast } from '../ui/toast.js';
+import { skeletonStatsCard, skeletonHistoryRow } from '../ui/skeleton.js';
+import { icon } from '../ui/icons.js';
 
 export function createStatsScreen({ startRetestQuiz } = {}) {
+
+  // Monotonic request id — drops stale history renders on rapid page/filter switches
+  let _historyReqId = 0;
 
   async function buildStatsScreen() {
     const book = currentUser.current_book;
@@ -13,14 +20,30 @@ export function createStatsScreen({ startRetestQuiz } = {}) {
       try { StatsState.statsAllUnits = await apiFetch(`/api/units?book_schema=${book}`); } catch (e) { StatsState.statsAllUnits = []; }
     }
 
-    const [summary, trend, groupHistory] = await Promise.all([
-      apiFetch(`/api/stats/summary?book_schema=${book}`),
-      apiFetch(`/api/stats/trend?book_schema=${book}`),
-      apiFetch(`/api/stats/group-history?book_schema=${book}`).catch(e => {
-        console.warn('Group history fetch failed:', e.message);
-        return [];
-      })
-    ]);
+    // Show skeletons while the stats fetch is in flight
+    document.getElementById('statsSummaryCards').innerHTML =
+      Array(6).fill(skeletonStatsCard()).join('');
+    document.getElementById('historyList').innerHTML =
+      Array(5).fill(skeletonHistoryRow()).join('');
+
+    let summary, trend, groupHistory;
+    try {
+      [summary, trend, groupHistory] = await Promise.all([
+        apiFetch(`/api/stats/summary?book_schema=${book}`),
+        apiFetch(`/api/stats/trend?book_schema=${book}`),
+        apiFetch(`/api/stats/group-history?book_schema=${book}`).catch(e => {
+          console.warn('Group history fetch failed:', e.message);
+          return [];
+        })
+      ]);
+    } catch (e) {
+      console.error('Stats load failed:', e);
+      showToast('统计数据加载失败，请重试', { type: 'error' });
+      document.getElementById('statsSummaryCards').innerHTML =
+        '<div class="no-data">加载失败，请重试</div>';
+      document.getElementById('historyList').innerHTML = '';
+      return;
+    }
     StatsState.statsTrendData = trend;
     StatsState.historyUnitFilter = 'all';
     StatsState.historyPage = 1;
@@ -28,7 +51,7 @@ export function createStatsScreen({ startRetestQuiz } = {}) {
     await ensureBookList();
     const bookName = (getBookList().find(b => b.schema === book) || {}).name || book;
     document.getElementById('statsBookLabel').innerHTML =
-      `<span class="unit-tag">📚 ${escapeHtml(bookName)}</span>`;
+      `<span class="unit-tag"><span style="display:inline-flex;vertical-align:-2px;margin-right:6px;">${icon('book-open', 12)}</span>${escapeHtml(bookName)}</span>`;
 
     document.getElementById('statsSummaryCards').innerHTML = `
       <div class="stats-summary-card">
@@ -49,6 +72,12 @@ export function createStatsScreen({ startRetestQuiz } = {}) {
       <div class="stats-summary-card">
         <div class="ss-num">${summary.total_group_sessions || 0}</div><div class="ss-label">学习次数</div>
       </div>`;
+
+    // Count-up animation for the summary numbers
+    document.querySelectorAll('#statsSummaryCards .ss-num').forEach(el => {
+      const txt = el.textContent;
+      countUp(el, parseFloat(txt), { suffix: txt.endsWith('%') ? '%' : '', duration: 900 });
+    });
 
     renderUnitTrendFilter();
     renderTrendChart();
@@ -71,9 +100,9 @@ export function createStatsScreen({ startRetestQuiz } = {}) {
         ? new Date(r.finished_at).toLocaleDateString('zh-CN', { year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit' })
         : '';
       const dur = r.duration_seconds ? ` · 用时 ${formatDuration(r.duration_seconds)}` : '';
-      const iconMap = { unit_complete:'🏆', round_complete:'✅', group_complete:'📝' };
+      const iconMap = { unit_complete: icon('award', 24), round_complete: icon('check-circle', 24), group_complete: icon('package', 24) };
       const errCount = r.error_count || 0;
-      const errInfo = errCount > 0 ? ` · ❌ ${errCount}个错误` : '';
+      const errInfo = errCount > 0 ? ` · <span style="display:inline-flex;vertical-align:-2px;">${icon('x-circle', 12)}</span> ${errCount}个错误` : '';
       const errCls = errCount > 0 ? ' has-errors' : '';
       const errWords = r.error_words && r.error_words.length > 0 ? r.error_words : [];
       const errWordsHtml = errWords.length > 0 ? errWords.map(ew =>
@@ -81,18 +110,18 @@ export function createStatsScreen({ startRetestQuiz } = {}) {
       ).join('') : '';
       const detailId = `ghd-${r.id}`;
       return `<div class="group-history-item${errCls}" onclick="toggleGroupHistoryDetail('${detailId}', this)">
-        <span class="ghi-icon">${iconMap[r.event_type] || '✅'}</span>
+        <span class="ghi-icon">${iconMap[r.event_type] || icon('check-circle', 24)}</span>
         <div class="ghi-info">
           <div class="ghi-unit">${escapeHtml(r.unit_name)}</div>
           <div class="ghi-meta">${date}${dur}${r.group_size ? ` · ${r.group_size}词` : ''}${errInfo}</div>
         </div>
         <span class="ghi-round">${escapeHtml(r.label || r.event_type)}</span>
         <span class="ghi-time">${date}</span>
-        ${errWords.length > 0 ? '<span class="ghi-expand">▼</span>' : ''}
+        ${errWords.length > 0 ? `<span class="ghi-expand">${icon('chevron-down', 12)}</span>` : ''}
       </div>
       ${errWords.length > 0 ? `
       <div class="group-history-detail" id="${detailId}" style="display:none;">
-        <div style="font-size:12px;font-weight:600;color:var(--terracotta);margin-bottom:8px;">❌ 错误单词（${errCount}个）：</div>
+        <div style="font-size:12px;font-weight:600;color:var(--terracotta);margin-bottom:8px;display:flex;align-items:center;gap:5px;"><span style="display:inline-flex;">${icon('x-circle', 13)}</span>错误单词（${errCount}个）：</div>
         <div style="line-height:2;">${errWordsHtml}</div>
       </div>` : ''}`;
     }).join('');
@@ -130,7 +159,7 @@ export function createStatsScreen({ startRetestQuiz } = {}) {
     }
     filterDiv.innerHTML = sorted.map(([uid, info]) => {
       const active = String(uid) === StatsState.statsTrendUnitFilter ? ' active-filter' : '';
-      return `<button class="trend-unit-btn${active}" data-unit="${uid}">📖 ${escapeHtml(info.name)}</button>`;
+      return `<button class="trend-unit-btn${active}" data-unit="${uid}"><span style="display:inline-flex;vertical-align:-2px;margin-right:5px;">${icon('book', 12)}</span>${escapeHtml(info.name)}</button>`;
     }).join('');
   }
 
@@ -193,8 +222,8 @@ export function createStatsScreen({ startRetestQuiz } = {}) {
   function renderHistoryUnitFilter() {
     const fd = document.getElementById('historyUnitFilter');
     if (!fd || StatsState.statsAllUnits.length === 0) { if (fd) fd.innerHTML = ''; return; }
-    fd.innerHTML = `<button class="trend-unit-btn${StatsState.historyUnitFilter==='all'?' active-filter':''}" data-unit="all">📊 全部</button>` +
-      StatsState.statsAllUnits.map(u => `<button class="trend-unit-btn${String(u.id)===StatsState.historyUnitFilter?' active-filter':''}" data-unit="${u.id}">📖 ${escapeHtml(u.name)}</button>`).join('');
+    fd.innerHTML = `<button class="trend-unit-btn${StatsState.historyUnitFilter==='all'?' active-filter':''}" data-unit="all"><span style="display:inline-flex;vertical-align:-2px;margin-right:5px;">${icon('bar-chart-2', 12)}</span>全部</button>` +
+      StatsState.statsAllUnits.map(u => `<button class="trend-unit-btn${String(u.id)===StatsState.historyUnitFilter?' active-filter':''}" data-unit="${u.id}"><span style="display:inline-flex;vertical-align:-2px;margin-right:5px;">${icon('book', 12)}</span>${escapeHtml(u.name)}</button>`).join('');
   }
 
   function switchHistoryUnit(unitId) {
@@ -206,10 +235,13 @@ export function createStatsScreen({ startRetestQuiz } = {}) {
 
   async function renderHistoryList() {
     const container = document.getElementById('historyList');
+    const reqId = ++_historyReqId;
+    container.innerHTML = Array(5).fill(skeletonHistoryRow()).join('');
     try {
       let url = `/api/history?page=${StatsState.historyPage}&per_page=10&book_schema=${currentUser.current_book}`;
       if (StatsState.historyUnitFilter !== 'all') url += `&unit_id=${StatsState.historyUnitFilter}`;
       const data = await apiFetch(url);
+      if (reqId !== _historyReqId) return;   // stale response — dropped
       const sessions = data.items;
       if (!sessions.length) { container.innerHTML = '<div class="no-data">还没有测验记录，快去答题吧！</div>'; document.getElementById('historyPagination').innerHTML = ''; return; }
       container.innerHTML = sessions.map(s => {
@@ -229,7 +261,7 @@ export function createStatsScreen({ startRetestQuiz } = {}) {
           <div class="hi-card-footer">
             <span class="hi-date">${date}</span>
             <span class="hi-duration">${escapeHtml(formatDuration(s.duration_seconds))}</span>
-            <span class="hi-expand-icon">▼</span>
+            <span class="hi-expand-icon">${icon('chevron-down', 14)}</span>
           </div>
         </div>
         <div class="history-detail" id="histDetail${s.id}" style="display:none;"></div>`;
@@ -237,7 +269,7 @@ export function createStatsScreen({ startRetestQuiz } = {}) {
       const tp = data.total_pages, tt = data.total;
       if (tp <= 1) { document.getElementById('historyPagination').innerHTML = ''; return; }
       document.getElementById('historyPagination').innerHTML = `<span class="page-info">${tt} 条记录 · 第 ${StatsState.historyPage}/${tp} 页</span><button class="page-btn" data-page="${StatsState.historyPage-1}"${StatsState.historyPage<=1?' disabled':''}>◀ 上一页</button><button class="page-btn" data-page="${StatsState.historyPage+1}"${StatsState.historyPage>=tp?' disabled':''}>下一页 ▶</button>`;
-    } catch(e) { container.innerHTML = '<div class="no-data">加载失败，请重试</div>'; }
+    } catch(e) { if (reqId !== _historyReqId) return; container.innerHTML = '<div class="no-data">加载失败，请重试</div>'; }
   }
 
   function goHistoryPage(page) {
@@ -263,8 +295,8 @@ export function createStatsScreen({ startRetestQuiz } = {}) {
             <button class="detail-toggle-btn" data-filter="wrong">错误单词${totalWrong > 0 ? ' (' + totalWrong + ')' : ''}</button>
           </div>
         </div>
-        <table class="detail-table"><thead><tr><th>#</th><th>中文</th><th>你的答案</th><th>正确答案</th><th></th></tr></thead><tbody>${detail.answers.map((a,i) => `<tr class="${a.is_correct?'correct-row':'wrong-row'}" data-is-correct="${a.is_correct}"><td>${i+1}</td><td class="zh">${escapeHtml(a.chinese)}</td><td class="${a.is_correct?'correct-ans':'user-ans'}">${escapeHtml(a.user_answer)}</td><td class="correct-ans">${escapeHtml(a.english)}</td><td class="icon">${a.is_correct?'✓':'✗'}</td></tr>`).join('')}</tbody></table>
-        ${totalWrong > 0 ? `<button class="btn-retest-wrong" id="btnRetest-${sessionId}">🔄 重新测验错误单词</button>` : ''}`;
+        <table class="detail-table"><thead><tr><th>#</th><th>中文</th><th>你的答案</th><th>正确答案</th><th></th></tr></thead><tbody>${detail.answers.map((a,i) => `<tr class="${a.is_correct?'correct-row':'wrong-row'}" data-is-correct="${a.is_correct}"><td>${i+1}</td><td class="zh">${escapeHtml(a.chinese)}</td><td class="${a.is_correct?'correct-ans':'user-ans'}">${escapeHtml(a.user_answer)}</td><td class="correct-ans">${escapeHtml(a.english)}</td><td class="icon">${icon(a.is_correct ? 'check' : 'x', 15)}</td></tr>`).join('')}</tbody></table>
+        ${totalWrong > 0 ? `<button class="btn-retest-wrong" id="btnRetest-${sessionId}"><span style="display:inline-flex;vertical-align:-2px;margin-right:6px;">${icon('refresh-cw', 14)}</span>重新测验错误单词</button>` : ''}`;
       dd.style.display = 'block';
       // Bind toggle click handlers
       dd.querySelectorAll('.detail-toggle-btn').forEach(btn => {
@@ -286,7 +318,7 @@ export function createStatsScreen({ startRetestQuiz } = {}) {
           startRetestQuiz(wrongs);
         });
       }
-    } catch(e) { dd.innerHTML = '<div style="padding:12px;color:var(--terracotta);">加载详情失败</div>'; dd.style.display = 'block'; }
+    } catch(e) { dd.innerHTML = '<div style="padding:12px;color:var(--terracotta);">加载详情失败</div>'; dd.style.display = 'block'; showToast('加载详情失败', { type: 'error' }); }
   }
 
   return { buildStatsScreen, switchTrendUnit, switchHistoryUnit, goHistoryPage, toggleHistoryDetail };
@@ -299,9 +331,9 @@ window.toggleGroupHistoryDetail = function(detailId, itemEl) {
   const expand = itemEl.querySelector('.ghi-expand');
   if (detail.style.display === 'none') {
     detail.style.display = '';
-    if (expand) expand.textContent = '▲';
+    if (expand) expand.innerHTML = icon('chevron-up', 12);
   } else {
     detail.style.display = 'none';
-    if (expand) expand.textContent = '▼';
+    if (expand) expand.innerHTML = icon('chevron-down', 12);
   }
 };

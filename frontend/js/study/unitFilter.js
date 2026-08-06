@@ -1,5 +1,6 @@
 // ==================== STUDY UNIT FILTER ====================
 import { escapeHtml } from '../utils.js';
+import { icon } from '../ui/icons.js';
 
 // null = "全部" (all units), number = specific unit ID
 let cardUnitFilter = null;
@@ -14,10 +15,10 @@ export function buildUnitChips(allUnits, mode) {
 
   // Card mode: single-select radio chips
   const allActive = cardUnitFilter === null;
-  let html = `<button class="cat-chip${allActive ? ' active-chip' : ''}" id="chipSelectAll">📚 全部</button>`;
+  let html = `<button class="cat-chip${allActive ? ' active-chip' : ''}" id="chipSelectAll"><span class="tb-icon">${icon('book-open', 14)}</span>全部</button>`;
   html += allUnits.map(u => {
     const active = cardUnitFilter === u.id ? ' active-chip' : '';
-    return `<button class="cat-chip${active}" data-unit="${u.id}">📖 ${escapeHtml(u.name)}</button>`;
+    return `<button class="cat-chip${active}" data-unit="${u.id}"><span class="tb-icon">${icon('book', 14)}</span>${escapeHtml(u.name)}</button>`;
   }).join('');
   container.innerHTML = html;
 }

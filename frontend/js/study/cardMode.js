@@ -4,6 +4,8 @@ import { getCardWords, setCardWords, getCardIndex, setCardIndex, resetCardIndex,
 import { getFilteredWords, updateStudyToolbarInfo } from './unitFilter.js';
 import { renderPlainWord } from '../render/phonicsRender.js';
 import { ensurePhonicsData } from '../state/phonics.js';
+import { escapeHtml } from '../utils.js';
+import { icon } from '../ui/icons.js';
 
 export function buildCardMode({ allWordsGrouped, allUnits }) {
   PlaybackController.destroy();
@@ -36,8 +38,8 @@ export function showCard() {
     if (divider) divider.style.display = 'none';
     if (nav) nav.style.visibility = 'hidden';
     fcCat.textContent = '';
-    fcEnMain.innerHTML = '<span class="fc-empty-emoji">📖</span>';
-    fcZhSub.innerHTML = '<span class="fc-empty-text">暂无词汇数据</span><br><span class="fc-empty-hint">请先选择词书并添加词汇<br>让词汇在脑海中生根发芽 🌱</span>';
+    fcEnMain.innerHTML = `<span class="fc-empty-emoji">${icon('book', 56)}</span>`;
+    fcZhSub.innerHTML = '<span class="fc-empty-text">暂无词汇数据</span><br><span class="fc-empty-hint">请先选择词书并添加词汇<br>让词汇在脑海中生根发芽</span>';
     fcCounter.textContent = '';
     return;
   }
@@ -47,7 +49,7 @@ export function showCard() {
   if (nav) nav.style.visibility = '';
   const w = getCardWords()[getCardIndex()];
   setActiveCardId(`${myGeneration}:${getCardIndex()}:${w.english}`);
-  fcCat.textContent = '📖 ' + w.unit_name;
+  fcCat.innerHTML = `${icon('book', 13)} ${escapeHtml(w.unit_name)}`;
   fcZhSub.textContent = w.chinese;
   fcCounter.textContent = `${getCardIndex() + 1} / ${getCardWords().length}`;
 

@@ -28,6 +28,7 @@ export const DOM = {
   get btnBackSelect()     { return _('btnBackSelect'); },
   get btnBackQuiz()       { return _('btnBackQuiz'); },
   get btnExitQuiz()       { return _('btnExitQuiz'); },
+  get btnSoundToggle()    { return _('btnSoundToggle'); },
   get submitBtn()         { return _('submitBtn'); },
   get answerInput()       { return _('answerInput'); },
   get btnRestart()        { return _('btnRestart'); },

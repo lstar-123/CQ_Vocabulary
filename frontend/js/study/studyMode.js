@@ -23,10 +23,10 @@ export function createStudyMode({ allUnits, allWordsGrouped, englishVisible, stu
     }
   };
 
-  function switchStudyMode(mode) {
+  async function switchStudyMode(mode) {
     if (studyMode.val !== mode) {
       const prev = LearningModes[studyMode.val];
-      if (prev && prev.cleanup && prev.cleanup() === false) return;
+      if (prev && prev.cleanup && await prev.cleanup() === false) return;
     }
     studyMode.val = mode;
     document.getElementById('btnCardMode').classList.toggle('active-sm', mode === 'card');

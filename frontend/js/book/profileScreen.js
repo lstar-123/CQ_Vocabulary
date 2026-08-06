@@ -3,6 +3,8 @@ import { apiFetch } from '../api.js';
 import { ensureBookList, getBookList } from './bookSelection.js';
 import { StatsState } from '../state/statsState.js';
 import { currentUser } from '../state/auth.js';
+import { escapeHtml } from '../utils.js';
+import { icon } from '../ui/icons.js';
 
 export function createProfileScreen({ allWordsGrouped, currentTab, onUnitSelection, onStudyMode, onStatsScreen }) {
 
@@ -45,7 +47,7 @@ export function createProfileScreen({ allWordsGrouped, currentTab, onUnitSelecti
       const result = await apiFetch('/api/auth/book', { method:'PUT', body: JSON.stringify({ book_schema: newBook }) });
       currentUser.current_book = result.current_book;
       document.getElementById('profileCurrentBook').textContent = result.book_name;
-      document.getElementById('profileMsg').textContent = '✅ 词书已切换为：' + result.book_name;
+      document.getElementById('profileMsg').innerHTML = `${icon('check-circle', 13)} 词书已切换为：` + escapeHtml(result.book_name);
       allWordsGrouped.length = 0;
       StatsState.statsAllUnits = [];
       StatsState.statsTrendUnitFilter = '';
@@ -54,7 +56,7 @@ export function createProfileScreen({ allWordsGrouped, currentTab, onUnitSelecti
         else if (currentTab === 'study') onStudyMode();
         else if (currentTab === 'stats') onStatsScreen();
       }, 600);
-    } catch (e) { document.getElementById('profileMsg').textContent = '❌ 切换失败：' + e.message; }
+    } catch (e) { document.getElementById('profileMsg').innerHTML = `${icon('x-circle', 13)} 切换失败：` + escapeHtml(e.message); }
   }
 
   return { openProfile, closeProfile, switchBook };

@@ -2,9 +2,10 @@
 import { escapeHtml } from '../utils.js';
 import { GroupLearning } from '../state/groupLearning.js';
 import { ensurePhonicsData } from '../state/phonics.js';
+import { icon } from '../ui/icons.js';
 
 export function renderGroupOverview() {
-  document.getElementById('groupOverviewTitle').textContent = '📖 ' + GroupLearning.unitName;
+  document.getElementById('groupOverviewTitle').innerHTML = `${icon('book', 18)} ${escapeHtml(GroupLearning.unitName)}`;
 
   const cards = document.getElementById('groupRoundCards');
   cards.innerHTML = GroupLearning.rounds.map((round, ri) =>
@@ -43,7 +44,7 @@ export function renderRoundCard(ri, round, status) {
   const title = `第${ri + 1}轮（约${round.targetSize}词/组）`;
   const totalGroups = round.groups.length;
 
-  const icons = { completed: '✅', in_progress: '🟢', locked: '🔒' };
+  const icons = { completed: icon('check-circle', 22), in_progress: icon('circle', 22), locked: icon('lock', 22) };
   const statusLabels = {
     completed: '已完成', in_progress: '待学习', locked: '已锁定'
   };
@@ -53,7 +54,7 @@ export function renderRoundCard(ri, round, status) {
 
   let detailHTML = '';
   if (status === 'locked') {
-    detailHTML = `🔒 完成第${ri}轮后解锁 · ${totalGroups} 组`;
+    detailHTML = `${icon('lock', 12)} 完成第${ri}轮后解锁 · ${totalGroups} 组`;
   } else if (status === 'in_progress') {
     detailHTML = `${totalGroups} 组待完成`;
   } else {
@@ -113,7 +114,7 @@ export function renderGroupLearning() {
   const hasErrors = wrongSet.size > 0;
 
   // ── Progress header ──
-  document.getElementById('groupUnitLabel').textContent = '📖 ' + GroupLearning.unitName;
+  document.getElementById('groupUnitLabel').innerHTML = `${icon('book', 13)} ${escapeHtml(GroupLearning.unitName)}`;
   document.getElementById('groupRoundLabel').textContent =
     `第${activeRI + 1}轮 · 组 ${group.groupIndex} / ${GroupLearning.totalGroups}`;
   document.getElementById('groupCounter').textContent =
@@ -127,7 +128,7 @@ export function renderGroupLearning() {
   // ── Error banner ──
   const errBanner = document.getElementById('groupSpellError');
   if (hasErrors) {
-    errBanner.textContent = `⚠️ 还有 ${wrongSet.size} 个单词需要加强`;
+    errBanner.innerHTML = `${icon('alert-triangle', 14)} 还有 ${wrongSet.size} 个单词需要加强`;
     errBanner.style.display = '';
   } else {
     errBanner.textContent = '';
@@ -143,7 +144,7 @@ export function renderGroupLearning() {
     <div class="group-word-card${errCls}" id="${wid}">
       <span class="gw-index">${i + 1}</span>
       <span class="gw-en" id="${wid}-en">${escapeHtml(w.english)}</span>
-      <button class="gw-speak" data-word="${escapeHtml(w.english).replace(/'/g,"\\'")}" data-target="${wid}-en" title="发音">🔊</button>
+      <button class="gw-speak" data-word="${escapeHtml(w.english).replace(/'/g,"\\'")}" data-target="${wid}-en" title="发音">${icon('volume-1', 17)}</button>
       <span class="gw-zh">${escapeHtml(w.chinese)}</span>
     </div>`;
   }).join('');

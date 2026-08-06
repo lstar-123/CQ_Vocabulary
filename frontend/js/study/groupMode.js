@@ -5,6 +5,7 @@ import { ACTIVE_STRATEGY, buildRoundsFromWords, getTotalRoundsForUnit } from './
 import { escapeHtml } from '../utils.js';
 import { apiFetch } from '../api.js';
 import { currentUser } from '../state/auth.js';
+import { icon } from '../ui/icons.js';
 
 export function createGroupMode({ allUnits, GroupNavigator }) {
 
@@ -35,14 +36,14 @@ export function createGroupMode({ allUnits, GroupNavigator }) {
         const isComplete = unitComplete.has(u.id);
         let roundLabel, roundCls;
         if (isComplete || (maxComp + 1 >= totalRounds)) {
-          roundLabel = '✅ 已完成'; roundCls = 'completed';
+          roundLabel = `${icon('check-circle', 12)} 已完成`; roundCls = 'completed';
         } else if (maxComp >= 0) {
           roundLabel = `第${maxComp + 2}/${totalRounds}轮`; roundCls = 'in-progress';
         } else {
           roundLabel = `${totalRounds}轮待学`; roundCls = 'not-started';
         }
         return `<div class="group-unit-card" data-unit="${u.id}">
-          <div class="guc-icon">📖</div>
+          <div class="guc-icon">${icon('book', 32)}</div>
           <div class="guc-name">${escapeHtml(u.name)}</div>
           <div class="guc-count">${u.word_count} 个词汇</div>
           <span class="guc-round ${roundCls}">${roundLabel}</span>
@@ -52,7 +53,7 @@ export function createGroupMode({ allUnits, GroupNavigator }) {
       container.innerHTML = '<div class="group-unit-grid">' + allUnits.map(u => {
         const totalRounds = getTotalRoundsForUnit(u.word_count);
         return `<div class="group-unit-card" data-unit="${u.id}">
-          <div class="guc-icon">📖</div>
+          <div class="guc-icon">${icon('book', 32)}</div>
           <div class="guc-name">${escapeHtml(u.name)}</div>
           <div class="guc-count">${u.word_count} 个词汇</div>
           <span class="guc-round not-started">${totalRounds}轮待学</span>
@@ -78,11 +79,11 @@ export function createGroupMode({ allUnits, GroupNavigator }) {
     try {
       words = await apiFetch(`/api/words?unit_ids=${GroupLearning.unitId}&book_schema=${book}`);
     } catch (e) {
-      document.getElementById('groupUnitError').textContent = '❌ 加载词汇失败';
+      document.getElementById('groupUnitError').innerHTML = `${icon('x-circle', 14)} 加载词汇失败`;
       return;
     }
     if (!words || words.length === 0) {
-      document.getElementById('groupUnitError').textContent = '❌ 该单元没有词汇';
+      document.getElementById('groupUnitError').innerHTML = `${icon('x-circle', 14)} 该单元没有词汇`;
       return;
     }
     GroupLearning.words = words;

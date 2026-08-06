@@ -1287,6 +1287,192 @@ body {
 .book-select-error {
   color: var(--terracotta); font-size: 13px; min-height: 20px; margin-top: 10px;
 }
+
+/* ============ TOAST ============ */
+.toast-container {
+  position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+  z-index: 300; display: flex; flex-direction: column; align-items: center;
+  gap: 8px; pointer-events: none; max-width: 92vw;
+}
+.toast {
+  background: var(--white); border: 1px solid var(--input-border);
+  border-left: 4px solid var(--sage);
+  border-radius: 10px; padding: 12px 20px;
+  box-shadow: var(--shadow-lg);
+  font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500;
+  color: var(--text-headline);
+  animation: toastIn 0.25s ease-out;
+  max-width: 100%;
+}
+.toast.toast-success { border-left-color: var(--success); }
+.toast.toast-error { border-left-color: var(--danger); }
+.toast.toast-warning { border-left-color: var(--terracotta); }
+.toast.leaving { animation: toastOut 0.26s ease-in forwards; }
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(-14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes toastOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-10px); }
+}
+
+/* ============ CONFIRM MODAL ============ */
+.confirm-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.3);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 250; backdrop-filter: blur(4px);
+}
+.confirm-card {
+  background: var(--white); border-radius: 16px;
+  padding: 28px 28px 24px; width: 100%; max-width: 380px;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.12);
+  animation: modalPop 0.18s ease-out;
+}
+.confirm-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px; font-weight: 700; color: var(--text-headline);
+  margin-bottom: 10px;
+}
+.confirm-msg {
+  font-family: 'Inter', sans-serif; font-size: 13px;
+  color: var(--text-body); line-height: 1.6;
+  white-space: pre-line; margin-bottom: 24px;
+}
+.confirm-actions { display: flex; gap: 10px; }
+.btn-confirm-cancel {
+  flex: 1; padding: 12px; font-size: 14px; font-weight: 500;
+  border: 1.5px solid var(--input-border); border-radius: 999px; cursor: pointer;
+  background: var(--white); color: var(--text-body); font-family: 'Inter', sans-serif;
+  transition: all 0.2s; min-height: 44px;
+}
+.btn-confirm-cancel:hover { background: var(--pill-bg); }
+.btn-confirm-ok {
+  flex: 1; padding: 12px; font-size: 14px; font-weight: 600;
+  border: none; border-radius: 999px; cursor: pointer;
+  background: var(--sage); color: #fff; font-family: 'Inter', sans-serif;
+  transition: all 0.2s; min-height: 44px;
+}
+.btn-confirm-ok:hover { background: var(--sage-hover); }
+.btn-confirm-ok.danger { background: var(--terracotta); }
+.btn-confirm-ok.danger:hover { background: #B55E44; }
+@keyframes modalPop {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ============ QUESTION TRANSITION ============ */
+.card.question-in { animation: questionIn 0.35s ease-out; }
+@keyframes questionIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============ FLASHCARD ============ */
+/* Content swaps instantly — no animation, no motion. Card sizing is the
+   original min-height behavior: the card only grows for rare 2-line words. */
+
+/* ============ SCORE RING ============ */
+.score-ring-wrap {
+  position: relative; width: 120px; height: 120px;
+  margin: 0 auto 24px;
+}
+.score-ring { position: absolute; inset: 0; width: 100%; height: 100%; }
+.score-ring-track { fill: none; stroke: rgba(255,255,255,0.35); stroke-width: 10; }
+.score-ring-progress {
+  fill: none; stroke: #fff; stroke-width: 10; stroke-linecap: round;
+  stroke-dasharray: 326.7; stroke-dashoffset: 326.7;
+  transform: rotate(-90deg); transform-origin: 50% 50%;
+  transition: stroke-dashoffset 1.1s ease-out;
+}
+.score-ring-wrap .score-circle { margin: 0; }
+
+/* ============ SKELETONS ============ */
+.skeleton {
+  position: relative; overflow: hidden;
+  background: var(--pill-bg); border-radius: 8px;
+}
+.skeleton::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.55), transparent);
+  transform: translateX(-100%);
+  animation: shimmer 1.4s infinite;
+}
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+.skeleton-check { width: 22px; height: 22px; border-radius: 6px; flex-shrink: 0; }
+.skeleton-unit-icon { width: 24px; height: 24px; border-radius: 6px; flex-shrink: 0; }
+.skeleton-block { border-radius: 8px; }
+.skeleton-line { border-radius: 999px; }
+
+/* ============ CONFETTI ============ */
+.confetti-layer {
+  position: fixed; inset: 0; pointer-events: none;
+  z-index: 400; overflow: hidden;
+}
+.confetti-piece {
+  position: absolute; top: -14px;
+  width: 8px; height: 13px; border-radius: 2px;
+  animation: confettiFall 2s ease-in forwards;
+}
+@keyframes confettiFall {
+  to {
+    transform: translate3d(var(--dx, 0), 108vh, 0) rotate(var(--rot, 540deg));
+    opacity: 0.7;
+  }
+}
+
+/* ============ A11Y & POLISH ============ */
+button:focus-visible, a:focus-visible, select:focus-visible {
+  outline: 2px solid var(--sage); outline-offset: 2px;
+}
+button:disabled, .btn:disabled, .btn-sm:disabled, .page-btn:disabled {
+  opacity: 0.5; cursor: not-allowed;
+}
+.kbd-hint {
+  font-family: 'Inter', sans-serif; font-size: 12px; color: var(--text-muted);
+  text-align: center; margin-top: 14px;
+}
+.kbd-hint kbd {
+  display: inline-block; padding: 1px 6px; border-radius: 4px;
+  background: var(--pill-bg); border: 1px solid var(--input-border);
+  font-family: 'Inter', sans-serif; font-size: 11px; color: var(--text-body);
+}
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* ============ ICONS ============ */
+/* Inline SVG line icons — inherit color via currentColor */
+.h-icon { display: inline-flex; vertical-align: -3px; margin-right: 8px; }
+.home-card-icon, .unit-icon, .cat-icon, .guc-icon, .book-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--sage); flex-shrink: 0;
+}
+.chart-empty-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--text-muted); opacity: 0.7; margin-bottom: 12px;
+}
+.bn-icon { display: inline-flex; vertical-align: -2px; margin-right: 6px; }
+.btn .btn-icon, .btn-start .btn-icon { display: inline-flex; vertical-align: -2px; margin-right: 6px; }
+.tb-icon { display: inline-flex; vertical-align: -2px; margin-right: 6px; }
+.gw-speak, .btn-speak, .btn-speak-sm { display: inline-flex; align-items: center; justify-content: center; }
+.rc-status { display: inline-flex; align-items: center; gap: 5px; }
+.rc-status svg { flex-shrink: 0; }
+.hi-expand-icon, .ghi-expand { display: inline-flex; align-items: center; justify-content: center; }
+.detail-table .icon { font-size: 16px; }
+.detail-table .icon svg { display: block; }
+.gs-result { display: inline-flex; align-items: center; justify-content: center; }
+
+/* ============ RESPONSIVE — NEW COMPONENTS (MOBILE) ============ */
+@media (max-width: 500px) {
+  .score-ring-wrap { width: 100px; height: 100px; }
+  .confirm-card { margin: 16px; padding: 26px 20px; }
+  .kbd-hint { font-size: 11px; }
+  .toast { max-width: 88vw; padding: 10px 16px; }
+}
 </style>
 </head>
 <body>
@@ -1298,7 +1484,7 @@ body {
   <!-- Book Selection Overlay (post-registration / no book set) -->
   <div id="bookSelectOverlay" class="book-select-overlay" style="display:none;">
     <div class="book-select-card">
-      <h2>📚 选择词书</h2>
+      <h2><span class="h-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></span>选择词书</h2>
       <p class="book-select-sub">请选择你要学习的词书，开始你的学习之旅</p>
       <div id="bookSelectOptions"></div>
       <p class="book-select-error" id="bookSelectError"></p>
@@ -1312,7 +1498,7 @@ body {
   <!-- Profile Modal -->
   <div id="profileOverlay" class="profile-overlay" style="display:none;">
     <div class="profile-card">
-      <h2>👤 个人信息</h2>
+      <h2><span class="h-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>个人信息</h2>
       <p class="profile-sub">管理你的账号和学习设置</p>
       <div class="profile-info">
         <div class="profile-row">
@@ -1346,9 +1532,9 @@ body {
 
   <!-- User Bar (always visible, outside of any screen) -->
   <div class="user-bar" id="userBar" style="display:none;">
-    <span>👤</span>
+    <span class="tb-icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
     <span class="user-name user-name-clickable" id="userNameDisplay" title="点击查看个人信息" onclick="if(window._openProfile)window._openProfile()"></span>
-    <a class="btn-download-android" href="/downloads/VocabularyMemorization.apk" title="下载 Android APP" id="btnDownloadApp">📱 Android App</a>
+    <a class="btn-download-android" href="/downloads/VocabularyMemorization.apk" title="下载 Android APP" id="btnDownloadApp"><span class="tb-icon"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></span>Android App</a>
     <button class="btn-logout" id="btnLogout">退出登录</button>
   </div>
 
@@ -1356,36 +1542,36 @@ body {
   <div id="homeScreen">
 
     <div class="home-card" id="homeCardStudy">
-      <span class="home-card-icon">📚</span>
+      <span class="home-card-icon" style="color:var(--sage);"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></span>
       <div class="home-card-body">
         <div class="home-card-title">背诵记忆</div>
         <div class="home-card-desc">卡片浏览、列表记忆、分组学习</div>
       </div>
-      <span class="home-card-arrow">›</span>
+      <span class="home-card-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></span>
     </div>
 
     <div class="home-card" id="homeCardQuiz">
-      <span class="home-card-icon">✏️</span>
+      <span class="home-card-icon" style="color:var(--terracotta);"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg></span>
       <div class="home-card-body">
         <div class="home-card-title">拼写测验</div>
         <div class="home-card-desc">看中文拼英文，单元自选，即时评分</div>
       </div>
-      <span class="home-card-arrow">›</span>
+      <span class="home-card-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></span>
     </div>
 
     <div class="home-card" id="homeCardStats">
-      <span class="home-card-icon">📊</span>
+      <span class="home-card-icon" style="color:#C8A87A;"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></span>
       <div class="home-card-body">
         <div class="home-card-title">学习统计</div>
         <div class="home-card-desc">学习记录、完成率、历史统计</div>
       </div>
-      <span class="home-card-arrow">›</span>
+      <span class="home-card-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></span>
     </div>
   </div>
 
   <!-- ==================== QUIZ: Unit Selection ==================== -->
   <div id="selectScreen" style="display:none;">
-    <button class="back-nav" id="btnBackSelect">← 返回首页</button>
+    <button class="back-nav" id="btnBackSelect"><span class="bn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></span>返回首页</button>
     <div class="unit-select-card">
       <h2>选择答题范围</h2>
       <p class="select-hint">选择一个或多个单元进行测验</p>
@@ -1398,8 +1584,11 @@ body {
   <!-- ==================== QUIZ: Questions ==================== -->
   <div id="quizScreen" style="display:none;">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-      <button class="back-nav" id="btnBackQuiz" style="margin-bottom:0;">← 返回选题</button>
-      <button class="btn-sm" id="btnExitQuiz" style="color:var(--terracotta);border:1px solid var(--terracotta);">退出测验</button>
+      <button class="back-nav" id="btnBackQuiz" style="margin-bottom:0;"><span class="bn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></span>返回选题</button>
+      <div style="display:flex;gap:8px;">
+        <button class="btn-sm" id="btnSoundToggle" style="color:var(--text-muted);border:1px solid var(--input-border);" title="声音开关"><span class="tb-icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg></span></button>
+        <button class="btn-sm" id="btnExitQuiz" style="color:var(--terracotta);border:1px solid var(--terracotta);">退出测验</button>
+      </div>
     </div>
     <div class="progress-wrap">
       <div class="progress-info">
@@ -1418,13 +1607,20 @@ body {
         <input type="text" id="answerInput" placeholder="输入英文翻译..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
         <button class="btn btn-primary" id="submitBtn">确认</button>
       </div>
+      <div class="kbd-hint">按 <kbd>Enter</kbd> 快速提交</div>
     </div>
   </div>
 
   <!-- ==================== QUIZ: Results ==================== -->
   <div id="resultsScreen" style="display:none;">
     <div class="result-card">
-      <div class="score-circle" id="scoreCircle">0</div>
+      <div class="score-ring-wrap">
+        <svg class="score-ring" viewBox="0 0 120 120" aria-hidden="true">
+          <circle class="score-ring-track" cx="60" cy="60" r="52"></circle>
+          <circle class="score-ring-progress" id="scoreRingProgress" cx="60" cy="60" r="52"></circle>
+        </svg>
+        <div class="score-circle" id="scoreCircle">0%</div>
+      </div>
       <h2 id="resultTitle"></h2>
       <div class="sub" id="resultSub"></div>
       <div class="stats">
@@ -1445,7 +1641,7 @@ body {
 
   <!-- ==================== STUDY ==================== -->
   <div id="studyScreen" style="display:none;">
-    <button class="back-nav" id="btnBackStudy">← 返回首页</button>
+    <button class="back-nav" id="btnBackStudy"><span class="bn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></span>返回首页</button>
     <div class="study-toolbar">
       <span class="toolbar-info" id="studyToolbarInfo">共 0 个词汇</span>
       <div class="toolbar-right">
@@ -1461,16 +1657,17 @@ body {
         <div class="flashcard" id="flashcard">
           <span class="fc-cat" id="fcCat"></span>
           <span class="fc-en-main" id="fcEnMain"></span>
-          <button class="btn-speak" id="btnSpeakCard" title="朗读发音">🔊</button>
+          <button class="btn-speak" id="btnSpeakCard" title="朗读发音"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg></button>
           <div class="fc-divider"></div>
           <span class="fc-zh-sub" id="fcZhSub"></span>
         </div>
       </div>
       <div class="flashcard-nav">
-        <button class="fc-nav-btn" id="btnPrevCard">&#9664;</button>
+        <button class="fc-nav-btn" id="btnPrevCard" title="上一张"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
         <span class="flashcard-counter" id="fcCounter">0 / 0</span>
-        <button class="fc-nav-btn" id="btnNextCard">&#9654;</button>
+        <button class="fc-nav-btn" id="btnNextCard" title="下一张"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
       </div>
+      <div class="kbd-hint">按 <kbd>←</kbd> <kbd>→</kbd> 切换卡片</div>
     </div>
 
     <div id="listMode" style="display:none;">
@@ -1482,7 +1679,7 @@ body {
       <!-- Unit Selection — click a unit to start immediately -->
       <div id="groupUnitSelect">
         <div class="unit-select-card" style="box-shadow:none; border:none; padding:20px 0;">
-          <h2 style="font-size:22px;">🎯 选择学习单元</h2>
+          <h2 style="font-size:22px;"><span class="h-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></span>选择学习单元</h2>
           <p class="select-hint" style="margin-bottom:20px;">点击单元直接开始分组记忆</p>
           <div id="groupUnitOptions"></div>
           <p style="color:var(--terracotta);font-size:13px;min-height:20px;text-align:center;" id="groupUnitError"></p>
@@ -1497,7 +1694,7 @@ body {
           <h3 style="text-align:center;margin-bottom:20px;font-family:'Playfair Display',serif;font-size:22px;color:var(--text-headline);" id="groupOverviewTitle"></h3>
           <div id="groupRoundCards"></div>
           <div style="text-align:center;margin-top:24px;">
-            <button class="btn-sm btn-cancel" data-action="exitToUnitList">← 返回单元列表</button>
+            <button class="btn-sm btn-cancel" data-action="exitToUnitList"><span class="bn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></span>返回单元列表</button>
           </div>
         </div>
 
@@ -1518,7 +1715,7 @@ body {
             <div id="groupWords"></div>
             <div style="display:flex;justify-content:center;gap:12px;margin-top:20px;flex-wrap:wrap;">
               <button class="btn-sm btn-cancel" data-action="exitToUnitList" style="color:var(--terracotta);border-color:var(--terracotta);">退出记忆</button>
-              <button class="btn btn-primary" data-action="startSpelling">✏️ 我已记住，开始拼写</button>
+              <button class="btn btn-primary" data-action="startSpelling"><span class="tb-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg></span>我已记住，开始拼写</button>
             </div>
           </div>
 
@@ -1526,7 +1723,7 @@ body {
             <div id="groupSpellingInputs"></div>
             <div style="display:flex;justify-content:center;gap:12px;margin-top:20px;flex-wrap:wrap;">
               <button class="btn-sm btn-cancel" data-action="exitToUnitList" style="color:var(--terracotta);border-color:var(--terracotta);">退出拼写</button>
-              <button class="btn btn-primary" data-action="checkAnswers">✅ 检查答案</button>
+              <button class="btn btn-primary" data-action="checkAnswers"><span class="tb-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></span>检查答案</button>
             </div>
             <p style="color:var(--terracotta);font-size:13px;min-height:20px;text-align:center;margin-top:10px;" id="groupSpellError"></p>
           </div>
@@ -1546,29 +1743,29 @@ body {
 
   <!-- ==================== STATS ==================== -->
   <div id="statsScreen" style="display:none;">
-    <button class="back-nav" id="btnBackStats">← 返回首页</button>
+    <button class="back-nav" id="btnBackStats"><span class="bn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></span>返回首页</button>
     <div style="text-align:center;margin-bottom:16px;" id="statsBookLabel"></div>
     <div class="stats-summary-cards" id="statsSummaryCards"></div>
     <div class="stats-chart-card">
-      <h3>📈 成绩趋势</h3>
+      <h3><span class="h-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></span>成绩趋势</h3>
       <div class="trend-unit-filter" id="trendUnitFilter"></div>
       <div class="chart-container" id="trendChartContainer">
         <canvas id="trendChart"></canvas>
         <div class="chart-empty" id="chartEmpty" style="display:none;">
-          <div class="chart-empty-icon">📝</div>
+          <div class="chart-empty-icon"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></div>
           <div class="chart-empty-title">暂无测验数据</div>
           <div class="chart-empty-hint">完成拼写测验后，成绩趋势将在这里展示</div>
         </div>
       </div>
     </div>
     <div class="detail-card">
-      <h3>📋 测验记录</h3>
+      <h3><span class="h-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></span>测验记录</h3>
       <div class="trend-unit-filter" id="historyUnitFilter"></div>
       <div id="historyList"></div>
       <div class="history-pagination" id="historyPagination"></div>
     </div>
     <div class="detail-card" id="groupHistoryCard">
-      <h3>🧩 分组记忆记录</h3>
+      <h3><span class="h-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></span>分组记忆记录</h3>
       <div id="groupHistoryList"></div>
       <div class="no-data" id="groupHistoryEmpty" style="display:none;">还没有分组记忆记录，去完成一个 Unit 吧！</div>
     </div>
@@ -1583,6 +1780,9 @@ body {
     </a>
   </footer>
 </div>
+
+<!-- Screen-reader announcements for quiz answer feedback -->
+<div id="quizAriaLive" class="sr-only" role="status" aria-live="polite"></div>
 
 <script type="module">
 import { escapeHtml, formatDuration, formatDurationMs, normalize, checkEquivalent, shuffleArray } from './js/utils.js';
@@ -1615,6 +1815,10 @@ import { QuizState } from './js/state/quizState.js';
 import { createQuizScreen } from './js/study/quizScreen.js';
 import { createProfileScreen } from './js/book/profileScreen.js';
 import { createStudyMode } from './js/study/studyMode.js';
+import { showToast } from './js/ui/toast.js';
+import { showConfirm, isModalOpen } from './js/ui/confirm.js';
+import { skeletonUnitOption } from './js/ui/skeleton.js';
+import { icon } from './js/ui/icons.js';
 
 function showMainApp() {
   document.getElementById('authOverlay').style.display = 'none';
@@ -1629,13 +1833,19 @@ function showMainApp() {
   }
 }
 
-function showHome() {
+async function showHome() {
   // If quiz is in progress, confirm before discarding
   if (document.getElementById('quizScreen').style.display !== 'none' && QuizState.results.length > 0) {
-    if (!confirm('确定要退出吗？\n\n当前测验进度将不会保存，下次进入时需要重新开始。')) {
-      return;
-    }
+    const ok = await showConfirm({
+      title: '退出测验？',
+      message: '当前测验进度将不会保存，下次进入时需要重新开始。',
+      confirmText: '退出',
+      cancelText: '返回',
+      danger: true,
+    });
+    if (!ok) return;
   }
+  cancelQuizFeedback();
   stopTimer();
   QuizState.results = [];
   QuizState.isRetest = false;
@@ -1661,12 +1871,21 @@ let englishVisible = true;
 let currentTab = 'quiz';
 async function buildUnitSelection() {
   const book = currentUser.current_book;
-  const data = await apiFetch(`/api/units?book_schema=${book}`);
+  document.getElementById('unitOptions').innerHTML =
+    Array(4).fill(skeletonUnitOption()).join('');
+  let data;
+  try {
+    data = await apiFetch(`/api/units?book_schema=${book}`);
+  } catch (e) {
+    showToast('单元加载失败，请重试', { type: 'error' });
+    document.getElementById('unitOptions').innerHTML = '<div class="no-data">加载失败</div>';
+    return;
+  }
   allUnits.length = 0; allUnits.push(...data);
   selectedUnitIds.clear();
   document.getElementById('unitOptions').innerHTML = `
-    <div class="unit-group-label">📚 全部单元</div>
-    ${data.map(u => `<div class="unit-option" data-unit="${u.id}"><div class="checkbox"></div><span class="unit-icon">📖</span><div class="unit-info"><div class="unit-name">${escapeHtml(u.name)}</div><div class="unit-count">${u.word_count} 个词汇</div></div></div>`).join('')}`;
+    <div class="unit-group-label"><span class="tb-icon">${icon('book-open', 13)}</span>全部单元</div>
+    ${data.map(u => `<div class="unit-option" data-unit="${u.id}"><div class="checkbox"></div><span class="unit-icon">${icon('book', 22)}</span><div class="unit-info"><div class="unit-name">${escapeHtml(u.name)}</div><div class="unit-count">${u.word_count} 个词汇</div></div></div>`).join('')}`;
   updateStartButton();
 }
 
@@ -1686,12 +1905,12 @@ function updateStartButton() {
 }
 
 // ==================== TAB SWITCHING ====================
-function switchTab(tab) {
+async function switchTab(tab) {
   // Cleanup current learning mode before leaving study tab
   if (currentTab === 'study' && tab !== 'study') {
     try {
       const cur = LearningModes[studyMode.val];
-      if (cur && cur.cleanup && cur.cleanup() === false) return;
+      if (cur && cur.cleanup && await cur.cleanup() === false) return;
     } catch(e) { console.error('[switchTab] cleanup error:', e); }
   }
   currentTab = tab;
@@ -1721,7 +1940,7 @@ const { GroupActions, GroupNavigator, submitGroupSpelling, exitGroupLearning } =
 const { buildGroupMode, selectGroupUnit } = createGroupMode({ allUnits, GroupNavigator });
 _buildGroupMode = buildGroupMode;
 const { LearningModes, switchStudyMode, buildStudyMode } = createStudyMode({ allUnits, allWordsGrouped, englishVisible, studyMode, buildGroupMode, exitGroupLearning });
-const { startQuiz, submitAnswer, backToSelect, exitQuiz, startRetestQuiz } = createQuizScreen({ allUnits, selectedUnitIds });
+const { startQuiz, submitAnswer, backToSelect, exitQuiz, startRetestQuiz, cancelQuizFeedback } = createQuizScreen({ allUnits, selectedUnitIds });
 const { buildStatsScreen, switchTrendUnit, switchHistoryUnit, goHistoryPage, toggleHistoryDetail } = createStatsScreen({ startRetestQuiz });
 const { openProfile, closeProfile, switchBook } = createProfileScreen({ allWordsGrouped, currentTab, onUnitSelection: buildUnitSelection, onStudyMode: buildStudyMode, onStatsScreen: buildStatsScreen });
 window._openProfile = openProfile;
@@ -1740,6 +1959,7 @@ bindStatsEvents({ showHome, switchTrendUnit, switchHistoryUnit, goHistoryPage, t
 
 // ==================== KEYBOARD SHORTCUTS ====================
 document.addEventListener('keydown', function(e) {
+  if (isModalOpen()) return;   // confirm modal open — ignore quiz/study shortcuts
   if (e.key === 'Enter' && document.getElementById('quizScreen').style.display !== 'none') {
     e.preventDefault(); submitAnswer();
   }

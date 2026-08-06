@@ -3,6 +3,7 @@ import { apiFetch } from '../api.js';
 import { escapeHtml } from '../utils.js';
 import { currentUser } from '../state/auth.js';
 import { finishShowMainApp, getSavedPage } from '../view/appView.js';
+import { icon } from '../ui/icons.js';
 
 let bookList = [];
 let selectedBookSchema = null;
@@ -24,7 +25,7 @@ export async function showBookSelection() {
   document.getElementById('bookSelectOptions').innerHTML = bookList.map(b => `
     <div class="book-option" data-schema="${b.schema}">
       <div class="book-radio"></div>
-      <span class="book-icon">📚</span>
+      <span class="book-icon">${icon('book-open', 26)}</span>
       <div class="book-info">
         <div class="book-name">${escapeHtml(b.name)}</div>
         <div class="book-desc">词书代码：${escapeHtml(b.schema)}</div>
@@ -54,7 +55,7 @@ export async function confirmBookSelection() {
     currentUser.current_book = result.current_book;
     finishShowMainApp(getSavedPage());
   } catch (e) {
-    document.getElementById('bookSelectError').textContent = '❌ 设置词书失败：' + e.message;
+    document.getElementById('bookSelectError').innerHTML = `${icon('x-circle', 13)} 设置词书失败：` + escapeHtml(e.message);
   }
 }
 

@@ -5,6 +5,9 @@ import { checkEquivalent, escapeHtml, formatDurationMs } from '../utils.js';
 import { insertGroupHistory } from '../repository/groupRepository.js';
 import { getRoundStatus, renderRoundCard, renderGroupOverview, renderGroupLearning } from './groupRender.js';
 import { startGroupSpelling as _startGroupSpelling } from './groupSpelling.js';
+import { showConfirm } from '../ui/confirm.js';
+// NOTE: aliased as svgIcon — `icon` is a DOM element (groupResultIcon) in this file
+import { icon as svgIcon } from '../ui/icons.js';
 
 // ═══════════════════════════════════════════════════════════════════════════
 // FACTORY — receives onExit callback to avoid importing quiz.html
@@ -113,7 +116,7 @@ function submitGroupSpelling() {
     const item = document.getElementById(`gsi-${i}`);
     const rel  = document.getElementById(`gsi-result-${i}`);
     if (item) { item.classList.remove('correct', 'wrong'); item.classList.add(r.isCorrect ? 'correct' : 'wrong'); }
-    if (rel)  { rel.textContent = r.isCorrect ? '✓' : '✗'; rel.style.color = r.isCorrect ? 'var(--success)' : 'var(--terracotta)'; }
+    if (rel)  { rel.innerHTML = svgIcon(r.isCorrect ? 'check' : 'x', 16); rel.style.color = r.isCorrect ? 'var(--success)' : 'var(--terracotta)'; }
   });
 
   // Accumulate errors across the entire unit session (deduplicated by english)
@@ -180,7 +183,7 @@ function renderGroupResult() {
   const errors = document.getElementById('groupResultErrors');
   const btn    = document.getElementById('btnGroupAdvance');
 
-  const praises = ['🎉 Excellent!', 'Great Job!', 'Perfect!', 'Amazing!', '全部答对啦！', '继续保持！', '太棒了！'];
+  const praises = ['Excellent!', 'Great Job!', 'Perfect!', 'Amazing!', '全部答对啦！', '继续保持！', '太棒了！'];
   const praise = praises[Math.floor(Math.random() * praises.length)];
 
   // ── Timing ──
@@ -197,14 +200,14 @@ function renderGroupResult() {
       `<div style="margin:4px 0;font-size:13px;color:var(--text-body);">第${ri+1}轮：${r.groups.length} 组</div>`
     ).join('');
     const totalG = GroupLearning.rounds.reduce((s,r) => s + r.groups.length, 0);
-    icon.textContent = '🏆';
+    icon.innerHTML = svgIcon('award', 48);
     title.textContent = 'Unit 完成！';
     detail.innerHTML = `
-      <div style="margin:8px 0;">🎉 「${GroupLearning.unitName}」学习完毕！</div>
+      <div style="margin:8px 0;">「${GroupLearning.unitName}」学习完毕！</div>
       ${roundStats}
       <div style="margin-top:8px;font-weight:600;color:var(--sage);">总计：${totalG} 组</div>
       <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--divider);">
-        <div style="font-weight:600;font-size:13px;color:var(--text-headline);margin-bottom:4px;">⏱ 学习用时</div>
+        <div style="font-weight:600;font-size:13px;color:var(--text-headline);margin-bottom:4px;display:inline-flex;align-items:center;gap:6px;"><span style="display:inline-flex;">${svgIcon('clock', 14)}</span>学习用时</div>
         <div style="display:flex;justify-content:space-between;padding:4px 0;font-size:13px;color:var(--text-body);"><span>整个 Unit</span><span style="font-weight:600;color:var(--text-headline);">${formatDurationMs(unitMs)}</span></div>
       </div>`;
     const results = GroupLearning.spellingResults;
@@ -212,17 +215,17 @@ function renderGroupResult() {
       <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-bottom:1px solid var(--divider);">
         <span style="font-weight:500;color:var(--text-headline);">${escapeHtml(r.word.english)}</span>
         <span style="font-size:12px;color:var(--text-muted);">${escapeHtml(r.word.chinese)}</span>
-        <span style="color:var(--success);font-weight:600;">✅ 正确</span>
+        <span style="color:var(--success);font-weight:600;display:inline-flex;align-items:center;gap:5px;">${svgIcon('check-circle', 14)}正确</span>
       </div>
     `).join('') : '';
-    btn.textContent = '✅ 返回首页';
+    btn.innerHTML = `<span style="display:inline-flex;vertical-align:-2px;margin-right:6px;">${svgIcon('check-circle', 15)}</span>返回首页`;
     btn.style.display = '';
     btn.setAttribute('data-action', 'finishAndExit');
   } else if (GroupLearning.isLastGroup) {
     // ── Round complete — insert immutable history record ──
     GroupLearning.mode = 'roundComplete';
     insertGroupHistory('round_complete');
-    icon.textContent = '🎉';
+    icon.innerHTML = svgIcon('star', 48);
     title.textContent = praise;
     detail.innerHTML = `
       <div>第${GroupLearning.activeRoundIndex + 1}轮完成！共${GroupLearning.totalGroups}组已全部通过</div>`;
@@ -231,15 +234,15 @@ function renderGroupResult() {
       <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-bottom:1px solid var(--divider);">
         <span style="font-weight:500;color:var(--text-headline);">${escapeHtml(r.word.english)}</span>
         <span style="font-size:12px;color:var(--text-muted);">${escapeHtml(r.word.chinese)}</span>
-        <span style="color:var(--success);font-weight:600;">✅ 正确</span>
+        <span style="color:var(--success);font-weight:600;display:inline-flex;align-items:center;gap:5px;">${svgIcon('check-circle', 14)}正确</span>
       </div>
     `).join('');
     btn.textContent = '完成本轮 →';
     btn.style.display = '';
     btn.setAttribute('data-action', 'advanceAfterPass');
   } else if (GroupLearning.mode === 'groupPass') {
-    // ── Normal group pass — show words with ✅ ──
-    icon.textContent = '🎉';
+    // ── Normal group pass ──
+    icon.innerHTML = svgIcon('star', 48);
     title.textContent = praise;
     const group = GroupLearning.currentGroup;
     detail.innerHTML = `
@@ -249,20 +252,20 @@ function renderGroupResult() {
       <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-bottom:1px solid var(--divider);">
         <span style="font-weight:500;color:var(--text-headline);">${escapeHtml(r.word.english)}</span>
         <span style="font-size:12px;color:var(--text-muted);">${escapeHtml(r.word.chinese)}</span>
-        <span style="color:var(--success);font-weight:600;">✅ 正确</span>
+        <span style="color:var(--success);font-weight:600;display:inline-flex;align-items:center;gap:5px;">${svgIcon('check-circle', 14)}正确</span>
       </div>
     `).join('');
-    btn.textContent = '继续下一组 →';
+    btn.innerHTML = `继续下一组 <span style="display:inline-flex;vertical-align:-2px;margin-left:4px;">${svgIcon('chevron-right', 14)}</span>`;
     btn.style.display = '';
     btn.setAttribute('data-action', 'advanceAfterPass');
   } else {
     // ── Fallback (shouldn't normally reach here) ──
-    icon.textContent = '✅';
+    icon.innerHTML = svgIcon('check-circle', 48);
     title.textContent = `第${GroupLearning.currentGroup.groupIndex}组完成`;
     detail.innerHTML = `
       <div>${GroupLearning.currentGroup.words.length}个单词全部正确</div>`;
     errors.innerHTML = '';
-    btn.textContent = '▶ 下一组';
+    btn.innerHTML = `<span style="display:inline-flex;vertical-align:-2px;margin-right:6px;">${svgIcon('chevron-right', 14)}</span>下一组`;
     btn.style.display = '';
     btn.setAttribute('data-action', 'advanceAfterPass');
   }
@@ -302,7 +305,7 @@ function advanceGroup() {
 
 // ── exitGroupLearning ─────────────────────────────────────────────────────
 
-function exitGroupLearning() {
+async function exitGroupLearning() {
   const isMidRound = GroupLearning.hasStartedLearning &&
       GroupLearning.mode !== 'select' &&
       GroupLearning.mode !== 'unitComplete' &&
@@ -310,9 +313,14 @@ function exitGroupLearning() {
       GroupLearning.mode !== 'roundComplete';
   // Prompt user before exiting mid-round
   if (isMidRound) {
-    if (!confirm('确定要退出吗？\n\n当前学习进度将不会保存，下次进入时需要重新开始本轮记忆。')) {
-      return false;
-    }
+    const ok = await showConfirm({
+      title: '退出记忆？',
+      message: '当前学习进度将不会保存，下次进入时需要重新开始本轮记忆。',
+      confirmText: '退出',
+      cancelText: '继续学习',
+      danger: true,
+    });
+    if (!ok) return false;
     // NO database writes.  All in-memory state is simply discarded.
     // Completed-round history was already saved on each completion event.
   }
