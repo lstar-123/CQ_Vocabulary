@@ -12,6 +12,29 @@
 }
 .study-toolbar .toolbar-right { display: flex; gap: 4px; }
 
+/* ============ GROUP LEARNING: TOP-RIGHT BUTTON ============ */
+/* NOTE: quiz.html uses inline <style> — keep this file in sync if it's
+   ever wired up.  Styled after the quiz screen's 退出测验 button
+   (terracotta outline pill) — the app's established visual language
+   for exit actions.  Label switches between 重新选择 and 退出记忆. */
+.group-exit-bar {
+  display: flex; justify-content: flex-end; margin-bottom: 12px;
+}
+.btn-exit-group {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 9px 20px; font-family: 'Inter', sans-serif;
+  font-size: 13px; font-weight: 600; white-space: nowrap;
+  color: var(--terracotta);
+  background: transparent;
+  border: 1px solid var(--terracotta);
+  border-radius: 999px; cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-exit-group:hover {
+  background: var(--peach);
+}
+.btn-exit-group:active { transform: scale(0.98); }
+
 /* ============ FLASHCARD ============ */
 .flashcard-wrap { margin-bottom: 20px; }
 .flashcard {

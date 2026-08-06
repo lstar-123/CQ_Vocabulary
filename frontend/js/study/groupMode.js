@@ -6,6 +6,7 @@ import { escapeHtml } from '../utils.js';
 import { apiFetch } from '../api.js';
 import { currentUser } from '../state/auth.js';
 import { icon } from '../ui/icons.js';
+import { showStudyChrome } from './groupController.js';
 
 export function createGroupMode({ allUnits, GroupNavigator }) {
 
@@ -19,6 +20,7 @@ export function createGroupMode({ allUnits, GroupNavigator }) {
     document.getElementById('groupUnitSelect').style.display = '';
     document.getElementById('groupActive').style.display = 'none';
     GroupLearning.reset();
+    showStudyChrome();
     renderGroupUnitOptions();
   }
 

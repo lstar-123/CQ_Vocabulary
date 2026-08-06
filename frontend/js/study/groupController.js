@@ -10,6 +10,34 @@ import { showConfirm } from '../ui/confirm.js';
 import { icon as svgIcon } from '../ui/icons.js';
 
 // ═══════════════════════════════════════════════════════════════════════════
+// STUDY CHROME — back-home button + mode toolbar (卡片记忆/列表浏览/分组记忆)
+// Hidden only while a round is actively being learned, so the user can't
+// accidentally exit mid-session.  Restored on overview / unit selection.
+// ═══════════════════════════════════════════════════════════════════════════
+
+export function hideStudyChrome() {
+  const backBtn = document.getElementById('btnBackStudy');
+  if (backBtn) backBtn.style.display = 'none';
+  const toolbar = document.querySelector('.study-toolbar');
+  if (toolbar) toolbar.style.display = 'none';
+}
+
+export function showStudyChrome() {
+  const backBtn = document.getElementById('btnBackStudy');
+  if (backBtn) backBtn.style.display = '';
+  const toolbar = document.querySelector('.study-toolbar');
+  if (toolbar) toolbar.style.display = '';
+}
+
+/** Label of the top-right group button — 重新选择 on overview, 退出记忆 in-session. */
+function setTopRightLabel(label) {
+  const labelEl = document.getElementById('btnGroupTopRightLabel');
+  if (labelEl) labelEl.textContent = label;
+  const btn = document.getElementById('btnGroupTopRight');
+  if (btn) btn.title = label;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
 // FACTORY — receives onExit callback to avoid importing quiz.html
 // ═══════════════════════════════════════════════════════════════════════════
 
@@ -61,6 +89,8 @@ const GroupNavigator = {
     GroupLearning.mode = 'overview';
     this._hideAll();
     document.getElementById('groupOverview').style.display = '';
+    showStudyChrome();
+    setTopRightLabel('重新选择');
     renderGroupOverview();
   },
 
@@ -70,6 +100,8 @@ const GroupNavigator = {
     document.getElementById('groupLearningArea').style.display = '';
     document.getElementById('groupLearningPhase').style.display = '';
     document.getElementById('groupResult').style.display = 'none';
+    hideStudyChrome();
+    setTopRightLabel('退出记忆');
     renderGroupLearning();
   },
 
@@ -331,6 +363,11 @@ async function exitGroupLearning() {
   GroupLearning.reset();
   document.getElementById('groupUnitSelect').style.display = '';
   document.getElementById('groupActive').style.display = 'none';
+  // Restore back-home button + mode toolbar for the unit-selection view
+  const backBtn = document.getElementById('btnBackStudy');
+  if (backBtn) backBtn.style.display = '';
+  const toolbar = document.querySelector('.study-toolbar');
+  if (toolbar) toolbar.style.display = '';
   return true;
 }
 
