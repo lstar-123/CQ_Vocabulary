@@ -5,6 +5,7 @@ import { checkEquivalent, escapeHtml, formatDurationMs } from '../utils.js';
 import { insertGroupHistory } from '../repository/groupRepository.js';
 import { getRoundStatus, renderRoundCard, renderGroupOverview, renderGroupLearning } from './groupRender.js';
 import { startGroupSpelling as _startGroupSpelling } from './groupSpelling.js';
+import { hideSpellingKeyboard } from './letterKeyboard.js';
 import { showConfirm } from '../ui/confirm.js';
 // NOTE: aliased as svgIcon — `icon` is a DOM element (groupResultIcon) in this file
 import { icon as svgIcon } from '../ui/icons.js';
@@ -130,6 +131,7 @@ const GroupNavigator = {
 // ── submitGroupSpelling ──────────────────────────────────────────────────
 
 function submitGroupSpelling() {
+  hideSpellingKeyboard();
   const group = GroupLearning.currentGroup;
   if (!group) return;
 

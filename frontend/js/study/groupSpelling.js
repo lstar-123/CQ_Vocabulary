@@ -4,6 +4,7 @@ import { PlaybackController } from '../playback.js';
 import { phonicsCache, ensurePhonicsData } from '../state/phonics.js';
 import { createSegmentElement, createHyphenElement } from '../domBuilder.js';
 import { GroupLearning } from '../state/groupLearning.js';
+import { IS_MOBILE, activateSpellingKeyboard } from './letterKeyboard.js';
 
 export function speakGroupWord(word, targetId) {
   PlaybackController.stop();
@@ -83,5 +84,18 @@ export function startGroupSpelling() {
       }
     });
   });
-  document.getElementById('gsi-input-0')?.focus();
+  // Mobile: swap the system keyboard for the on-screen letter keyboard so
+  // voice-to-text (dictation / Gboard microphone) cannot inject answers.
+  // Desktop keeps normal typing on the physical keyboard.
+  if (IS_MOBILE) {
+    document.querySelectorAll('#groupSpellingInputs input').forEach(inp => {
+      inp.setAttribute('readonly', '');
+      inp.classList.add('mobile-kb-input');
+      inp.addEventListener('click', () => activateSpellingKeyboard(inp));
+    });
+    const first = document.getElementById('gsi-input-0');
+    if (first) activateSpellingKeyboard(first);
+  } else {
+    document.getElementById('gsi-input-0')?.focus();
+  }
 }

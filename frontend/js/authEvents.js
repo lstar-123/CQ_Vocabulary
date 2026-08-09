@@ -13,7 +13,7 @@ export function bindAuthEvents({ handleAuthSubmit, renderAuthForm }) {
   });
 }
 
-export function bindProfileEvents({ closeProfile, switchBook }) {
+export function bindProfileEvents({ closeProfile, switchBook, openUsernameModal, closeUsernameModal, saveUsername }) {
   if (DOM.profileOverlay) {
     DOM.profileOverlay.addEventListener('click', (e) => {
       if (e.target === DOM.profileOverlay) closeProfile();
@@ -21,6 +21,24 @@ export function bindProfileEvents({ closeProfile, switchBook }) {
   }
   if (DOM.btnProfileClose) DOM.btnProfileClose.addEventListener('click', () => closeProfile());
   if (DOM.btnProfileSave) DOM.btnProfileSave.addEventListener('click', switchBook);
+
+  // Change username
+  if (DOM.profileUsername) DOM.profileUsername.addEventListener('click', openUsernameModal);
+  if (DOM.usernameModal) {
+    DOM.usernameModal.addEventListener('click', (e) => {
+      if (e.target === DOM.usernameModal) closeUsernameModal();
+    });
+    DOM.usernameModal.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && e.target.closest('input')) saveUsername();
+    });
+  }
+  if (DOM.btnUsernameCancel) DOM.btnUsernameCancel.addEventListener('click', () => closeUsernameModal());
+  if (DOM.btnUsernameSave) DOM.btnUsernameSave.addEventListener('click', saveUsername);
+  if (DOM.usernameInput) {
+    DOM.usernameInput.addEventListener('input', () => {
+      if (DOM.usernameCount) DOM.usernameCount.textContent = DOM.usernameInput.value.length + ' / 50';
+    });
+  }
 }
 
 export function bindBookSelectEvents({ confirmBookSelection, selectBookOption, closeBookSelection }) {

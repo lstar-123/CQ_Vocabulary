@@ -31,6 +31,7 @@ def get_students():
         result.append({
             'id': s.id,
             'username': s.username,
+            'note': s.note,
             'created_at': s.created_at.isoformat() if s.created_at else None,
             'total_quizzes': total_quizzes,
             'avg_score': avg_score,
@@ -61,12 +62,52 @@ def get_student_detail(student_id):
     return jsonify({
         'id': student.id,
         'username': student.username,
+        'note': student.note,
         'created_at': student.created_at.isoformat() if student.created_at else None,
         'total_quizzes': total_quizzes,
         'avg_score': avg_score,
         'best_score': best_score,
         'total_words_tested': total_words
     })
+
+
+@teacher_bp.route('/students/<int:student_id>/note', methods=['PUT'])
+@teacher_required
+def update_student_note(student_id):
+    """Set (or clear) the teacher-only remark for a student."""
+    student = db.session.get(User, student_id)
+    if not student:
+        return jsonify({'error': '学生不存在'}), 404
+
+    data = request.get_json()
+    if not data:
+        return jsonify({'error': '请求数据无效'}), 400
+
+    note = data.get('note')
+    student.note = (note or '').strip() or None
+    db.session.commit()
+    return jsonify({'ok': True, 'note': student.note})
+
+
+@teacher_bp.route('/students/<int:student_id>/password', methods=['PUT'])
+@teacher_required
+def reset_student_password(student_id):
+    """Teacher resets a student's login password."""
+    student = db.session.get(User, student_id)
+    if not student:
+        return jsonify({'error': '学生不存在'}), 404
+
+    data = request.get_json()
+    if not data:
+        return jsonify({'error': '请求数据无效'}), 400
+
+    password = (data.get('password') or '').strip()
+    if len(password) < 3:
+        return jsonify({'error': '密码至少需要3个字符'}), 400
+
+    student.set_password(password)
+    db.session.commit()
+    return jsonify({'ok': True})
 
 
 @teacher_bp.route('/students/<int:student_id>/sessions')

@@ -121,6 +121,31 @@ def list_books():
     return jsonify(books)
 
 
+@auth_bp.route('/username', methods=['PUT'])
+@api_login_required
+def change_username():
+    data = request.get_json()
+    if not data:
+        return jsonify({'error': '请求数据无效'}), 400
+
+    username = (data.get('username') or '').strip()
+    if len(username) < 2 or len(username) > 50:
+        return jsonify({'error': '用户名需要2-50个字符'}), 400
+
+    existing = User.query.filter_by(username=username).first()
+    if existing and existing.id != current_user.id:
+        return jsonify({'error': '用户名已存在'}), 409
+
+    current_user.username = username
+    db.session.commit()
+    return jsonify({
+        'id': current_user.id,
+        'username': current_user.username,
+        'role': 'student',
+        'current_book': current_user.current_book
+    })
+
+
 @auth_bp.route('/me')
 def me():
     if current_user.is_authenticated:

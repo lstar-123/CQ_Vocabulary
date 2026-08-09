@@ -279,3 +279,62 @@
   .group-unit-card { padding: 16px 12px; }
   .group-unit-card .guc-name { font-size: 14px; }
 }
+
+/* ════════════════════════════════════════════════════════════════
+   Mobile letter keyboard — replaces the system keyboard on touch
+   devices so voice-to-text cannot inject spelling answers.
+   ════════════════════════════════════════════════════════════════ */
+
+/* Active row highlight (which word is being typed) */
+.group-spell-item.active-input {
+  border-color: var(--sage);
+  box-shadow: 0 0 0 2px rgba(99, 140, 112, 0.15);
+}
+/* readonly on mobile: hide caret, block text selection popup */
+input.mobile-kb-input {
+  caret-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Keyboard shell — fixed to the bottom of the viewport like the
+   system keyboard it replaces */
+.letter-keyboard {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  z-index: 1200;
+  display: none;
+  background: var(--cream);
+  border-top: 1px solid var(--input-border);
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+  padding: 10px 8px calc(10px + env(safe-area-inset-bottom, 0px));
+}
+.letter-keyboard.visible { display: block; }
+
+/* Room for the fixed keyboard so the check button stays reachable */
+#groupSpellingPhase.kb-open { padding-bottom: 235px; }
+
+.lk-row { display: flex; gap: 6px; margin-bottom: 6px; }
+.lk-row:last-child { margin-bottom: 0; }
+
+.lk-key {
+  flex: 1; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--white);
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  font-size: 18px; font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-headline);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: background 0.1s;
+}
+.lk-key:active { background: var(--sage-light); }
+
+.lk-backspace { flex: 1.4; }
+.lk-space {
+  flex: 2.6; font-size: 14px; font-weight: 500; color: var(--text-body);
+  letter-spacing: 1px;
+}

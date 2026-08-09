@@ -89,4 +89,12 @@ export const DOM = {
   get btnProfileSave()    { return _('btnProfileSave'); },
   get bookSelectOptions() { return _('bookSelectOptions'); },
   get bookSelectError()   { return _('bookSelectError'); },
+  get profileUsername()   { return _('profileUsername'); },
+  get usernameModal()     { return _('usernameModal'); },
+  get usernameInput()     { return _('usernameInput'); },
+  get usernameMsg()       { return _('usernameMsg'); },
+  get usernameCount()     { return _('usernameCount'); },
+  get umCurrentName()     { return _('umCurrentName'); },
+  get btnUsernameCancel() { return _('btnUsernameCancel'); },
+  get btnUsernameSave()   { return _('btnUsernameSave'); },
 };

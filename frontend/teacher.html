@@ -174,7 +174,7 @@ body {
 }
 .student-card .sc-info { flex: 1; }
 .student-card .sc-name { font-weight: 600; font-size: 15px; color: var(--text-headline); }
-.student-card .sc-meta { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+.student-card .sc-meta { font-size: 12px; color: var(--text-muted); margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 320px; }
 .student-card .sc-stats { display: flex; gap: 20px; text-align: center; }
 .student-card .sc-stat .sc-num {
   font-family: 'Playfair Display', serif;
@@ -449,6 +449,13 @@ body {
   background: var(--white);
 }
 .modal-card .form-group input:focus, .modal-card .form-group select:focus { border-color: var(--sage); }
+.modal-card .form-group textarea {
+  width: 100%; padding: 12px 16px; font-size: 14px; font-family: 'Inter', sans-serif;
+  border: 1.5px solid var(--input-border); border-radius: 10px; outline: none;
+  background: var(--white); resize: vertical; min-height: 80px;
+  transition: border-color 0.2s; color: var(--text-headline);
+}
+.modal-card .form-group textarea:focus { border-color: var(--sage); }
 .modal-card .btn-row { display: flex; gap: 10px; justify-content: flex-end; margin-top: 24px; }
 
 /* ============ NO DATA ============ */
@@ -623,6 +630,42 @@ body {
     </div>
   </div>
 
+  <!-- ==================== PASSWORD RESET MODAL ==================== -->
+  <div id="passwordModal" class="modal-overlay" style="display:none;">
+    <div class="modal-card">
+      <h3>🔑 重置密码</h3>
+      <p style="font-size:13px;color:var(--text-body);margin-bottom:18px;">为 <b id="pwStudentName" style="color:var(--sage);"></b> 设置新登录密码</p>
+      <div class="form-group">
+        <label>新密码</label>
+        <input type="password" id="pwNewPassword" placeholder="至少3个字符" autocomplete="new-password">
+      </div>
+      <div class="form-group">
+        <label>确认新密码</label>
+        <input type="password" id="pwConfirmPassword" placeholder="再次输入新密码" autocomplete="new-password">
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-cancel" onclick="closePasswordModal()">取消</button>
+        <button class="btn btn-primary" onclick="savePassword()">确认重置</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== STUDENT NOTE MODAL ==================== -->
+  <div id="noteModal" class="modal-overlay" style="display:none;">
+    <div class="modal-card">
+      <h3>📝 学生备注</h3>
+      <p style="font-size:13px;color:var(--text-body);margin-bottom:18px;">为 <b id="noteStudentName" style="color:var(--sage);"></b> 添加备注（仅教师端可见）</p>
+      <div class="form-group">
+        <label>备注内容</label>
+        <textarea id="noteInput" placeholder="可填写学生情况、注意事项等，留空可清除备注" maxlength="500"></textarea>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-cancel" onclick="closeNoteModal()">取消</button>
+        <button class="btn btn-primary" onclick="saveNote()">保存备注</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer style="text-align:center; padding: 32px 16px 24px; font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 12px; color: #999;">
     <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" style="color:#999; text-decoration:none; transition: color 0.2s;">豫ICP备2025153149号-3</a>
@@ -763,10 +806,13 @@ function switchTab(tab) {
 }
 
 // ==================== STUDENT MANAGEMENT ====================
+let studentListCache = [];
+
 async function fetchStudents() {
   const container = document.getElementById('studentList');
   try {
     const students = await apiFetch('/api/teacher/students');
+    studentListCache = students;
     if (students.length === 0) {
       container.innerHTML = '<div class="no-data">还没有学生用户。学生注册后会自动出现在这里。</div>';
       return;
@@ -777,13 +823,15 @@ async function fetchStudents() {
           <div class="sc-avatar">${(s.username[0] || '?').toUpperCase()}</div>
           <div class="sc-info">
             <div class="sc-name">${escapeHtml(s.username)}</div>
-            <div class="sc-meta">注册于 ${s.created_at ? new Date(s.created_at).toLocaleDateString('zh-CN') : '-'} · 共 ${s.total_quizzes} 次测验</div>
+            <div class="sc-meta" id="noteMeta${s.id}">${buildNoteMeta(s)}</div>
           </div>
           <div class="sc-stats">
             <div class="sc-stat"><div class="sc-num">${s.avg_score}%</div><div class="sc-label">平均分</div></div>
             <div class="sc-stat"><div class="sc-num">${s.best_score}%</div><div class="sc-label">最高分</div></div>
             <div class="sc-stat"><div class="sc-num">${s.total_words_tested}</div><div class="sc-label">总题数</div></div>
           </div>
+          <button class="btn-sm btn-edit" style="margin-right:4px;" onclick="event.stopPropagation();openNoteModal(${s.id})">📝 备注</button>
+          <button class="btn-sm btn-edit" style="margin-right:4px;" onclick="event.stopPropagation();openPasswordModal(${s.id})">🔑 重置密码</button>
           <span style="color:var(--text-muted);font-size:14px;margin-left:4px;">&#9660;</span>
         </div>
       </div>
@@ -830,6 +878,84 @@ async function switchStudentSubTab(studentId, tab) {
     loadStudentQuizSessions(studentId);
   } else {
     loadStudentGroupHistory(studentId);
+  }
+}
+
+// ── Password reset ────────────────────────────────────────
+let passwordModalStudentId = null;
+
+function openPasswordModal(studentId) {
+  const student = studentListCache.find(s => s.id === studentId);
+  if (!student) return;
+  passwordModalStudentId = studentId;
+  document.getElementById('pwStudentName').textContent = student.username;
+  document.getElementById('pwNewPassword').value = '';
+  document.getElementById('pwConfirmPassword').value = '';
+  document.getElementById('passwordModal').style.display = 'flex';
+  setTimeout(() => document.getElementById('pwNewPassword').focus(), 100);
+}
+
+function closePasswordModal() {
+  document.getElementById('passwordModal').style.display = 'none';
+  passwordModalStudentId = null;
+}
+
+async function savePassword() {
+  const p1 = document.getElementById('pwNewPassword').value;
+  const p2 = document.getElementById('pwConfirmPassword').value;
+  if (!p1) { alert('请输入新密码'); return; }
+  if (p1.length < 3) { alert('密码至少需要3个字符'); return; }
+  if (p1 !== p2) { alert('两次输入的密码不一致'); return; }
+  try {
+    await apiFetch(`/api/teacher/students/${passwordModalStudentId}/password`, {
+      method: 'PUT',
+      body: JSON.stringify({ password: p1 })
+    });
+    closePasswordModal();
+    alert('密码已重置');
+  } catch (e) {
+    alert('重置失败：' + e.message);
+  }
+}
+
+// ── Student note ──────────────────────────────────────────
+let noteModalStudentId = null;
+
+function buildNoteMeta(s) {
+  const base = `注册于 ${s.created_at ? new Date(s.created_at).toLocaleDateString('zh-CN') : '-'} · 共 ${s.total_quizzes} 次测验`;
+  return s.note ? base + ` · 📝 ${escapeHtml(s.note)}` : base;
+}
+
+function openNoteModal(studentId) {
+  const student = studentListCache.find(s => s.id === studentId);
+  if (!student) return;
+  noteModalStudentId = studentId;
+  document.getElementById('noteStudentName').textContent = student.username;
+  document.getElementById('noteInput').value = student.note || '';
+  document.getElementById('noteModal').style.display = 'flex';
+  setTimeout(() => document.getElementById('noteInput').focus(), 100);
+}
+
+function closeNoteModal() {
+  document.getElementById('noteModal').style.display = 'none';
+  noteModalStudentId = null;
+}
+
+async function saveNote() {
+  const note = document.getElementById('noteInput').value.trim();
+  try {
+    const result = await apiFetch(`/api/teacher/students/${noteModalStudentId}/note`, {
+      method: 'PUT',
+      body: JSON.stringify({ note })
+    });
+    // Update cache and card meta line in place (keep expanded details intact)
+    const student = studentListCache.find(s => s.id === noteModalStudentId);
+    if (student) student.note = result.note;
+    const meta = document.getElementById('noteMeta' + noteModalStudentId);
+    if (meta && student) meta.textContent = buildNoteMeta(student);
+    closeNoteModal();
+  } catch (e) {
+    alert('保存失败：' + e.message);
   }
 }
 
@@ -1225,7 +1351,7 @@ function escapeHtml(s) { const d = document.createElement('div'); d.textContent 
 
 // ==================== KEYBOARD ====================
 document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeModal();
+  if (e.key === 'Escape') { closeModal(); closePasswordModal(); closeNoteModal(); }
   if (e.key === 'Enter') {
     // Check if login form is open
     const authOverlay = document.getElementById('authOverlay');
@@ -1238,6 +1364,12 @@ document.addEventListener('keydown', function(e) {
 // Close modal on overlay click
 document.getElementById('editModal').addEventListener('click', function(e) {
   if (e.target === this) closeModal();
+});
+document.getElementById('passwordModal').addEventListener('click', function(e) {
+  if (e.target === this) closePasswordModal();
+});
+document.getElementById('noteModal').addEventListener('click', function(e) {
+  if (e.target === this) closeNoteModal();
 });
 
 // ==================== INIT ====================

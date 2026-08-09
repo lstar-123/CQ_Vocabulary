@@ -1247,6 +1247,125 @@ body {
 }
 .user-name-clickable:hover { color: var(--terracotta); }
 
+/* ============ CHANGE USERNAME MODAL ============ */
+.username-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.32);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 210; backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  animation: umFade 0.2s ease;
+}
+.username-card {
+  background: var(--white); border-radius: 24px;
+  padding: 34px 30px 24px; width: 100%; max-width: 400px;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.14), 0 2px 10px rgba(0,0,0,0.06);
+  text-align: center;
+  animation: umPop 0.32s cubic-bezier(0.16, 0.8, 0.32, 1.08);
+}
+.username-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; color: var(--text-headline); margin-bottom: 6px;
+  letter-spacing: 0.2px;
+}
+.um-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 18px; }
+
+/* Avatar with edit badge */
+.um-avatar {
+  width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 16px;
+  background: linear-gradient(135deg, #DFF0E4, var(--sage-light));
+  color: var(--sage); display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 16px rgba(88,153,122,0.22);
+  position: relative;
+}
+.um-avatar-badge {
+  position: absolute; right: -1px; bottom: -1px;
+  width: 24px; height: 24px; border-radius: 50%;
+  background: var(--terracotta); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid var(--white);
+  box-shadow: 0 2px 8px rgba(200,111,80,0.4);
+}
+
+/* Current name pill */
+.um-current {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--cream); border: 1px dashed #DCD5C8;
+  padding: 7px 16px; border-radius: 999px; margin-bottom: 18px;
+}
+.um-current-label { font-size: 12px; color: var(--text-muted); }
+.um-current-value {
+  font-size: 13px; font-weight: 600; color: var(--sage);
+  max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+/* Input with inline icon */
+.um-input-wrap { position: relative; }
+.um-input-wrap svg {
+  position: absolute; left: 15px; top: 50%; transform: translateY(-50%);
+  color: #B9B4AA; pointer-events: none; transition: color 0.2s;
+}
+.um-input-wrap input {
+  width: 100%; padding: 14px 46px; font-size: 15px; font-weight: 600;
+  font-family: 'Inter', sans-serif; color: var(--text-headline);
+  border: 2px solid var(--input-border); border-radius: 14px; outline: none;
+  background: #FBFAF7; transition: all 0.25s ease; letter-spacing: 0.3px;
+}
+.um-input-wrap input::placeholder { color: #B9B4AA; font-weight: 400; letter-spacing: 0; }
+.um-input-wrap input:hover { border-color: #D8D2C6; }
+.um-input-wrap input:focus {
+  border-color: var(--sage); background: var(--white);
+  box-shadow: 0 0 0 4px rgba(88,153,122,0.15);
+}
+.um-input-wrap:focus-within svg { color: var(--sage); }
+
+/* Character counter */
+.um-count {
+  text-align: right; font-size: 11px; color: var(--text-muted);
+  margin-top: 6px; font-family: 'Inter', sans-serif; letter-spacing: 0.4px;
+}
+
+/* Message */
+.um-msg {
+  font-size: 12px; min-height: 18px; margin: 4px 0 2px;
+  text-align: left; padding-left: 4px;
+}
+
+/* Buttons */
+.um-save {
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  width: 100%; padding: 14px; margin-top: 8px;
+  border: none; border-radius: 14px; cursor: pointer;
+  background: linear-gradient(135deg, #6BAE8D, #58997A);
+  color: #fff; font-size: 15px; font-weight: 600; font-family: 'Inter', sans-serif;
+  box-shadow: 0 4px 14px rgba(88,153,122,0.3);
+  transition: all 0.2s;
+}
+.um-save:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(88,153,122,0.38);
+  background: linear-gradient(135deg, #62A183, #4A8568);
+}
+.um-save:active { transform: translateY(0); box-shadow: 0 4px 12px rgba(88,153,122,0.28); }
+.um-cancel {
+  width: 100%; padding: 11px; margin-top: 6px;
+  background: transparent; border: none; border-radius: 12px; cursor: pointer;
+  color: var(--text-muted); font-size: 13px; font-weight: 500; font-family: 'Inter', sans-serif;
+  transition: all 0.2s;
+}
+.um-cancel:hover { color: var(--text-body); background: var(--pill-bg); }
+
+@keyframes umFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes umPop {
+  from { opacity: 0; transform: translateY(16px) scale(0.94); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 500px) {
+  .username-card { padding: 26px 20px 18px; margin: 16px; border-radius: 20px; }
+  .um-avatar { width: 54px; height: 54px; }
+  .username-card h2 { font-size: 20px; }
+}
+
 /* ============ BOOK SELECTION OVERLAY ============ */
 .book-select-overlay {
   position: fixed; inset: 0; background: rgba(0,0,0,0.3);
@@ -1526,7 +1645,7 @@ button:disabled, .btn:disabled, .btn-sm:disabled, .page-btn:disabled {
       <div class="profile-info">
         <div class="profile-row">
           <span class="pr-label">用户名</span>
-          <span class="pr-value" id="profileUsername"></span>
+          <span class="pr-value user-name-clickable" id="profileUsername" title="点击修改用户名"></span>
         </div>
         <div class="profile-row">
           <span class="pr-label">当前词书</span>
@@ -1544,6 +1663,33 @@ button:disabled, .btn:disabled, .btn-sm:disabled, .page-btn:disabled {
         <button class="btn-cancel" id="btnProfileClose">关闭</button>
         <button class="btn-save" id="btnProfileSave">切换词书</button>
       </div>
+    </div>
+  </div>
+
+  <!-- Change Username Modal -->
+  <div id="usernameModal" class="username-overlay" style="display:none;">
+    <div class="username-card">
+      <div class="um-avatar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <span class="um-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg></span>
+      </div>
+      <h2>修改用户名</h2>
+      <p class="um-sub">给自己起一个新名字吧</p>
+      <div class="um-current">
+        <span class="um-current-label">当前用户名</span>
+        <span class="um-current-value" id="umCurrentName"></span>
+      </div>
+      <div class="um-input-wrap">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <input type="text" id="usernameInput" placeholder="请输入新用户名" autocomplete="off" maxlength="50" spellcheck="false">
+      </div>
+      <div class="um-count"><span id="usernameCount">0 / 50</span></div>
+      <p id="usernameMsg" class="um-msg"></p>
+      <button class="um-save" id="btnUsernameSave">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>
+        确认修改
+      </button>
+      <button class="um-cancel" id="btnUsernameCancel">取消</button>
     </div>
   </div>
 
@@ -1965,13 +2111,13 @@ _buildGroupMode = buildGroupMode;
 const { LearningModes, switchStudyMode, buildStudyMode } = createStudyMode({ allUnits, allWordsGrouped, englishVisible, studyMode, buildGroupMode, exitGroupLearning });
 const { startQuiz, submitAnswer, backToSelect, exitQuiz, startRetestQuiz, cancelQuizFeedback } = createQuizScreen({ allUnits, selectedUnitIds });
 const { buildStatsScreen, switchTrendUnit, switchHistoryUnit, goHistoryPage, toggleHistoryDetail } = createStatsScreen({ startRetestQuiz });
-const { openProfile, closeProfile, switchBook } = createProfileScreen({ allWordsGrouped, currentTab, onUnitSelection: buildUnitSelection, onStudyMode: buildStudyMode, onStatsScreen: buildStatsScreen });
+const { openProfile, closeProfile, switchBook, openUsernameModal, closeUsernameModal, saveUsername } = createProfileScreen({ allWordsGrouped, currentTab, onUnitSelection: buildUnitSelection, onStudyMode: buildStudyMode, onStatsScreen: buildStatsScreen });
 window._openProfile = openProfile;
 window._switchTab = switchTab;
 
 // ==================== EVENT BINDINGS (moved to js/*Events.js) ====================
 bindAuthEvents({ handleAuthSubmit: () => handleAuthSubmit(showMainApp), renderAuthForm });
-bindProfileEvents({ closeProfile, switchBook });
+bindProfileEvents({ closeProfile, switchBook, openUsernameModal, closeUsernameModal, saveUsername });
 bindBookSelectEvents({ confirmBookSelection, selectBookOption, closeBookSelection });
 bindHomeEvents({ showHome, switchTab, openProfile, handleLogout });
 bindQuizEvents({ showHome, startQuiz, submitAnswer, backToSelect, exitQuiz, toggleUnit });
@@ -1983,6 +2129,10 @@ bindStatsEvents({ showHome, switchTrendUnit, switchHistoryUnit, goHistoryPage, t
 // ==================== KEYBOARD SHORTCUTS ====================
 document.addEventListener('keydown', function(e) {
   if (isModalOpen()) return;   // confirm modal open — ignore quiz/study shortcuts
+  if (e.key === 'Escape' && document.getElementById('usernameModal').style.display !== 'none') {
+    closeUsernameModal();
+    return;
+  }
   if (e.key === 'Enter' && document.getElementById('quizScreen').style.display !== 'none') {
     e.preventDefault(); submitAnswer();
   }

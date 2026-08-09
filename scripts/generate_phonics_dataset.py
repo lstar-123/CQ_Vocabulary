@@ -326,9 +326,55 @@ def load_manual_overrides() -> dict:
 # Claude API
 # ---------------------------------------------------------------------------
 
+def _repair_json_array(text: str) -> list[dict] | None:
+    """Attempt to repair malformed JSON array from LLM output.
+
+    Common issues with non-Claude providers:
+    - Missing commas between array elements
+    - Trailing commas
+    - Truncated output
+    - Unescaped characters inside strings
+    """
+    import re
+
+    # Strategy 1: Try to extract individual JSON objects and re-assemble
+    # Look for patterns like {"word": "..." ... } and collect them
+    obj_pattern = re.compile(r'\{\s*"word"\s*:.*?\}(?=\s*[,\]]|\s*$|\s*\{)', re.DOTALL)
+    matches = obj_pattern.findall(text)
+    if matches:
+        try:
+            repaired = '[' + ','.join(matches) + ']'
+            result = json.loads(repaired)
+            if isinstance(result, list) and len(result) > 0:
+                return result
+        except json.JSONDecodeError:
+            pass
+
+    # Strategy 2: Fix missing commas — insert comma before {"word" when missing
+    fixed = re.sub(r'\}\s*\n?\s*\{', '},{', text)
+    try:
+        result = json.loads(fixed)
+        if isinstance(result, list):
+            return result
+    except json.JSONDecodeError:
+        pass
+
+    # Strategy 3: Try json_repair library if available
+    try:
+        import json_repair
+        return json_repair.repair_json(text, return_objects=True)
+    except ImportError:
+        pass
+    except Exception:
+        pass
+
+    return None
+
+
 def call_claude_batch(words: list[str], model: str) -> list[dict]:
     """Send a batch of words to Claude, return parsed JSON list."""
     import anthropic
+    import re
 
     if not ANTHROPIC_API_KEY:
         raise RuntimeError(
@@ -368,26 +414,37 @@ def call_claude_batch(words: list[str], model: str) -> list[dict]:
             lines = lines[:-1]
         text = '\n'.join(lines)
 
+    # Try direct parse first
     try:
         result = json.loads(text)
-    except json.JSONDecodeError as e:
-        # Try to find JSON array in the text
-        import re
-        match = re.search(r'\[.*\]', text, re.DOTALL)
-        if match:
-            result = json.loads(match.group())
-        else:
-            raise RuntimeError(
-                f'Failed to parse Claude response as JSON: {e}\n'
-                f'Raw response (first 500 chars): {text[:500]}'
-            ) from e
+        if isinstance(result, list):
+            return result
+    except json.JSONDecodeError:
+        pass
 
-    if not isinstance(result, list):
-        raise RuntimeError(
-            f'Expected JSON array, got {type(result).__name__}'
-        )
+    # Try to find JSON array in the text
+    match = re.search(r'\[.*\]', text, re.DOTALL)
+    if match:
+        array_text = match.group()
+        try:
+            result = json.loads(array_text)
+            if isinstance(result, list):
+                return result
+        except json.JSONDecodeError:
+            # Try repairing the extracted array
+            repaired = _repair_json_array(array_text)
+            if repaired:
+                return repaired
 
-    return result
+    # Try repairing the full text
+    repaired = _repair_json_array(text)
+    if repaired:
+        return repaired
+
+    raise RuntimeError(
+        f'Failed to parse Claude response as JSON.\n'
+        f'Raw response (first 500 chars): {text[:500]}'
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -421,9 +478,10 @@ def main():
     # Load manual overrides
     # -----------------------------------------------------------------------
     manual_overrides = load_manual_overrides()
+    # Filter out metadata keys (starting with _) and non-dict entries
     override_words = {
         w.lower() for w, entry in manual_overrides.items()
-        if entry.get('reviewed')
+        if isinstance(entry, dict) and entry.get('reviewed')
     }
     if override_words:
         print(f'Manual overrides loaded: {len(override_words)} word(s) will be skipped.\n')

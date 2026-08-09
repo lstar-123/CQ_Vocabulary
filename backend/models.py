@@ -35,6 +35,7 @@ class User(UserMixin, db.Model):
     username = db.Column(db.String(50), unique=True, nullable=False)
     password_hash = db.Column(db.String(255), nullable=False)
     current_book = db.Column(db.String(50), nullable=True, default=None)
+    note = db.Column(db.Text, nullable=True, default=None)  # teacher-only remark, never exposed to students
     created_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
 
     quiz_sessions = db.relationship('QuizSession', backref='user', lazy=True,

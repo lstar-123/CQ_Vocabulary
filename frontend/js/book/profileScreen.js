@@ -59,5 +59,44 @@ export function createProfileScreen({ allWordsGrouped, currentTab, onUnitSelecti
     } catch (e) { document.getElementById('profileMsg').innerHTML = `${icon('x-circle', 13)} 切换失败：` + escapeHtml(e.message); }
   }
 
-  return { openProfile, closeProfile, switchBook };
+  // ── Change username ─────────────────────────────────────
+  function openUsernameModal() {
+    const curName = currentUser.username || '';
+    document.getElementById('usernameInput').value = curName;
+    document.getElementById('usernameMsg').textContent = '';
+    document.getElementById('usernameMsg').style.color = 'var(--sage)';
+    const curEl = document.getElementById('umCurrentName');
+    if (curEl) curEl.textContent = curName || '—';
+    const countEl = document.getElementById('usernameCount');
+    if (countEl) countEl.textContent = curName.length + ' / 50';
+    document.getElementById('usernameModal').style.display = 'flex';
+    setTimeout(() => {
+      const inp = document.getElementById('usernameInput');
+      if (inp) { inp.focus(); inp.select(); }
+    }, 100);
+  }
+
+  function closeUsernameModal(e) {
+    if (e && e.target !== document.getElementById('usernameModal')) return;
+    document.getElementById('usernameModal').style.display = 'none';
+  }
+
+  async function saveUsername() {
+    const username = document.getElementById('usernameInput').value.trim();
+    const msgEl = document.getElementById('usernameMsg');
+    if (!username) { msgEl.style.color = 'var(--terracotta)'; msgEl.textContent = '用户名不能为空'; return; }
+    try {
+      const result = await apiFetch('/api/auth/username', { method: 'PUT', body: JSON.stringify({ username }) });
+      currentUser.username = result.username;
+      document.getElementById('profileUsername').textContent = result.username;
+      const userNameDisplay = document.getElementById('userNameDisplay');
+      if (userNameDisplay) userNameDisplay.textContent = result.username;
+      closeUsernameModal();
+    } catch (e) {
+      msgEl.style.color = 'var(--terracotta)';
+      msgEl.textContent = e.message || '修改失败';
+    }
+  }
+
+  return { openProfile, closeProfile, switchBook, openUsernameModal, closeUsernameModal, saveUsername };
 }
