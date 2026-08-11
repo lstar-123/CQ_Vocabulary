@@ -9,6 +9,7 @@ import { showConfirm, isModalOpen } from '../ui/confirm.js';
 import { playAnswerTick } from '../ui/sound.js';
 import { countUp, animateRing } from '../ui/anim.js';
 import { burstConfetti } from '../ui/confetti.js';
+import { showMvpCelebration } from '../ui/mvpCelebration.js';
 import { icon } from '../ui/icons.js';
 
 export function createQuizScreen({ allUnits, selectedUnitIds }) {
@@ -185,11 +186,16 @@ export function createQuizScreen({ allUnits, selectedUnitIds }) {
     sc.style.background = color;
     sc.textContent = '0%';
 
-    // Animate the score ring + count-up, confetti on high scores
+    // Animate the score ring + count-up, confetti on high scores,
+    // and a full MVP celebration show on a perfect 100% (mascots + gold).
     const ring = document.getElementById('scoreRingProgress');
     if (ring) animateRing(ring, accuracy);
     countUp(sc, accuracy, { suffix: '%', duration: 1000 });
-    if (accuracy >= 90) burstConfetti();
+    if (accuracy >= 100) {
+      showMvpCelebration({ total, correct });
+    } else if (accuracy >= 90) {
+      burstConfetti();
+    }
 
     const title = document.getElementById('resultTitle'), sub = document.getElementById('resultSub');
     if (accuracy >= 95) { title.textContent = '太棒了！'; sub.textContent = '你几乎全部掌握，继续保持！'; }

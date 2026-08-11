@@ -11,9 +11,9 @@ function prefersReducedMotion() {
 
 /**
  * Fire a burst of confetti pieces from the top of the screen.
- * @param {object} [opts] { count }
+ * @param {object} [opts] { count, colors }
  */
-export function burstConfetti({ count = 70 } = {}) {
+export function burstConfetti({ count = 70, colors = COLORS } = {}) {
   if (prefersReducedMotion()) return;
 
   let layer = document.querySelector('.confetti-layer');
@@ -29,7 +29,7 @@ export function burstConfetti({ count = 70 } = {}) {
     const piece = document.createElement('span');
     piece.className = 'confetti-piece';
     piece.style.left = Math.random() * 100 + '%';
-    piece.style.background = COLORS[i % COLORS.length];
+    piece.style.background = colors[i % colors.length];
     piece.style.setProperty('--dx', (Math.random() * 240 - 120) + 'px');
     piece.style.setProperty('--rot', (Math.random() * 720 + 360) + 'deg');
     piece.style.animationDelay = Math.random() * 0.35 + 's';

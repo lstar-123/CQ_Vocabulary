@@ -1565,6 +1565,171 @@ body {
   }
 }
 
+/* ============ MVP CELEBRATION (100% quiz) ============ */
+/* Full-screen golden celebration with the three mascots.
+   z-index: overlay 380 < confetti-layer 400. */
+.mvp-overlay {
+  position: fixed; inset: 0; z-index: 380;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+.mvp-overlay.is-on { opacity: 1; pointer-events: auto; }
+
+.mvp-scrim {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 40%, rgba(58, 50, 32, 0.72), rgba(28, 26, 22, 0.82));
+  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+}
+
+.mvp-stage {
+  position: relative;
+  display: flex; flex-direction: column; align-items: center;
+  width: min(420px, 92vw);
+  padding-bottom: 24px;
+}
+
+/* golden breathing glow behind the stage */
+.mvp-glow {
+  position: absolute; left: 50%; top: 18%;
+  width: 300px; height: 300px; margin-left: -150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(246, 195, 67, 0.35), rgba(246, 195, 67, 0) 65%);
+  transform: scale(0.6); opacity: 0;
+}
+.mvp-glow.pulse { animation: mvpHaloPulse 2.6s ease-out infinite; }
+
+/* expanding ring under the title */
+.mvp-halo {
+  position: absolute; left: 50%; top: 24%;
+  width: 96px; height: 96px; margin-left: -48px; margin-top: -48px;
+  border: 3px solid rgba(246, 195, 67, 0.9);
+  border-radius: 50%;
+  transform: scale(0.2); opacity: 0;
+}
+.mvp-halo.pulse { animation: mvpHaloRing 2.6s ease-out infinite; }
+
+@keyframes mvpHaloPulse {
+  0% { transform: scale(0.55); opacity: 0; }
+  35% { opacity: 1; }
+  100% { transform: scale(1.15); opacity: 0; }
+}
+@keyframes mvpHaloRing {
+  0% { transform: scale(0.2); opacity: 0; }
+  30% { opacity: 0.95; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+
+/* PERFECT! — letter-by-letter pop-in.
+   Note: the gradient lives on each letter span (not the parent) —
+   background-clip: text on a parent whose children carry transform
+   animations renders blank text in Chromium. */
+.mvp-title {
+  margin: 0 0 6px;
+  font-family: 'Playfair Display', serif;
+  font-size: 52px; font-weight: 800; letter-spacing: 6px;
+}
+.mvp-title span {
+  display: inline-block;
+  background: linear-gradient(180deg, #FFE9A8 0%, #F6C343 45%, #D4A017 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+  filter: drop-shadow(0 3px 10px rgba(212, 160, 23, 0.4));
+  opacity: 0;
+  animation: mvpLetterIn 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+@keyframes mvpLetterIn {
+  0% { transform: scale(0.2) translateY(14px); opacity: 0; }
+  60% { transform: scale(1.35) translateY(-4px); opacity: 1; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+/* score */
+.mvp-score {
+  display: flex; align-items: baseline;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800; color: #FFF;
+  font-size: 64px; line-height: 1;
+  text-shadow: 0 3px 24px rgba(246, 195, 67, 0.55);
+  opacity: 0;
+  animation: mvpScoreIn 0.7s ease-out 0.95s forwards;
+}
+.mvp-score-unit { font-size: 34px; margin-left: 2px; color: #F6C343; }
+@keyframes mvpScoreIn {
+  from { transform: scale(0.6); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.mvp-sub {
+  margin-top: 10px;
+  font-size: 14px; font-weight: 500; letter-spacing: 2px;
+  color: #FFE9A8;
+  opacity: 0;
+  animation: mvpFadeUp 0.5s ease-out 1.15s forwards;
+}
+@keyframes mvpFadeUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* mascot stage */
+.mvp-chars {
+  display: flex; align-items: flex-end; justify-content: center;
+  gap: 8px; margin-top: 26px;
+}
+.mvp-char {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.mvp-char svg { width: 100%; height: 100%; }
+.char-center { width: 150px; height: 150px; }
+.char-left, .char-right { width: 105px; height: 105px; }
+
+.char-center { animation: mvpPopIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.45s both; }
+.char-left  { animation: mvpFlyInL 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.75s both; }
+.char-right { animation: mvpRollIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.95s both; }
+
+@keyframes mvpPopIn {
+  0% { transform: scale(0) translateY(90px); opacity: 0; }
+  60% { transform: scale(1.22) translateY(-10px); opacity: 1; }
+  80% { transform: scale(0.96) translateY(0); }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+@keyframes mvpFlyInL {
+  0% { transform: translateX(-160px) rotate(-18deg); opacity: 0; }
+  60% { transform: translateX(10px) rotate(4deg); opacity: 1; }
+  100% { transform: translateX(0) rotate(0); opacity: 1; }
+}
+@keyframes mvpRollIn {
+  0% { transform: translateX(160px) rotate(200deg); opacity: 0; }
+  60% { transform: translateX(-10px) rotate(20deg); opacity: 1; }
+  100% { transform: translateX(0) rotate(0); opacity: 1; }
+}
+
+/* close button */
+.mvp-close {
+  position: absolute; top: 16px; right: 16px;
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFF; font-size: 20px; line-height: 1;
+  cursor: pointer; transition: background 0.2s, transform 0.2s;
+}
+.mvp-close:hover { background: rgba(255, 255, 255, 0.22); transform: scale(1.06); }
+
+@media (max-width: 500px) {
+  .mvp-title { font-size: 38px; letter-spacing: 4px; }
+  .mvp-score { font-size: 48px; }
+  .char-center { width: 120px; height: 120px; }
+  .char-left, .char-right { width: 84px; height: 84px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mvp-overlay, .mvp-overlay.is-on { transition: none; }
+  .mvp-overlay { display: none; }
+}
+  }
+}
+
 /* ============ A11Y & POLISH ============ */
 button:focus-visible, a:focus-visible, select:focus-visible {
   outline: 2px solid var(--sage); outline-offset: 2px;
@@ -1952,6 +2117,9 @@ button:disabled, .btn:disabled, .btn-sm:disabled, .page-btn:disabled {
 
 <!-- Screen-reader announcements for quiz answer feedback -->
 <div id="quizAriaLive" class="sr-only" role="status" aria-live="polite"></div>
+
+<!-- Lottie player — drives the MVP celebration mascots (local vendored copy) -->
+<script src="js/vendor/lottie.min.js"></script>
 
 <script type="module">
 import { escapeHtml, formatDuration, formatDurationMs, normalize, checkEquivalent, shuffleArray } from './js/utils.js';
